@@ -1,0 +1,40 @@
+body {
+  background-image: url(../../public/Fondo.jpg);
+  background-size: cover; /* Hace que la imagen ocupe toda la pantalla */
+  background-repeat: no-repeat; /* Evita que la imagen se repita */
+  background-position: center; /* Centra la imagen */
+  height: 100%; /* Asegura que el fondo cubra la altura de la ventana */
+  margin: 0; /* Elimina el margen del body */
+  width: 100%;
+  display: block;
+}
+#page,
+#root {
+  height: 100%;
+}
+#title,
+#pokemonList {
+  display: flex;
+  justify-content: space-around;
+  margin: 1% 0%;
+}
+#title {
+  height: 10%;
+  width: 100%;
+}
+#title > img {
+  overflow: hidden;
+  height: 6em;
+  width: 100%;
+}
+#pokemonList {
+  height: 85%;
+  width: 100%;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-around;
+  gap: 10px;
+}
+#pokemonList > div {
+  height: fit-content;
+}
