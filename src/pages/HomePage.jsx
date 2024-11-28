@@ -1,4 +1,4 @@
-import { PokemonCard } from "../components/PokemonCard";
+import { PokemonList } from "../components/PokemonList";
 import "../styles/HomePage.css";
 
 export function HomePage() {
@@ -8,13 +8,7 @@ export function HomePage() {
         <img src="../../public/Logo.svg" alt="" />
       </div>
       <div id="pokemonList">
-        <PokemonCard></PokemonCard>
-        <PokemonCard></PokemonCard>
-        <PokemonCard></PokemonCard>
-        <PokemonCard></PokemonCard>
-        <PokemonCard></PokemonCard>
-        <PokemonCard></PokemonCard>
-        <PokemonCard></PokemonCard>
+        <PokemonList></PokemonList>
       </div>
     </div>
   );
