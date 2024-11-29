@@ -15,13 +15,14 @@
 }
 
 .pokemon-card:hover {
-  box-shadow: 0 0 30px var(--card-color); /* Efecto glow usando --card-color */
-  transform: scale(1.05);
+  box-shadow: 0 0 15px var(--card-color), 0 0 25px var(--card-color),
+    0 0 35px var(--card-color); /* Efecto glow más pronunciado */
+  transform: scale(1.05); /* Efecto ligero de escala */
 }
 
 .pokemon-card > #divImg,
 #cardBody {
-  background-color: white;
+  background-color: #fffef4;
   padding: 0.7em;
   border-radius: 10px;
 }

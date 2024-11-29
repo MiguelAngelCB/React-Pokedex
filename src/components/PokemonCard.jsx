@@ -1,3 +1,5 @@
+// src/components/PokemonCard.jsx
+
 import { useRef } from "react";
 import PropTypes from "prop-types";
 import "../styles/PokemonCard.css";
@@ -15,8 +17,8 @@ export function PokemonCard({ pokemon }) {
     const centerY = cardRect.height / 2; // Centro de la tarjeta en Y
 
     // Rotación inversa (para que gire en la dirección contraria)
-    const rotateX = ((y - centerY) / centerY) * -20; // Invertimos el signo de rotateX
-    const rotateY = ((x - centerX) / centerX) * 20; // Invertimos el signo de rotateY
+    const rotateX = ((y - centerY) / centerY) * -30; // Invertimos el signo de rotateX
+    const rotateY = ((x - centerX) / centerX) * 30; // Invertimos el signo de rotateY
 
     // Aplicamos la rotación
     card.style.transform = `perspective(1000px) rotateX(${rotateX}deg) rotateY(${rotateY}deg)`;
@@ -28,12 +30,16 @@ export function PokemonCard({ pokemon }) {
     card.style.transform = "perspective(1000px) rotateX(0) rotateY(0)"; // Resetear la rotación
   };
 
+  const capitalizeName = (name) => {
+    return name.replace(/\b\w/g, (char) => char.toUpperCase());
+  };
+
   return (
     <div
       ref={cardRef}
       className="pokemon-card"
       style={{
-        "--card-color": pokemon.color || "rgba(255, 215, 0, 0.8)", // Usamos 'color' para fondo y glow
+        "--card-color": pokemon.types[0].color || "rgba(255, 215, 0, 0.8)", // Usamos 'color' para fondo y glow
       }}
       onMouseMove={handleMouseMove}
       onMouseLeave={handleMouseLeave}
@@ -42,10 +48,21 @@ export function PokemonCard({ pokemon }) {
         <img src={pokemon.image} alt={pokemon.name} />
       </div>
       <h3>
-        #{pokemon.id} - {pokemon.name}
-      </h3>{" "}
+        #{pokemon.id} - {capitalizeName(pokemon.name)}
+      </h3>
       <div id="cardBody">
-        <div className="type">{pokemon.type}</div>
+        <div className="types">
+          {/* Renderizamos todos los tipos de un Pokémon */}
+          {pokemon.types.map((type, index) => (
+            <span
+              key={index}
+              className="type"
+              style={{ backgroundColor: type.color }}
+            >
+              {type.name}
+            </span>
+          ))}
+        </div>
         <div className="stats">
           <span>HP: {pokemon.stats.hp}</span>
           <span>Attack: {pokemon.stats.attack}</span>
@@ -62,10 +79,15 @@ export function PokemonCard({ pokemon }) {
 // Validación de las props con PropTypes
 PokemonCard.propTypes = {
   pokemon: PropTypes.shape({
-    id: PropTypes.string.isRequired,
+    id: PropTypes.number.isRequired,
     name: PropTypes.string.isRequired,
     image: PropTypes.string.isRequired,
-    type: PropTypes.string.isRequired,
+    types: PropTypes.arrayOf(
+      PropTypes.shape({
+        name: PropTypes.string.isRequired,
+        color: PropTypes.string.isRequired,
+      })
+    ).isRequired, // Aseguramos que types sea un arreglo
     stats: PropTypes.shape({
       hp: PropTypes.number.isRequired,
       attack: PropTypes.number.isRequired,
