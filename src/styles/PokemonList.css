@@ -1,0 +1,75 @@
+/* Estilos de la animación de carga (puntos grandes y fijos) */
+.loading-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh; /* Ocupa toda la altura de la pantalla */
+  position: absolute; /* Asegura que la animación esté centrada incluso si hay más contenido en la página */
+  left: 0;
+  right: 0;
+  top: 50%;
+  bottom: 0;
+}
+
+/* Para los puntos (.dot) */
+.dot {
+  width: 3rem; /* Tamaño fijo más grande */
+  height: 3rem; /* Tamaño fijo más grande */
+  margin: 0 30px; /* Espaciado entre puntos */
+  background-color: #ffcc00; /* Amarillo */
+  border: 10px solid #2c71b8; /* Azul Pokémon */
+  border-radius: 50%;
+  box-shadow: 0 0 0 rgb(33 56 110), -5px 3px 0 rgb(33 56 110); /* Sombra desplazada sin difuminado */
+  animation: bounce 0.8s infinite ease-in-out;
+}
+
+.dot:nth-child(1) {
+  animation-delay: 0s;
+}
+
+.dot:nth-child(2) {
+  animation-delay: 0.2s;
+}
+
+.dot:nth-child(3) {
+  animation-delay: 0.4s;
+}
+
+/* Animación para el salto de los puntos */
+@keyframes bounce {
+  0%,
+  100% {
+    transform: translateY(0); /* Puntos en su posición original */
+  }
+  50% {
+    transform: translateY(-50px); /* Salto hacia arriba */
+  }
+}
+
+/* Estilos de los botones grandes y centrados */
+button {
+  padding: 15px 30px; /* Botón más grande */
+  font-size: 20px; /* Texto más grande */
+  border: none;
+  border-radius: 8px;
+  background-color: #3b4cca; /* Azul Pokémon */
+  color: #fff;
+  cursor: pointer;
+  display: inline-block;
+  text-align: center;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.6); /* Sombra sólida y más difusa */
+  transition: transform 0.3s ease; /* Transición suave para el efecto de presión */
+}
+
+/* Efecto relieve al presionar el botón (sin animación hover) */
+button:active {
+  transform: translateY(4px); /* El botón se mueve hacia abajo al hacer clic */
+  box-shadow: 0 4px 5px rgba(0, 0, 0, 0.4); /* Menos sombra al presionar para simular "presión" */
+}
+
+/* Botones centrados */
+button.center {
+  margin: 20px auto;
+  display: block;
+  text-align: center;
+}

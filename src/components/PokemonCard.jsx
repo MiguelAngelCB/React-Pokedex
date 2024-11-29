@@ -17,8 +17,8 @@ export function PokemonCard({ pokemon }) {
     const centerY = cardRect.height / 2; // Centro de la tarjeta en Y
 
     // Rotación inversa (para que gire en la dirección contraria)
-    const rotateX = ((y - centerY) / centerY) * -30; // Invertimos el signo de rotateX
-    const rotateY = ((x - centerX) / centerX) * 30; // Invertimos el signo de rotateY
+    const rotateX = ((y - centerY) / centerY) * -20; // Invertimos el signo de rotateX
+    const rotateY = ((x - centerX) / centerX) * 20; // Invertimos el signo de rotateY
 
     // Aplicamos la rotación
     card.style.transform = `perspective(1000px) rotateX(${rotateX}deg) rotateY(${rotateY}deg)`;
@@ -28,10 +28,6 @@ export function PokemonCard({ pokemon }) {
   const handleMouseLeave = () => {
     const card = cardRef.current;
     card.style.transform = "perspective(1000px) rotateX(0) rotateY(0)"; // Resetear la rotación
-  };
-
-  const capitalizeName = (name) => {
-    return name.replace(/\b\w/g, (char) => char.toUpperCase());
   };
 
   return (
@@ -48,7 +44,7 @@ export function PokemonCard({ pokemon }) {
         <img src={pokemon.image} alt={pokemon.name} />
       </div>
       <h3>
-        #{pokemon.id} - {capitalizeName(pokemon.name)}
+        #{pokemon.id} - {pokemon.name}
       </h3>
       <div id="cardBody">
         <div className="types">

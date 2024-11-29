@@ -1,5 +1,3 @@
-// src/hooks/useFetch.js
-
 import { useState, useEffect } from "react";
 
 export const useFetch = (fetchFunction, deps = []) => {
@@ -9,20 +7,20 @@ export const useFetch = (fetchFunction, deps = []) => {
 
   useEffect(() => {
     const fetchData = async () => {
-      setLoading(true);
-      setError(null);
+      setLoading(true); // Comienza la carga
+      setError(null); // Resetea el error
       try {
-        const result = await fetchFunction();
-        setData(result);
+        const result = await fetchFunction(); // Llama la función de fetch
+        setData(result); // Actualiza los datos
       } catch (error) {
-        setError(error);
+        setError(error); // Si ocurre un error, actualiza el estado
       } finally {
-        setLoading(false);
+        setLoading(false); // Cuando termina la carga, cambia el estado a false
       }
     };
 
-    fetchData();
-  }, deps);
+    fetchData(); // Ejecuta la función de carga
+  }, deps); // Solo se vuelve a ejecutar si las dependencias cambian
 
   return { data, loading, error };
 };
