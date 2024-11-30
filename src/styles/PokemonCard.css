@@ -1,40 +1,82 @@
+/* Contenedor de la carta */
+.pokemon-card-container {
+  width: 325px; /* Ajuste el ancho a 300px */
+  height: 450px; /* Altura ajustada */
+  perspective: 1000px;
+  cursor: pointer;
+  position: relative; /* Necesario para alinear las caras dentro del contenedor */
+}
+
+/* Carta */
 .pokemon-card {
   font-family: monospace;
   font-weight: 900;
   box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1), 0 1px 3px rgba(0, 0, 0, 0.08);
   border-radius: 16px;
-  width: 250px;
+  width: 100%;
+  height: 100%;
   padding: 20px;
   text-align: center;
-  position: relative;
-  background-color: var(
-    --card-color,
-    #ffcc01
-  ); /* Usamos --card-color como fondo */
-  transition: box-shadow 0.3s ease, transform 0.1s ease;
+  position: absolute;
+  backface-visibility: hidden;
+  transform-origin: center; /* Hace que la carta gire alrededor de su centro */
+  transition: transform 0.8s ease-in-out, box-shadow 0.3s ease;
+  box-sizing: border-box;
+  transform-style: preserve-3d; /* Garantiza que la rotación se preserve en 3D */
+}
+
+.pokemon-card.front {
+  background-color: var(--card-color, #ffcc01); /* Color de fondo dinámico */
 }
 
 .pokemon-card:hover {
-  box-shadow: 0 0 30px var(--card-color); /* Efecto glow usando --card-color */
-  transform: scale(1.05);
+  box-shadow: 0 0 30px var(--card-color);
+  /* El zoom de la carta se ha eliminado */
 }
 
+/* Cara trasera */
+.pokemon-card.back {
+  background-color: var(
+    --card-color,
+    #ffcc01
+  ); /* Fondo del mismo color que el de la parte frontal */
+  transform: rotateY(180deg);
+  padding: 20px;
+  border-radius: 16px;
+  width: 100%;
+  height: 100%;
+  box-sizing: border-box;
+}
+
+/* Eliminamos el height: 100% de #divImg y #cardBody */
 .pokemon-card > #divImg,
 #cardBody {
   background-color: #ffe4e4;
   padding: 0.7em;
   border-radius: 10px;
+  width: 100%;
+  box-sizing: border-box;
 }
 
-.pokemon-card img {
+/* Ajustes de imagen */
+.pokemon-card #divImg > img {
   width: 150px;
   height: 150px;
+  transition: transform 0.3s ease-in-out; /* Animación de zoom para las imágenes */
 }
 
+/* Animación de zoom solo a las imágenes */
+.pokemon-card:hover #divImg > img {
+  transform: scale(
+    1.1
+  ); /* Efecto de zoom cuando se hace hover sobre la carta */
+}
+
+/* Ajustes de texto */
 .pokemon-card h3 {
   margin: 10px 0;
   font-size: 24px;
-  color: #333;
+  color: white;
 }
 
 .pokemon-card .type {
@@ -42,7 +84,7 @@
   background-color: var(
     --card-color,
     #ffcc01
-  ); /* Usamos --card-color para el fondo del tipo */
+  ); /* Fondo de tipo del mismo color */
   color: #fff;
   padding: 5px 10px;
   margin: 5px;
@@ -60,4 +102,37 @@
 .pokemon-card .stats span {
   display: block;
   margin: 2px 0;
+}
+
+.pokemon-card .additional-info {
+  margin-top: 10px;
+}
+
+.additional-info {
+  margin-top: 10px;
+  text-align: left;
+}
+
+.pokemon-card .additional-info p {
+  font-size: 14px;
+  margin: 5px 0;
+  display: flex;
+}
+
+/* Estado volteado */
+.pokemon-card-container.flipped .front {
+  transform: rotateY(180deg);
+}
+
+.pokemon-card-container.flipped .back {
+  transform: rotateY(0deg);
+}
+
+/* Ajustes para la imagen de la generación en la sección additional-info */
+.pokemon-card .additional-info img {
+  max-width: 35px; /* Puedes aumentar o disminuir según lo que necesites */
+  max-height: 35px; /* Mantener la imagen proporcional */
+  width: auto; /* Para evitar que se estire más de lo necesario */
+  height: auto; /* Para evitar que se distorsione */
+  object-fit: contain; /* Asegura que el SVG se vea bien sin perder proporciones */
 }

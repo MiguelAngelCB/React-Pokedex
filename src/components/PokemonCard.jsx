@@ -1,89 +1,138 @@
-// src/components/PokemonCard.jsx
-
-import { useRef } from "react";
+import { useState } from "react";
 import PropTypes from "prop-types";
-import "../styles/PokemonCard.css";
+import { GenerationImages } from "../enum/GenerationImages"; // Importamos el objeto
+import "../styles/PokemonCard.css"; // Asegúrate de importar los estilos aquí
 
 export function PokemonCard({ pokemon }) {
-  const cardRef = useRef(null);
+  const [isFlipped, setIsFlipped] = useState(false);
 
-  // Función para manejar el movimiento del ratón y aplicar la animación de paralelaje
-  const handleMouseMove = (event) => {
-    const card = cardRef.current;
-    const cardRect = card.getBoundingClientRect();
-    const x = event.clientX - cardRect.left; // Coordenada X del ratón
-    const y = event.clientY - cardRect.top; // Coordenada Y del ratón
-    const centerX = cardRect.width / 2; // Centro de la tarjeta en X
-    const centerY = cardRect.height / 2; // Centro de la tarjeta en Y
-
-    // Rotación inversa (para que gire en la dirección contraria)
-    const rotateX = ((y - centerY) / centerY) * -20; // Invertimos el signo de rotateX
-    const rotateY = ((x - centerX) / centerX) * 20; // Invertimos el signo de rotateY
-
-    // Aplicamos la rotación
-    card.style.transform = `perspective(1000px) rotateX(${rotateX}deg) rotateY(${rotateY}deg)`;
+  const handleCardClick = () => {
+    setIsFlipped(!isFlipped);
   };
 
-  // Función para resetear la rotación cuando el ratón salga de la tarjeta
-  const handleMouseLeave = () => {
-    const card = cardRef.current;
-    card.style.transform = "perspective(1000px) rotateX(0) rotateY(0)"; // Resetear la rotación
-  };
+  const generationImage = GenerationImages[`${pokemon.generation}`];
 
   return (
     <div
-      ref={cardRef}
-      className="pokemon-card"
-      style={{
-        "--card-color": pokemon.types[0].color || "rgba(255, 215, 0, 0.8)", // Usamos 'color' para fondo y glow
-      }}
-      onMouseMove={handleMouseMove}
-      onMouseLeave={handleMouseLeave}
+      className={`pokemon-card-container ${isFlipped ? "flipped" : ""}`}
+      onClick={handleCardClick}
     >
-      <div id="divImg">
-        <img src={pokemon.image} alt={pokemon.name} />
-      </div>
-      <h3>
-        #{pokemon.id} - {pokemon.name}
-      </h3>
-      <div id="cardBody">
-        <div className="types">
-          {/* Renderizamos todos los tipos de un Pokémon */}
-          {pokemon.types.map((type, index) => (
-            <span
-              key={index}
-              className="type"
-              style={{ backgroundColor: type.color }}
-            >
-              {type.name}
-            </span>
-          ))}
+      {/* Cara frontal */}
+      <div
+        className="pokemon-card front"
+        style={{
+          "--card-color": pokemon.types[0].color
+            ? `${pokemon.types[0].color}db`
+            : "rgba(255, 215, 0, 0.8)", // Añadimos 80 (opacidad) al color o usamos un color predeterminado con transparencia
+        }}
+      >
+        <div id="divImg">
+          <img src={pokemon.image} alt={pokemon.name} />
         </div>
-        <div className="stats">
-          <span>HP: {pokemon.stats.hp}</span>
-          <span>Attack: {pokemon.stats.attack}</span>
-          <span>Defense: {pokemon.stats.defense}</span>
-          <span>Speed: {pokemon.stats.speed}</span>
-          <span>Special Attack: {pokemon.stats.specialAttack}</span>
-          <span>Special Defense: {pokemon.stats.specialDefense}</span>
+        <h3>
+          #{pokemon.id} - {pokemon.name}
+        </h3>
+        <div id="cardBody">
+          <div className="types">
+            {pokemon.types.map((type, index) => (
+              <span key={index} className="type">
+                {type.name}
+              </span>
+            ))}
+          </div>
+          <div className="stats">
+            <span>HP: {pokemon.stats.hp}</span>
+            <span>Attack: {pokemon.stats.attack}</span>
+            <span>Defense: {pokemon.stats.defense}</span>
+            <span>Speed: {pokemon.stats.speed}</span>
+            <span>Special Attack: {pokemon.stats.specialAttack}</span>
+            <span>Special Defense: {pokemon.stats.specialDefense}</span>
+          </div>
+        </div>
+      </div>
+
+      {/* Cara trasera */}
+      <div
+        className="pokemon-card back"
+        style={{
+          "--card-color": pokemon.types[0].color
+            ? `${pokemon.types[0].color}db`
+            : "rgba(255, 215, 0, 0.8)", // Añadimos 80 (opacidad) al color o usamos un color predeterminado con transparencia
+        }}
+      >
+        <div id="divImg">
+          {/* Imagen shiny o normal */}
+          <img
+            src={pokemon.shinyImage || pokemon.image}
+            alt={`Shiny de ${pokemon.name}`}
+          />
+        </div>
+        <h3>
+          #{pokemon.id} - {pokemon.name}
+        </h3>
+        <div id="cardBody">
+          <div className="types">
+            {pokemon.types.map((type, index) => (
+              <span
+                key={index}
+                className="type"
+                style={{ backgroundColor: type.color }}
+              >
+                {type.name}
+              </span>
+            ))}
+          </div>
+          {/* Información adicional en la parte trasera */}
+          <div className="additional-info">
+            <p>
+              <strong>Generación:</strong>
+              {/* Imagen de la generación */}
+              <img
+                src={generationImage}
+                alt={`Generación ${pokemon.generation}`}
+              />
+            </p>
+            <p>
+              <strong>Peso:</strong> {pokemon.weight} kg
+            </p>
+            <p>
+              <strong>Altura:</strong> {pokemon.height} m
+            </p>
+            {/* Habilidades */}
+            <p>
+              <strong>Habilidades:</strong>{" "}
+              {pokemon.abilities.normal.length > 0
+                ? pokemon.abilities.normal.join(", ")
+                : "Ninguna"}
+            </p>
+            <p>
+              <strong>Habilidades Ocultas:</strong>{" "}
+              {pokemon.abilities.hidden.length > 0
+                ? pokemon.abilities.hidden.join(", ")
+                : "Ninguna"}
+            </p>
+          </div>
         </div>
       </div>
     </div>
   );
 }
 
-// Validación de las props con PropTypes
 PokemonCard.propTypes = {
   pokemon: PropTypes.shape({
     id: PropTypes.number.isRequired,
     name: PropTypes.string.isRequired,
     image: PropTypes.string.isRequired,
+    shinyImage: PropTypes.string,
+    generation: PropTypes.string.isRequired,
+    weight: PropTypes.number.isRequired,
+    height: PropTypes.number.isRequired,
     types: PropTypes.arrayOf(
       PropTypes.shape({
         name: PropTypes.string.isRequired,
         color: PropTypes.string.isRequired,
       })
-    ).isRequired, // Aseguramos que types sea un arreglo
+    ).isRequired,
     stats: PropTypes.shape({
       hp: PropTypes.number.isRequired,
       attack: PropTypes.number.isRequired,
@@ -92,6 +141,11 @@ PokemonCard.propTypes = {
       specialAttack: PropTypes.number.isRequired,
       specialDefense: PropTypes.number.isRequired,
     }).isRequired,
-    color: PropTypes.string, // color ahora es la propiedad única
+    abilities: PropTypes.shape({
+      normal: PropTypes.arrayOf(PropTypes.string),
+      hidden: PropTypes.arrayOf(PropTypes.string),
+    }).isRequired,
   }).isRequired,
 };
+
+export default PokemonCard;

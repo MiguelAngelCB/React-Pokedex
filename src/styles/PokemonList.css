@@ -7,7 +7,7 @@
   position: absolute; /* Asegura que la animación esté centrada incluso si hay más contenido en la página */
   left: 0;
   right: 0;
-  top: 50%;
+  top: 0;
   bottom: 0;
 }
 
