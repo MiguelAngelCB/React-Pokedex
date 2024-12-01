@@ -1,7 +1,6 @@
 /* Asegurando que el body ocupe toda la pantalla */
 html,
 body {
-  height: 100%;
   margin: 0; /* Eliminamos márgenes por defecto */
 }
 

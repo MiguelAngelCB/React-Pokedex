@@ -1,12 +1,12 @@
 import axios from "axios";
 import { TypeColors } from "../enum/TypeColors"; // Importamos el enum TypeColors
-import { fetchPokemonColor } from "./fetchPokemonColor"; // Importamos la función fetchPokemonColor
+// import { fetchPokemonColor } from "./fetchPokemonColor"; // Importamos la función fetchPokemonColor
 import { getPokemonGeneration } from "./fetchPokemonGeneration"; // Importamos la función getPokemonGeneration
 
 const BASE_URL = "https://pokeapi.co/api/v2";
 
 export const fetchAllPokemons = async () => {
-  const limit = 300; // Limitamos a 100 Pokémon para obtener más resultados
+  const limit = 900; // Limitamos a 100 Pokémon para obtener más resultados
   const url = `${BASE_URL}/pokemon?offset=0&limit=${limit}`;
 
   try {
@@ -17,8 +17,8 @@ export const fetchAllPokemons = async () => {
       data.results.map(async (pokemon) => {
         const { data: details } = await axios.get(pokemon.url);
 
-        // Obtener el color de la especie
-        const color = await fetchPokemonColor(details.species.url);
+        // Obtener el color del pokemon
+        // const color = await fetchPokemonColor(details.species.url);
 
         // Obtener la generación del Pokémon
         const generation = await getPokemonGeneration(details.species.url);
@@ -46,7 +46,7 @@ export const fetchAllPokemons = async () => {
           name: details.name,
           image: normalImage, // Usamos la imagen normal en pixel art
           shinyImage: details.sprites.front_shiny, // Imagen shiny
-          color,
+          // color,
           types: details.types.map((t) => ({
             name: t.type.name,
             color: TypeColors[t.type.name] || "#777", // Usamos el enum TypeColors
