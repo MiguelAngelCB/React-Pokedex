@@ -1,26 +1,39 @@
 import React, { useState } from "react";
 import { useFetch } from "../hooks/useFetch";
 import { PokemonCard } from "./PokemonCard";
-import { PokemonFilter } from "./PokemonFilter"; // Importamos el nuevo componente
+import { PokemonFilter } from "./PokemonFilter";
 import { fetchAllPokemons } from "../services/api";
-import "../styles/PokemonList.css"; // Importamos el archivo CSS para la animación
+import "../styles/PokemonList.css";
 
 export function PokemonList() {
   const { data: pokemonList, loading, error } = useFetch(fetchAllPokemons);
-  const [filteredType, setFilteredType] = useState("");
+  const [filteredTypes, setFilteredTypes] = useState([]); // Estado para manejar hasta 2 tipos seleccionados
 
-  // Aplicamos el filtro de tipo
+  // Función para manejar el filtro de tipos
   const handleFilter = (type) => {
-    setFilteredType(type);
+    if (type === "All") {
+      // Si "All" se selecciona, reiniciamos los filtros
+      setFilteredTypes([]);
+    } else {
+      if (filteredTypes.includes(type)) {
+        // Si el tipo ya está en los filtros, lo eliminamos
+        setFilteredTypes(filteredTypes.filter((t) => t !== type));
+      } else if (filteredTypes.length < 2) {
+        // Si no hemos seleccionado 2 tipos, lo agregamos al filtro
+        setFilteredTypes([...filteredTypes, type]);
+      }
+    }
   };
 
-  // Filtrar Pokémon según el tipo seleccionado
-  const visiblePokemons = filteredType
-  ? pokemonList.filter((pokemon) =>
-      pokemon.types.some((type) => type.name.toLowerCase() === filteredType.toLowerCase()) // Normaliza la comparación
-    )
-  : pokemonList;
-
+  // Filtrar los Pokémon según los tipos seleccionados
+  const visiblePokemons = filteredTypes.length
+    ? pokemonList.filter((pokemon) => {
+        // Comprobamos si los tipos del Pokémon coinciden exactamente con los tipos seleccionados
+        const pokemonTypes = pokemon.types.map((type) => type.name.toLowerCase());
+        return filteredTypes.length === pokemonTypes.length &&
+          filteredTypes.every((type) => pokemonTypes.includes(type.toLowerCase()));
+      })
+    : pokemonList;
 
   // Mostrar la animación de carga si estamos cargando o si no hay Pokémon aún
   if (loading || !pokemonList || pokemonList.length === 0) {
@@ -41,7 +54,7 @@ export function PokemonList() {
   // Renderizar las cartas de Pokémon cuando ya están disponibles
   return (
     <>
-      <PokemonFilter filteredType={filteredType} handleFilter={handleFilter} />
+      <PokemonFilter filteredTypes={filteredTypes} handleFilter={handleFilter} />
       <div id="pokemonList">
         {visiblePokemons.map((pokemon) => (
           <PokemonCard key={pokemon.id} pokemon={pokemon} />
