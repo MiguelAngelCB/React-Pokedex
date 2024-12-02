@@ -17,13 +17,13 @@ export function PokemonCard({ pokemon }) {
       className={`pokemon-card-container ${isFlipped ? "flipped" : ""}`}
       onClick={handleCardClick}
     >
-      {/* Cara frontal */}
+      {/* Front face */}
       <div
         className="pokemon-card front"
         style={{
           "--card-color": pokemon.types[0].color
-            ? `${pokemon.types[0].color}db`
-            : "rgba(255, 215, 0, 0.8)", // Añadimos 80 (opacidad) al color o usamos un color predeterminado con transparencia
+            ? `${pokemon.types[0].color}e0`
+            : "rgba(255, 215, 0, 0.8)", // Add 80 (opacity) to the color or use a default transparent color
         }}
       >
         <div id="divImg">
@@ -35,7 +35,11 @@ export function PokemonCard({ pokemon }) {
         <div id="cardBody">
           <div className="types">
             {pokemon.types.map((type, index) => (
-              <span key={index} className="type">
+              <span
+                key={index}
+                className="type"
+                style={{ backgroundColor: type.color }}
+              >
                 {type.name}
               </span>
             ))}
@@ -51,20 +55,20 @@ export function PokemonCard({ pokemon }) {
         </div>
       </div>
 
-      {/* Cara trasera */}
+      {/* Back face */}
       <div
         className="pokemon-card back"
         style={{
           "--card-color": pokemon.types[0].color
-            ? `${pokemon.types[0].color}db`
-            : "rgba(255, 215, 0, 0.8)", // Añadimos 80 (opacidad) al color o usamos un color predeterminado con transparencia
+            ? `${pokemon.types[0].color}e0`
+            : "rgba(255, 215, 0, 0.8)", // Add 80 (opacity) to the color or use a default transparent color
         }}
       >
         <div id="divImg">
-          {/* Imagen shiny o normal */}
+          {/* Shiny or normal image */}
           <img
             src={pokemon.shinyImage || pokemon.image}
-            alt={`Shiny de ${pokemon.name}`}
+            alt={`Shiny of ${pokemon.name}`}
           />
         </div>
         <h3>
@@ -82,34 +86,34 @@ export function PokemonCard({ pokemon }) {
               </span>
             ))}
           </div>
-          {/* Información adicional en la parte trasera */}
+          {/* Additional information on the back */}
           <div className="additional-info">
             <p>
-              <strong>Generación:</strong>
-              {/* Imagen de la generación */}
+              <strong>Generation:</strong>
+              {/* Generation image */}
               <img
                 src={generationImage}
-                alt={`Generación ${pokemon.generation}`}
+                alt={`Generation ${pokemon.generation}`}
               />
             </p>
             <p>
-              <strong>Peso:</strong> {pokemon.weight} kg
+              <strong>Weight:</strong> {pokemon.weight} kg
             </p>
             <p>
-              <strong>Altura:</strong> {pokemon.height} m
+              <strong>Height:</strong> {pokemon.height} m
             </p>
-            {/* Habilidades */}
+            {/* Abilities */}
             <p>
-              <strong>Habilidades:</strong>{" "}
+              <strong>Abilities:</strong>{" "}
               {pokemon.abilities.normal.length > 0
                 ? pokemon.abilities.normal.join(", ")
-                : "Ninguna"}
+                : "None"}
             </p>
             <p>
-              <strong>Habilidades Ocultas:</strong>{" "}
+              <strong>Hidden Abilities:</strong>{" "}
               {pokemon.abilities.hidden.length > 0
                 ? pokemon.abilities.hidden.join(", ")
-                : "Ninguna"}
+                : "None"}
             </p>
           </div>
         </div>
@@ -123,6 +127,7 @@ PokemonCard.propTypes = {
     id: PropTypes.number.isRequired,
     name: PropTypes.string.isRequired,
     image: PropTypes.string.isRequired,
+    color: PropTypes.string.isRequired,
     shinyImage: PropTypes.string,
     generation: PropTypes.string.isRequired,
     weight: PropTypes.number.isRequired,

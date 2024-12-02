@@ -12,7 +12,7 @@ const formatName = (name) => {
 };
 
 export const fetchAllPokemons = async () => {
-  const limit = 1025; // Número de Pokémon a obtener
+  const limit = 1300; // Número de Pokémon a obtener
   const url = `${BASE_URL}/pokemon?offset=0&limit=${limit}`;
 
   try {
@@ -57,6 +57,7 @@ export const fetchAllPokemons = async () => {
             id: details.id,
             name: formatName(details.name),
             image: normalImage,
+            color: speciesDetails.color.name,
             shinyImage: details.sprites.front_shiny,
             types: details.types.map((t) => ({
               name: t.type.name,
