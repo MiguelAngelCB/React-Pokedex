@@ -6,7 +6,7 @@ import { getPokemonGeneration } from "./fetchPokemonGeneration"; // Importamos l
 const BASE_URL = "https://pokeapi.co/api/v2";
 
 export const fetchAllPokemons = async () => {
-  const limit = 900; // Limitamos a 100 Pokémon para obtener más resultados
+  const limit = 100; // Limitamos a 100 Pokémon para obtener más resultados
   const url = `${BASE_URL}/pokemon?offset=0&limit=${limit}`;
 
   try {
