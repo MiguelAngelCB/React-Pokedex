@@ -1,12 +1,17 @@
-import axios from "axios";
+import axios from "axios"; // Para realizar solicitudes HTTP
 import { TypeColors } from "../enum/TypeColors"; // Importamos el enum TypeColors
-// import { fetchPokemonColor } from "./fetchPokemonColor"; // Importamos la función fetchPokemonColor
 import { getPokemonGeneration } from "./fetchPokemonGeneration"; // Importamos la función getPokemonGeneration
 
 const BASE_URL = "https://pokeapi.co/api/v2";
 
+// Función para limitar el nombre a dos palabras
+const formatName = (name) => {
+  const words = name.split("-"); // Divide el nombre por guiones (como "miraidon-aquatic-mode")
+  return words.slice(0, 2).join(" "); // Toma las primeras dos palabras y las une con un espacio
+};
+
 export const fetchAllPokemons = async () => {
-  const limit = 900; // Limitamos a 100 Pokémon para obtener más resultados
+  const limit = 300; // Limitamos a 1300 Pokémon para cubrir todo el rango.
   const url = `${BASE_URL}/pokemon?offset=0&limit=${limit}`;
 
   try {
@@ -17,8 +22,19 @@ export const fetchAllPokemons = async () => {
       data.results.map(async (pokemon) => {
         const { data: details } = await axios.get(pokemon.url);
 
-        // Obtener el color del pokemon
-        // const color = await fetchPokemonColor(details.species.url);
+        // Consultar el endpoint de species para obtener la variedad por defecto
+        const { data: speciesDetails } = await axios.get(details.species.url);
+        const isDefaultVariety = speciesDetails.varieties.find(
+          (v) => v.is_default
+        );
+
+        // Verificar si este Pokémon corresponde a la variedad por defecto
+        if (
+          isDefaultVariety &&
+          isDefaultVariety.pokemon.name !== details.name
+        ) {
+          return null; // Ignorar si no es la variante base
+        }
 
         // Obtener la generación del Pokémon
         const generation = await getPokemonGeneration(details.species.url);
@@ -38,15 +54,14 @@ export const fetchAllPokemons = async () => {
           details.sprites.front_default || // Intenta obtener el sprite normal en pixel art
           details.sprites.other?.dream_world?.front_default || // En caso de que esté en dream_world
           details.sprites.other?.home?.front_default || // Si está en home
-          null; // Si no se encuentra el sprite, devuelve null
+          "../../public/pokeball.svg"; // Si no se encuentra el sprite, devuelve null
 
-        // Devolver los detalles del Pokémon, incluyendo color, habilidades, estadísticas, etc.
+        // Devolver los detalles del Pokémon
         return {
           id: details.id,
-          name: details.name,
+          name: formatName(details.name), // Formateamos el nombre a máximo dos palabras
           image: normalImage, // Usamos la imagen normal en pixel art
           shinyImage: details.sprites.front_shiny, // Imagen shiny
-          // color,
           types: details.types.map((t) => ({
             name: t.type.name,
             color: TypeColors[t.type.name] || "#777", // Usamos el enum TypeColors
@@ -67,7 +82,8 @@ export const fetchAllPokemons = async () => {
       })
     );
 
-    return pokemonDetails;
+    // Filtrar resultados nulos (Pokémon que no son base)
+    return pokemonDetails.filter((pokemon) => pokemon !== null);
   } catch (error) {
     console.error("Error fetching Pokémon:", error);
     return [];
