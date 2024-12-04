@@ -1,7 +1,8 @@
 import { useState } from "react";
 import PropTypes from "prop-types";
-import { GenerationImages } from "../enum/GenerationImages"; // Importamos el objeto
-import "../styles/PokemonCard.css"; // Asegúrate de importar los estilos aquí
+import { GenerationImages } from "../enum/GenerationImages";
+import "../styles/PokemonCard.css";
+import PokemonFallbackImage from "./PokemonFallbackImage"; // Ruta corregida
 
 export function PokemonCard({ pokemon }) {
   const [isFlipped, setIsFlipped] = useState(false);
@@ -21,13 +22,18 @@ export function PokemonCard({ pokemon }) {
       <div
         className="pokemon-card front"
         style={{
-          "--card-color": pokemon.types[0].color
+          "--card-color": pokemon.types[0]?.color
             ? `${pokemon.types[0].color}e0`
-            : "rgba(255, 215, 0, 0.8)", // Add 80 (opacity) to the color or use a default transparent color
+            : "rgba(255, 215, 0, 0.8)",
         }}
       >
         <div id="divImg">
-          <img src={pokemon.image} alt={pokemon.name} />
+          {/* Mostrar la imagen del Pokémon o el fallback */}
+          {pokemon.image ? (
+            <img src={pokemon.image} alt={pokemon.name} />
+          ) : (
+            <PokemonFallbackImage color={pokemon.types[0]?.color || "#777"} />
+          )}
         </div>
         <h3>
           #{pokemon.id} - {pokemon.name}
@@ -59,17 +65,18 @@ export function PokemonCard({ pokemon }) {
       <div
         className="pokemon-card back"
         style={{
-          "--card-color": pokemon.types[0].color
+          "--card-color": pokemon.types[0]?.color
             ? `${pokemon.types[0].color}e0`
-            : "rgba(255, 215, 0, 0.8)", // Add 80 (opacity) to the color or use a default transparent color
+            : "rgba(255, 215, 0, 0.8)",
         }}
       >
         <div id="divImg">
-          {/* Shiny or normal image */}
-          <img
-            src={pokemon.shinyImage || pokemon.image}
-            alt={`Shiny of ${pokemon.name}`}
-          />
+          {/* Mostrar la imagen shiny o el fallback */}
+          {pokemon.shinyImage ? (
+            <img src={pokemon.shinyImage} alt={`Shiny of ${pokemon.name}`} />
+          ) : (
+            <PokemonFallbackImage color={pokemon.types[0]?.color || "#777"} />
+          )}
         </div>
         <h3>
           #{pokemon.id} - {pokemon.name}
@@ -86,11 +93,10 @@ export function PokemonCard({ pokemon }) {
               </span>
             ))}
           </div>
-          {/* Additional information on the back */}
+          {/* Información adicional */}
           <div className="additional-info">
             <p>
               <strong>Generation:</strong>
-              {/* Generation image */}
               <img
                 src={generationImage}
                 alt={`Generation ${pokemon.generation}`}
@@ -102,18 +108,12 @@ export function PokemonCard({ pokemon }) {
             <p>
               <strong>Height:</strong> {pokemon.height} m
             </p>
-            {/* Abilities */}
             <p>
-              <strong>Abilities:</strong>{" "}
-              {pokemon.abilities.normal.length > 0
-                ? pokemon.abilities.normal.join(", ")
-                : "None"}
+              <strong>Abilities:</strong> {pokemon.abilities.normal.join(", ")}
             </p>
             <p>
               <strong>Hidden Abilities:</strong>{" "}
-              {pokemon.abilities.hidden.length > 0
-                ? pokemon.abilities.hidden.join(", ")
-                : "None"}
+              {pokemon.abilities.hidden.join(", ")}
             </p>
           </div>
         </div>
@@ -126,8 +126,7 @@ PokemonCard.propTypes = {
   pokemon: PropTypes.shape({
     id: PropTypes.number.isRequired,
     name: PropTypes.string.isRequired,
-    image: PropTypes.string.isRequired,
-    color: PropTypes.string.isRequired,
+    image: PropTypes.string,
     shinyImage: PropTypes.string,
     generation: PropTypes.string.isRequired,
     weight: PropTypes.number.isRequired,

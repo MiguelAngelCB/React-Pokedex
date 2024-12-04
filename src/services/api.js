@@ -12,7 +12,7 @@ const formatName = (name) => {
 };
 
 export const fetchAllPokemons = async () => {
-  const limit = 1300; // Número de Pokémon a obtener
+  const limit = 1350; // Número de Pokémon a obtener
   const url = `${BASE_URL}/pokemon?offset=0&limit=${limit}`;
 
   try {
@@ -23,19 +23,6 @@ export const fetchAllPokemons = async () => {
       data.results.map((pokemon) =>
         concurrencyLimit(async () => {
           const { data: details } = await axios.get(pokemon.url);
-
-          const { data: speciesDetails } = await axios.get(details.species.url);
-          const isDefaultVariety = speciesDetails.varieties.find(
-            (v) => v.is_default
-          );
-
-          if (
-            isDefaultVariety &&
-            isDefaultVariety.pokemon.name !== details.name
-          ) {
-            return null;
-          }
-
           const generation = await getPokemonGeneration(details.species.url);
 
           const abilities = {
@@ -47,17 +34,12 @@ export const fetchAllPokemons = async () => {
               .map((ability) => ability.ability.name),
           };
 
-          const normalImage =
-            details.sprites.front_default ||
-            details.sprites.other?.dream_world?.front_default ||
-            details.sprites.other?.home?.front_default ||
-            "../../public/pokeball.svg";
+          const normalImage = details.sprites.front_default; // Puedes usar una URL predeterminada de imagen o un SVG fallback
 
           return {
             id: details.id,
             name: formatName(details.name),
-            image: normalImage,
-            color: speciesDetails.color.name,
+            image: normalImage, // Aquí pasas una URL o la imagen de fallback
             shinyImage: details.sprites.front_shiny,
             types: details.types.map((t) => ({
               name: t.type.name,

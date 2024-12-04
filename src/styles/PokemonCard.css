@@ -72,14 +72,16 @@
 }
 
 /* Ajustes de imagen */
-.pokemon-card #divImg > img {
+.pokemon-card #divImg > img,
+.pokemon-card #divImg > svg {
   width: 150px;
   height: 150px;
-  transition: transform 0.3s ease-in-out; /* Animación de zoom para las imágenes */
+  transition: transform 0.3s ease-in-out; /* Animación de zoom para imágenes y SVG */
 }
 
-/* Animación de zoom solo a las imágenes */
-.pokemon-card:hover #divImg > img {
+/* Animación de zoom para imágenes y SVG */
+.pokemon-card:hover #divImg > img,
+.pokemon-card:hover #divImg > svg {
   transform: scale(
     1.2
   ); /* Efecto de zoom cuando se hace hover sobre la carta */
