@@ -108,13 +108,8 @@ export function PokemonCard({ pokemon }) {
             <p>
               <strong>Height:</strong> {pokemon.height} m
             </p>
-            <p>
-              <strong>Abilities:</strong> {pokemon.abilities.normal.join(", ")}
-            </p>
-            <p>
-              <strong>Hidden Abilities:</strong>{" "}
-              {pokemon.abilities.hidden.join(", ")}
-            </p>
+            <p>Abilities: {pokemon.abilities.normal.join(", ")}</p>
+            <p>Hidden Abilities: {pokemon.abilities.hidden.join(", ")}</p>
           </div>
         </div>
       </div>
