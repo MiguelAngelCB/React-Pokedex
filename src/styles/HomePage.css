@@ -27,7 +27,6 @@ body {
   top: 0; /* Alinea el título en la parte superior */
   left: 0; /* Alinea el título a la izquierda */
   width: 100%; /* Asegura que ocupe todo el ancho */ /* Fondo semitransparente para que se vea bien sobre el fondo */
-  z-index: 10; /* Asegura que el título quede encima de otros elementos */
 }
 
 #title > img {
@@ -42,7 +41,7 @@ body {
   width: 100%;
   display: flex;
   flex-wrap: wrap;
-  justify-content: space-around;
+  justify-content: center;
   gap: 50px;
 }
 #listContainer {

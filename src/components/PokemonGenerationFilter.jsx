@@ -12,6 +12,16 @@ export function PokemonGenerationFilter({
   return (
     <div className="generation-filter">
       <div className="generation-checkboxes">
+        {/* Botón "Show All" con el mismo estilo que los elementos de generación */}
+        <label
+            style={{ cursor: "pointer" }}
+          >
+          <button
+          onClick={handleShowAllGenerations}
+          className="generation-item show-all-button"
+        >All</button>
+          </label>
+        {/* Botones de generación (con checkboxes invisibles) */}
         {generations.map((generation) => (
           <label
             key={generation.id}
@@ -35,9 +45,6 @@ export function PokemonGenerationFilter({
           </label>
         ))}
       </div>
-      <button onClick={handleShowAllGenerations} className="show-all-button">
-        All
-      </button>
     </div>
   );
 }

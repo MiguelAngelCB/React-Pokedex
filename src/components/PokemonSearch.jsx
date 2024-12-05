@@ -1,6 +1,6 @@
-// PokemonSearch.jsx
 import { useState } from "react";
 import "../styles/PokemonSearch.css"; // Importamos el archivo CSS
+import PropTypes from "prop-types"; // Importamos PropTypes
 
 export function PokemonSearch({ handleSearch }) {
   const [searchTerm, setSearchTerm] = useState("");
@@ -22,3 +22,9 @@ export function PokemonSearch({ handleSearch }) {
     </div>
   );
 }
+
+// Validación de las props
+PokemonSearch.propTypes = {
+  handleSearch: PropTypes.func.isRequired, // Aseguramos que handleSearch sea una función requerida
+};
+

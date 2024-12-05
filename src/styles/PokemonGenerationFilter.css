@@ -8,50 +8,60 @@
   display: flex;
   flex-wrap: wrap;
   justify-content: center;
+  align-items: center;
   gap: 10px;
 }
 
-.generation-item {
+.generation-item,
+.show-all-button {
   display: inline-block;
-  border-radius: 8px; /* Bordes redondeados para el contenedor de la imagen */
-  padding: 5px; /* Espacio entre el borde y la imagen */
+  border-radius: 8px; /* Bordes redondeados para el contenedor */
+  padding: 5px; /* Espacio entre el borde y el contenido */
   border: 2px solid transparent; /* Borde transparente por defecto */
-  transition: border 0.3s ease;
+  transition: border 0.3s ease, transform 0.3s ease; /* Animaciones para borde y transformación */
+  width: 90px; /* Tamaño igual al de las imágenes */
+  display: flex; /* Para centrar el contenido dentro */
+  justify-content: center;
+  align-items: center;
+  background-color: transparent; /* Fondo transparente por defecto */
 }
 
+/* Estilo para las imágenes dentro de los items */
 .generation-image {
-  width: 90px; /* Tamaño de las imágenes actualizado a 90px de ancho */
+  width: 90px; /* Tamaño de las imágenes actualizado */
   object-fit: contain; /* Asegura que la imagen no se distorsione */
-  background-color: transparent; /* Fondo transparente, para que no haya un fondo blanco */
+  background-color: transparent; /* Fondo transparente */
 }
 
+/* Estilo cuando un item está seleccionado */
 .generation-item.selected > img {
   border: 4px solid yellow; /* Borde amarillo cuando está seleccionada */
   border-radius: 18px;
+  
 }
 
-.generation-buttons {
-  margin-top: 20px; /* Espacio entre los botones y las imágenes */
+.generation-item > img,.show-all-button {
+  border: 2px solid white;
+  border-radius: 15px;
 }
 
-button {
-  background-color: #4caf50;
-  color: white;
-  border: none;
-  padding: 10px 20px;
-  font-size: 16px;
-  cursor: pointer;
-  border-radius: 5px;
-  transition: background-color 0.3s ease;
+/* Animación al pasar el mouse */
+.generation-item:hover,
+.show-all-button:hover {
+  transform: scale(1.1); /* Escalado del elemento al pasar el mouse */
 }
 
-button:hover {
-  background-color: #45a049;
-}
-
+/* Estilo específico para el botón "Show All" */
 .show-all-button {
-  background-color: #2196f3; /* Botón "All" con color azul */
-  margin-top: 10px;
+  background-color: #2196f3;
+  color: white;
+  cursor: pointer;
+  font-weight: bold;
+  font-size: 23px;
+}
+
+.generation-image, .show-all-button{
+  height: 40px;
 }
 
 .show-all-button:hover {

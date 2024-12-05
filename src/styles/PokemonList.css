@@ -46,30 +46,23 @@
   }
 }
 
-/* Estilos de los botones grandes y centrados */
-button {
-  padding: 15px 30px; /* Botón más grande */
-  font-size: 20px; /* Texto más grande */
-  border: none;
-  border-radius: 8px;
-  background-color: #3b4cca; /* Azul Pokémon */
-  color: #fff;
-  cursor: pointer;
-  display: inline-block;
-  text-align: center;
-  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.6); /* Sombra sólida y más difusa */
+.flip-all-btn{
   transition: transform 0.3s ease; /* Transición suave para el efecto de presión */
+  position: fixed;
+  top: 10px;
+  right: 10px;
+  z-index: 1;
+  padding: 10px 20px;
+  background-color: #575757;
+  display: flex;
+  border: 2px solid white;
+  border-radius: 15px;
 }
-
 /* Efecto relieve al presionar el botón (sin animación hover) */
-button:active {
-  transform: translateY(4px); /* El botón se mueve hacia abajo al hacer clic */
-  box-shadow: 0 4px 5px rgba(0, 0, 0, 0.4); /* Menos sombra al presionar para simular "presión" */
+.flip-all-btn:hover {
+  transform: scale(1.1); /* Escalado del elemento al pasar el mouse */
 }
-
-/* Botones centrados */
-button.center {
-  margin: 20px auto;
-  display: block;
-  text-align: center;
+.flip-all-btn>img{
+  height: 30px;
+  width: 30px;
 }

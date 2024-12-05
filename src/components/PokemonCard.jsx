@@ -1,25 +1,33 @@
-import { useState } from "react";
+import { useState, useEffect } from "react";
 import PropTypes from "prop-types";
 import "../styles/PokemonCard.css";
 import PokemonFallbackImage from "./PokemonFallbackImage"; // Ruta corregida
 import { PokemonGenerations } from "../enum/PokemonGenerations";
 
-export function PokemonCard({ pokemon }) {
-  const [isFlipped, setIsFlipped] = useState(false);
+export function PokemonCard({ pokemon, isFlipped }) {
+  // El estado isFlipped ahora es controlado por el componente padre
+  const [isCardFlipped, setIsCardFlipped] = useState(isFlipped);
+
+  // Si el estado global cambia, actualizamos la carta
+  useEffect(() => {
+    setIsCardFlipped(isFlipped);
+  }, [isFlipped]);
 
   const handleCardClick = () => {
-    setIsFlipped(!isFlipped);
+    setIsCardFlipped(!isCardFlipped); // Solo cambia el estado local si la carta se hace clic
   };
 
   const generation = PokemonGenerations.find(
     (gen) => gen.id === pokemon.generation
   );
+  const totalStats = () => pokemon.stats.hp+pokemon.stats.attack+pokemon.stats.defense+pokemon.stats.speed+pokemon.stats.specialAttack+pokemon.stats.specialDefense;
+;
 
   const generationImage = generation.image;
 
   return (
     <div
-      className={`pokemon-card-container ${isFlipped ? "flipped" : ""}`}
+      className={`pokemon-card-container ${isCardFlipped ? "flipped" : ""}`}
       onClick={handleCardClick}
     >
       {/* Front face */}
@@ -61,6 +69,7 @@ export function PokemonCard({ pokemon }) {
             <span>Speed: {pokemon.stats.speed}</span>
             <span>Special Attack: {pokemon.stats.specialAttack}</span>
             <span>Special Defense: {pokemon.stats.specialDefense}</span>
+            <span>Total: {totalStats()}</span>
           </div>
         </div>
       </div>
@@ -149,6 +158,7 @@ PokemonCard.propTypes = {
       hidden: PropTypes.arrayOf(PropTypes.string),
     }).isRequired,
   }).isRequired,
+  isFlipped: PropTypes.bool.isRequired, // Recibe la prop isFlipped
 };
 
 export default PokemonCard;
