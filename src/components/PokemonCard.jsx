@@ -1,17 +1,21 @@
 import { useState } from "react";
 import PropTypes from "prop-types";
-import { GenerationImages } from "../enum/GenerationImages";
 import "../styles/PokemonCard.css";
 import PokemonFallbackImage from "./PokemonFallbackImage"; // Ruta corregida
+import { PokemonGenerations } from "../enum/PokemonGenerations";
 
 export function PokemonCard({ pokemon }) {
-  const [isFlipped, setIsFlipped] = useState(true);
+  const [isFlipped, setIsFlipped] = useState(false);
 
   const handleCardClick = () => {
     setIsFlipped(!isFlipped);
   };
 
-  const generationImage = GenerationImages[`${pokemon.generation}`];
+  const generation = PokemonGenerations.find(
+    (gen) => gen.id === pokemon.generation
+  );
+
+  const generationImage = generation.image;
 
   return (
     <div

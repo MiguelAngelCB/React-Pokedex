@@ -1,33 +1,50 @@
-import React from "react";
+import { PokemonGenerations } from "../enum/PokemonGenerations";
+import "../styles/PokemonGenerationFilter.css";
+import PropTypes from "prop-types"; // Importamos PropTypes
 
-export function PokemonGenerationFilter({ selectedGenerations, handleGenerationChange }) {
-  const generations = [
-    { id: "generation-i", label: "Generation I" },
-    { id: "generation-ii", label: "Generation II" },
-    { id: "generation-iii", label: "Generation III" },
-    { id: "generation-iv", label: "Generation IV" },
-    { id: "generation-v", label: "Generation V" },
-    { id: "generation-vi", label: "Generation VI" },
-    { id: "generation-vii", label: "Generation VII" },
-    { id: "generation-viii", label: "Generation VIII" },
-  ];
+export function PokemonGenerationFilter({
+  selectedGenerations,
+  handleGenerationChange,
+  handleShowAllGenerations,
+}) {
+  const generations = PokemonGenerations;
 
   return (
     <div className="generation-filter">
-      <h4>Filter by Generation</h4>
       <div className="generation-checkboxes">
         {generations.map((generation) => (
-          <label key={generation.id}>
+          <label
+            key={generation.id}
+            className={`generation-item ${
+              selectedGenerations.includes(generation.id) ? "selected" : ""
+            }`}
+            style={{ cursor: "pointer" }}
+          >
             <input
               type="checkbox"
               value={generation.id}
               checked={selectedGenerations.includes(generation.id)}
               onChange={() => handleGenerationChange(generation.id)}
+              style={{ display: "none" }} // Esto oculta el checkbox visualmente
             />
-            {generation.label}
+            <img
+              src={generation.image}
+              alt={generation.label}
+              className="generation-image"
+            />
           </label>
         ))}
       </div>
+      <button onClick={handleShowAllGenerations} className="show-all-button">
+        All
+      </button>
     </div>
   );
 }
+
+// Validación de las props
+PokemonGenerationFilter.propTypes = {
+  selectedGenerations: PropTypes.arrayOf(PropTypes.string).isRequired, // Espera un array de strings (IDs de generaciones)
+  handleGenerationChange: PropTypes.func.isRequired, // Espera una función que maneja el cambio de generación
+  handleShowAllGenerations: PropTypes.func.isRequired, // Espera una función para mostrar todas las generaciones
+};

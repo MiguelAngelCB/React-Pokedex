@@ -18,12 +18,12 @@ body {
 #pokemonList {
   display: flex;
   justify-content: space-around;
-  padding: 2rem 0;
+  padding: 1rem 0;
 }
 
 /* Hacemos que el título se quede fijo en la parte superior */
 #title {
-  position: fixed; /* Fija el título en la parte superior */
+  position: relative; /* Fija el título en la parte superior */
   top: 0; /* Alinea el título en la parte superior */
   left: 0; /* Alinea el título a la izquierda */
   width: 100%; /* Asegura que ocupe todo el ancho */ /* Fondo semitransparente para que se vea bien sobre el fondo */
@@ -38,11 +38,19 @@ body {
 
 /* Ajustamos el área donde está la lista de Pokémon para que no quede cubierta por el título fijo */
 #pokemonList {
-  margin-top: 10em; /* Espacio suficiente para que la lista no quede oculta debajo del título fijo */
   height: auto; /* Permite que la lista de Pokémon ocupe el resto del espacio disponible */
   width: 100%;
   display: flex;
   flex-wrap: wrap;
   justify-content: space-around;
   gap: 50px;
+}
+#listContainer {
+  height: auto;
+  width: 100%;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  flex-direction: column;
+  align-items: center;
 }

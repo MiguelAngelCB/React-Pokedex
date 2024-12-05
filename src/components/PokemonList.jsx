@@ -1,4 +1,4 @@
-import React, { useState } from "react";
+import { useState } from "react";
 import { useFetch } from "../hooks/useFetch";
 import { PokemonCard } from "./PokemonCard";
 import { PokemonFilter } from "./PokemonFilter";
@@ -33,7 +33,9 @@ export function PokemonList() {
   const handleGenerationFilter = (generation) => {
     if (selectedGenerations.includes(generation)) {
       // Si la generación ya está seleccionada, la eliminamos
-      setSelectedGenerations(selectedGenerations.filter((g) => g !== generation));
+      setSelectedGenerations(
+        selectedGenerations.filter((g) => g !== generation)
+      );
     } else {
       // Si no está seleccionada, la añadimos
       setSelectedGenerations([...selectedGenerations, generation]);
@@ -50,11 +52,14 @@ export function PokemonList() {
     // Filtrado por tipo
     const matchesType =
       filteredTypes.length === 0 ||
-      filteredTypes.every((type) => pokemon.types.some((t) => t.name.toLowerCase() === type.toLowerCase()));
+      filteredTypes.every((type) =>
+        pokemon.types.some((t) => t.name.toLowerCase() === type.toLowerCase())
+      );
 
     // Filtrado por generación
     const matchesGeneration =
-      selectedGenerations.length === 0 || selectedGenerations.includes(pokemon.generation);
+      selectedGenerations.length === 0 ||
+      selectedGenerations.includes(pokemon.generation);
 
     // Filtrado por búsqueda de nombre
     const matchesSearch = pokemon.name.toLowerCase().includes(searchTerm);
@@ -81,8 +86,12 @@ export function PokemonList() {
   // Renderizar las cartas de Pokémon cuando ya están disponibles
   return (
     <>
-      <PokemonSearch handleSearch={handleSearch} /> {/* Componente de búsqueda */}
-      <PokemonFilter filteredTypes={filteredTypes} handleFilter={handleFilter} />
+      <PokemonSearch handleSearch={handleSearch} />{" "}
+      {/* Componente de búsqueda */}
+      <PokemonFilter
+        filteredTypes={filteredTypes}
+        handleFilter={handleFilter}
+      />
       <PokemonGenerationFilter
         selectedGenerations={selectedGenerations}
         handleGenerationChange={handleGenerationFilter}

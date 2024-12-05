@@ -1,5 +1,5 @@
 // PokemonSearch.jsx
-import React, { useState } from "react";
+import { useState } from "react";
 import "../styles/PokemonSearch.css"; // Importamos el archivo CSS
 
 export function PokemonSearch({ handleSearch }) {
