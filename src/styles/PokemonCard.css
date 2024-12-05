@@ -1,7 +1,7 @@
 /* Contenedor de la carta */
 .pokemon-card-container {
   width: 325px; /* Ajuste el ancho a 300px */
-  height: 450px; /* Altura ajustada */
+  height: 540px; /* Altura ajustada */
   perspective: 1000px;
   cursor: pointer;
   position: relative; /* Necesario para alinear las caras dentro del contenedor */
@@ -23,6 +23,9 @@
   transition: transform 0.8s ease-in-out, box-shadow 0.3s ease;
   box-sizing: border-box;
   transform-style: preserve-3d; /* Garantiza que la rotación se preserve en 3D */
+  display: flex;
+  flex-direction: column;
+  align-items: center;
 }
 
 .pokemon-card.front {
@@ -52,23 +55,39 @@
 .pokemon-card > #divImg,
 #cardBody {
   background-color: #ffe4e4;
-  padding: 0.7em;
+  padding: 0em 1em;
   border-radius: 10px;
   width: 100%;
   box-sizing: border-box;
+  height: 50%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+
+.pokemon-card > #divImg {
+  border-radius: 200px;
+  max-width: 230px;
+  min-height: 230px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  overflow: hidden;
 }
 
 /* Ajustes de imagen */
-.pokemon-card #divImg > img {
+.pokemon-card #divImg > img,
+.pokemon-card #divImg > svg {
   width: 150px;
   height: 150px;
-  transition: transform 0.3s ease-in-out; /* Animación de zoom para las imágenes */
+  transition: transform 0.3s ease-in-out; /* Animación de zoom para imágenes y SVG */
 }
 
-/* Animación de zoom solo a las imágenes */
-.pokemon-card:hover #divImg > img {
+/* Animación de zoom para imágenes y SVG */
+.pokemon-card:hover #divImg > img,
+.pokemon-card:hover #divImg > svg {
   transform: scale(
-    1.1
+    1.2
   ); /* Efecto de zoom cuando se hace hover sobre la carta */
 }
 
@@ -77,6 +96,8 @@
   margin: 10px 0;
   font-size: 24px;
   color: white;
+  height: 150px;
+  align-content: center;
 }
 
 .pokemon-card .type {
@@ -94,9 +115,11 @@
 }
 
 .pokemon-card .stats {
-  margin-top: 10px;
   text-align: left;
-  font-size: 14px;
+  margin: 10px 0px;
+}
+.pokemon-card .types {
+  margin-top: 7px;
 }
 
 .pokemon-card .stats span {
@@ -105,20 +128,23 @@
 }
 
 .pokemon-card .additional-info {
-  margin-top: 10px;
+  margin: 10px 0px;
 }
 
 .additional-info {
-  margin-top: 10px;
   text-align: left;
 }
 
 .pokemon-card .additional-info p {
-  font-size: 14px;
   margin: 5px 0;
   display: flex;
+  align-items: flex-end;
 }
 
+.pokemon-card .additional-info p,
+.pokemon-card .stats {
+  font-size: 15.5px;
+}
 /* Estado volteado */
 .pokemon-card-container.flipped .front {
   transform: rotateY(180deg);

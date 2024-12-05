@@ -1,10 +1,11 @@
 import { useState } from "react";
 import PropTypes from "prop-types";
-import { GenerationImages } from "../enum/GenerationImages"; // Importamos el objeto
-import "../styles/PokemonCard.css"; // Asegúrate de importar los estilos aquí
+import { GenerationImages } from "../enum/GenerationImages";
+import "../styles/PokemonCard.css";
+import PokemonFallbackImage from "./PokemonFallbackImage"; // Ruta corregida
 
 export function PokemonCard({ pokemon }) {
-  const [isFlipped, setIsFlipped] = useState(false);
+  const [isFlipped, setIsFlipped] = useState(true);
 
   const handleCardClick = () => {
     setIsFlipped(!isFlipped);
@@ -17,55 +18,22 @@ export function PokemonCard({ pokemon }) {
       className={`pokemon-card-container ${isFlipped ? "flipped" : ""}`}
       onClick={handleCardClick}
     >
-      {/* Cara frontal */}
+      {/* Front face */}
       <div
         className="pokemon-card front"
         style={{
-          "--card-color": pokemon.types[0].color
-            ? `${pokemon.types[0].color}db`
-            : "rgba(255, 215, 0, 0.8)", // Añadimos 80 (opacidad) al color o usamos un color predeterminado con transparencia
+          "--card-color": pokemon.types[0]?.color
+            ? `${pokemon.types[0].color}e0`
+            : "rgba(255, 215, 0, 0.8)",
         }}
       >
         <div id="divImg">
-          <img src={pokemon.image} alt={pokemon.name} />
-        </div>
-        <h3>
-          #{pokemon.id} - {pokemon.name}
-        </h3>
-        <div id="cardBody">
-          <div className="types">
-            {pokemon.types.map((type, index) => (
-              <span key={index} className="type">
-                {type.name}
-              </span>
-            ))}
-          </div>
-          <div className="stats">
-            <span>HP: {pokemon.stats.hp}</span>
-            <span>Attack: {pokemon.stats.attack}</span>
-            <span>Defense: {pokemon.stats.defense}</span>
-            <span>Speed: {pokemon.stats.speed}</span>
-            <span>Special Attack: {pokemon.stats.specialAttack}</span>
-            <span>Special Defense: {pokemon.stats.specialDefense}</span>
-          </div>
-        </div>
-      </div>
-
-      {/* Cara trasera */}
-      <div
-        className="pokemon-card back"
-        style={{
-          "--card-color": pokemon.types[0].color
-            ? `${pokemon.types[0].color}db`
-            : "rgba(255, 215, 0, 0.8)", // Añadimos 80 (opacidad) al color o usamos un color predeterminado con transparencia
-        }}
-      >
-        <div id="divImg">
-          {/* Imagen shiny o normal */}
-          <img
-            src={pokemon.shinyImage || pokemon.image}
-            alt={`Shiny de ${pokemon.name}`}
-          />
+          {/* Mostrar la imagen del Pokémon o el fallback */}
+          {pokemon.image ? (
+            <img src={pokemon.image} alt={pokemon.name} />
+          ) : (
+            <PokemonFallbackImage color={pokemon.types[0]?.color || "#777"} />
+          )}
         </div>
         <h3>
           #{pokemon.id} - {pokemon.name}
@@ -82,35 +50,66 @@ export function PokemonCard({ pokemon }) {
               </span>
             ))}
           </div>
-          {/* Información adicional en la parte trasera */}
+          <div className="stats">
+            <span>HP: {pokemon.stats.hp}</span>
+            <span>Attack: {pokemon.stats.attack}</span>
+            <span>Defense: {pokemon.stats.defense}</span>
+            <span>Speed: {pokemon.stats.speed}</span>
+            <span>Special Attack: {pokemon.stats.specialAttack}</span>
+            <span>Special Defense: {pokemon.stats.specialDefense}</span>
+          </div>
+        </div>
+      </div>
+
+      {/* Back face */}
+      <div
+        className="pokemon-card back"
+        style={{
+          "--card-color": pokemon.types[0]?.color
+            ? `${pokemon.types[0].color}e0`
+            : "rgba(255, 215, 0, 0.8)",
+        }}
+      >
+        <div id="divImg">
+          {/* Mostrar la imagen shiny o el fallback */}
+          {pokemon.shinyImage ? (
+            <img src={pokemon.shinyImage} alt={`Shiny of ${pokemon.name}`} />
+          ) : (
+            <PokemonFallbackImage color={pokemon.types[0]?.color || "#777"} />
+          )}
+        </div>
+        <h3>
+          #{pokemon.id} - {pokemon.name}
+        </h3>
+        <div id="cardBody">
+          <div className="types">
+            {pokemon.types.map((type, index) => (
+              <span
+                key={index}
+                className="type"
+                style={{ backgroundColor: type.color }}
+              >
+                {type.name}
+              </span>
+            ))}
+          </div>
+          {/* Información adicional */}
           <div className="additional-info">
             <p>
-              <strong>Generación:</strong>
-              {/* Imagen de la generación */}
+              <strong>Generation:</strong>
               <img
                 src={generationImage}
-                alt={`Generación ${pokemon.generation}`}
+                alt={`Generation ${pokemon.generation}`}
               />
             </p>
             <p>
-              <strong>Peso:</strong> {pokemon.weight} kg
+              <strong>Weight:</strong> {pokemon.weight} kg
             </p>
             <p>
-              <strong>Altura:</strong> {pokemon.height} m
+              <strong>Height:</strong> {pokemon.height} m
             </p>
-            {/* Habilidades */}
-            <p>
-              <strong>Habilidades:</strong>{" "}
-              {pokemon.abilities.normal.length > 0
-                ? pokemon.abilities.normal.join(", ")
-                : "Ninguna"}
-            </p>
-            <p>
-              <strong>Habilidades Ocultas:</strong>{" "}
-              {pokemon.abilities.hidden.length > 0
-                ? pokemon.abilities.hidden.join(", ")
-                : "Ninguna"}
-            </p>
+            <p>Abilities: {pokemon.abilities.normal.join(", ")}</p>
+            <p>Hidden Abilities: {pokemon.abilities.hidden.join(", ")}</p>
           </div>
         </div>
       </div>
@@ -122,7 +121,7 @@ PokemonCard.propTypes = {
   pokemon: PropTypes.shape({
     id: PropTypes.number.isRequired,
     name: PropTypes.string.isRequired,
-    image: PropTypes.string.isRequired,
+    image: PropTypes.string,
     shinyImage: PropTypes.string,
     generation: PropTypes.string.isRequired,
     weight: PropTypes.number.isRequired,
