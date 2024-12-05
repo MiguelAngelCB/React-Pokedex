@@ -5,7 +5,7 @@ export function HomePage() {
   return (
     <div id="page">
       <div id="title">
-        <img src="../../public/Logo.svg" alt="" />
+      <img src="img/Logo.svg"/>
       </div>
       <div id="listContainer">
         <PokemonList></PokemonList>

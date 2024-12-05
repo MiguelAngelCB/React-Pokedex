@@ -101,7 +101,7 @@ export function PokemonList() {
         handleShowAllGenerations={handleShowAllGenerations} // Pasamos la función para deseleccionar todas las generaciones
       />
       <button onClick={handleFlipAllCards} className="flip-all-btn">
-       <img src="../../public/Flip.svg" alt="" />
+      <img src="img/Flip.svg"/>
       </button>
       <div id="pokemonList">
         {visiblePokemons.map((pokemon) => (

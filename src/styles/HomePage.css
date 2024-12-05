@@ -6,7 +6,7 @@ body {
 
 /* Fondo de pantalla */
 body {
-  background-image: url(../../public/Fondo.png);
+  background-image: url(../../public/img/Fondo.png);
   background-size: cover; /* Hace que la imagen ocupe toda la pantalla */
   background-repeat: no-repeat; /* Evita que la imagen se repita */
   background-position: center center; /* Centra la imagen */
