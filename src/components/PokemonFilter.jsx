@@ -4,7 +4,8 @@ export function PokemonFilter({ filteredTypes, handleFilter }) {
   const types = [
     "All", "Fire", "Water", "Grass", "Electric", "Normal", 
     "Poison", "Psychic", "Fighting", "Bug", "Ghost", 
-    "Dragon", "Dark", "Steel", "Fairy"
+    "Dragon", "Dark", "Steel", "Fairy", "Flying",
+    "Rock", "Ice", "Ground", 
   ];
 
   return (
