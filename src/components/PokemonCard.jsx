@@ -5,7 +5,7 @@ import "../styles/PokemonCard.css";
 import PokemonFallbackImage from "./PokemonFallbackImage"; // Ruta corregida
 
 export function PokemonCard({ pokemon }) {
-  const [isFlipped, setIsFlipped] = useState(false);
+  const [isFlipped, setIsFlipped] = useState(true);
 
   const handleCardClick = () => {
     setIsFlipped(!isFlipped);
