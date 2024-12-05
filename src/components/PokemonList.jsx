@@ -4,11 +4,11 @@ import { PokemonCard } from "./PokemonCard";
 import { PokemonTypeFilter } from "./PokemonTypeFilter";
 import { PokemonSearch } from "./PokemonSearch";
 import { PokemonGenerationFilter } from "./PokemonGenerationFilter";
-import { fetchAllPokemons } from "../services/api";
+import { fetchAllPokemons, fetchPokemonsFromFile } from "../services/api";
 import "../styles/PokemonList.css";
 
 export function PokemonList() {
-  const { data: pokemonList, loading, error } = useFetch(fetchAllPokemons);
+  const { data: pokemonList, loading, error } = useFetch(fetchPokemonsFromFile);
   const [filteredTypes, setFilteredTypes] = useState([]); // Estado para manejar los tipos seleccionados
   const [selectedGenerations, setSelectedGenerations] = useState([]); // Estado para manejar las generaciones seleccionadas
   const [searchTerm, setSearchTerm] = useState(""); // Estado para manejar el término de búsqueda

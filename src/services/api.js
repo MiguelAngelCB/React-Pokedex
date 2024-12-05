@@ -2,6 +2,8 @@ import axios from "axios";
 import pLimit from "p-limit"; // Importamos p-limit para controlar la concurrencia
 import { TypeColors } from "../enum/TypeColors";
 import { getPokemonGeneration } from "./fetchPokemonGeneration";
+import pokemons from "../json/pokemons.json";
+
 
 const BASE_URL = "https://pokeapi.co/api/v2";
 const concurrencyLimit = pLimit(10); // Limitar a 10 solicitudes simultáneas
@@ -67,4 +69,7 @@ export const fetchAllPokemons = async () => {
     console.error("Error fetching Pokémon:", error);
     return [];
   }
+};
+export const fetchPokemonsFromFile = () => {
+  return pokemons;
 };
