@@ -1,3 +1,12 @@
+/* Ajustamos el área donde está la lista de Pokémon para que no quede cubierta por el título fijo */
+#pokemonList {
+  height: auto; /* Permite que la lista de Pokémon ocupe el resto del espacio disponible */
+  width: 100%;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-evenly;
+  gap: 50px;
+}
 /* Estilos de la animación de carga (puntos grandes y fijos) */
 .loading-container {
   display: flex;
