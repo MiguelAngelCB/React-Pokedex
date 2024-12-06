@@ -68,7 +68,7 @@ export function PokemonList() {
       selectedGenerations.length === 0 ||
       selectedGenerations.includes(pokemon.generation);
 
-    const matchesSearch = pokemon.name.toLowerCase().includes(searchTerm);
+    const matchesSearch = (pokemon.id+" "+pokemon.name.toLowerCase()).includes(searchTerm);
 
     return matchesType && matchesGeneration && matchesSearch;
   });

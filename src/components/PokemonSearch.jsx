@@ -16,7 +16,7 @@ export function PokemonSearch({ handleSearch }) {
         type="text"
         value={searchTerm}
         onChange={handleInputChange}
-        placeholder="Buscar Pokémon por nombre"
+        placeholder="Buscar Pokémon por nombre o numero de pokedex"
         className="search-input"
       />
     </div>
