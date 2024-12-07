@@ -43,8 +43,8 @@
 /* Ajustes para pantallas más pequeñas */
 @media (max-width: 768px) {
   .pagination button {
-    width: 40px; /* Reducir el ancho */
-    height: 40px; /* Reducir el alto */
+    width: 35px;
+    height: 35px;
     font-size: large; /* Reducir el tamaño del texto */
   }
 
