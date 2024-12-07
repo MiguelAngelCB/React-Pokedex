@@ -2,8 +2,8 @@
   display: flex;
   justify-content: center;
   align-items: center;
-  gap: 5px; /* Espaciado más pequeño entre los botones */
-  margin: 40px 0px 20px;
+  gap: 5px; /* Espaciado entre los botones */
+  margin: 20px 0px;
 }
 
 .pagination button {
@@ -34,7 +34,22 @@
   background-color: #d3d3d3;
   cursor: not-allowed;
 }
+
 .pagination button.active {
   background-color: #cd2121;
   font-weight: bold;
+}
+
+/* Ajustes para pantallas más pequeñas */
+@media (max-width: 768px) {
+  .pagination button {
+    width: 40px; /* Reducir el ancho */
+    height: 40px; /* Reducir el alto */
+    font-size: large; /* Reducir el tamaño del texto */
+  }
+
+  .pagination button img {
+    width: 12px; /* Reducir tamaño de las flechas */
+    height: 12px;
+  }
 }
