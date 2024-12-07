@@ -3,7 +3,7 @@
   justify-content: center;
   align-items: center;
   gap: 5px; /* Espaciado entre los botones */
-  margin: 20px 0px;
+  padding: 20px 0px;
 }
 
 .pagination button {
