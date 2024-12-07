@@ -1,0 +1,40 @@
+.pagination {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 5px; /* Espaciado más pequeño entre los botones */
+  margin: 40px 0px 20px;
+}
+
+.pagination button {
+  width: 60px;
+  height: 60px;
+  font-size: xx-large;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  color: white;
+  border: none;
+  border-radius: 50%; /* Forma redonda */
+  background-color: #2c71b8;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+.pagination button img {
+  width: 16px; /* Tamaño de las flechas */
+  height: 16px;
+}
+
+.pagination button:hover {
+  background-color: #1f4f86;
+}
+
+.pagination button:disabled {
+  background-color: #d3d3d3;
+  cursor: not-allowed;
+}
+.pagination button.active {
+  background-color: #cd2121;
+  font-weight: bold;
+}

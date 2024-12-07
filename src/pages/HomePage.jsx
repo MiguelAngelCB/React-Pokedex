@@ -1,3 +1,4 @@
+import { useState } from "react";
 import { usePokemonContext } from "../context/PokemonContext";
 import { PokemonList } from "../components/PokemonList";
 import { PokemonSearch } from "../components/PokemonSearch";
@@ -6,28 +7,42 @@ import { PokemonGenerationFilter } from "../components/PokemonGenerationFilter";
 import "../styles/HomePage.css";
 
 export function HomePage() {
-  const { loading } = usePokemonContext(); // Obtiene el estado `loading` desde el contexto global
+  const { loading } = usePokemonContext(); // Obtiene el estado loading desde el contexto global
+  const [filtersVisible, setFiltersVisible] = useState(false); // Estado para controlar la visibilidad de los filtros
+
+  const toggleFilters = () => {
+    setFiltersVisible(!filtersVisible); // Alterna la visibilidad de los filtros
+  };
 
   return (
     <div id="page">
-      {/* Header con el logo y los filtros */}
+      {/* Header con el logo */}
       <div id="header">
         <div id="title">
-          <img src="img/Logo.svg" alt="Logo" /> {/* Título de la app */}
+          <img src="img/Logo.svg" alt="Logo" />
         </div>
-        
       </div>
-      {/* Contenedor de la lista de Pokémon */}
-      <div id="listContainer">
-      {!loading && ( /* Muestra los filtros solo cuando los datos han cargado */
-          <div id="filters">
-            <PokemonSearch /> {/* Componente de búsqueda */}
-            <PokemonTypeFilter /> {/* Filtro por tipo */}
-            <PokemonGenerationFilter /> {/* Filtro por generación */}
-          </div>
-        )}
-        <PokemonList /> {/* Lista de Pokémon */}
-      </div>
+
+      {/* Botón de desplegable */}
+      <button
+        id="filters-toggle"
+        onClick={toggleFilters}
+        aria-expanded={filtersVisible}
+      >
+        <span>{filtersVisible ? "▲" : "▼"}</span> Filters
+      </button>
+
+      {/* Filtros (se muestra solo cuando filtersVisible es true) */}
+      {filtersVisible && !loading && (
+        <div id="filters">
+          <PokemonSearch />
+          <PokemonTypeFilter />
+          <PokemonGenerationFilter />
+        </div>
+      )}
+
+      {/* Lista de Pokémon */}
+      <PokemonList />
     </div>
   );
 }

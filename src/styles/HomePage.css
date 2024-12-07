@@ -1,9 +1,10 @@
 /* Asegurando que el body ocupe toda la pantalla */
-
 html,
 body {
   margin: 0; /* Eliminamos márgenes por defecto */
+  height: 100%; /* Asegura que ocupe toda la pantalla */
 }
+
 /* Fondo de pantalla */
 body {
   background-image: url(../../public/img/Fondo.png);
@@ -12,6 +13,7 @@ body {
   background-position: center center; /* Centra la imagen */
   background-attachment: fixed; /* Hace que la imagen de fondo no se mueva al hacer scroll */
 }
+
 /* Estilo para el contenedor del título y la lista de Pokémon */
 #title,
 #pokemonList {
@@ -20,27 +22,67 @@ body {
   padding: 1rem 0;
 }
 
-/* Hacemos que el título se quede fijo en la parte superior */
+/* El header no es sticky ahora */
+#header {
+  padding: 1rem;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
 #title {
-  margin: 5vh 0 0;
-  position: relative; /* Fija el título en la parte superior */
-  top: 0; /* Alinea el título en la parte superior */
-  left: 0; /* Alinea el título a la izquierda */
-  width: 100%; /* Asegura que ocupe todo el ancho */ /* Fondo semitransparente para que se vea bien sobre el fondo */
+  margin: 0;
+  flex: 1;
+  display: flex;
+  justify-content: center;
+  align-items: center;
 }
 
 #title > img {
-  overflow: hidden;
   height: 8em;
-  width: 100%;
+  width: auto;
 }
 
-#listContainer {
-  height: auto;
-  width: 100%;
+/* Estilo del botón para desplegar los filtros */
+#filters-toggle {
+  position: fixed; /* Hace que el botón sea fijo en su posición */
+  top: 10px; /* Establece un margen desde la parte superior de la pantalla */
+  left: 10px; /* Establece un margen desde la parte superior de la pantalla */
+  margin: 0;
+  padding: 0.5rem 1rem;
+  font-size: 1rem;
+  background-color: #007bff;
+  color: white;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  transition: background-color 0.3s;
+  z-index: 2; /* Asegura que el botón esté siempre visible encima de otros elementos */
+}
+
+#filters-toggle:hover {
+  background-color: #0056b3;
+}
+
+/* Filtros */
+#filters {
   display: flex;
-  flex-wrap: wrap;
-  justify-content: center;
   flex-direction: column;
-  align-items: center;
+  position: sticky; /* Hace que los filtros sean sticky */
+  top: 0; /* Filtros pegados a la parte superior cuando haces scroll */
+  z-index: 1; /* Asegura que los filtros estén por encima del contenido */
+  overflow-y: auto; /* Permite scroll dentro de los filtros */
+}
+#filters,
+#header {
+  background-color: rgba(255, 255, 255, 0.7); /* Fondo semitransparente */
+}
+
+/* Hacer scroll en el header cuando el ancho es pequeño */
+@media (max-width: 768px) {
+  #filters {
+    max-height: 80vh; /* Limita la altura de los filtros */
+    overflow-y: auto; /* Permite scroll dentro de los filtros */
+  }
 }
