@@ -1,9 +1,9 @@
 /* Asegurando que el body ocupe toda la pantalla */
+
 html,
 body {
   margin: 0; /* Eliminamos márgenes por defecto */
 }
-
 /* Fondo de pantalla */
 body {
   background-image: url(../../public/img/Fondo.png);
@@ -12,7 +12,6 @@ body {
   background-position: center center; /* Centra la imagen */
   background-attachment: fixed; /* Hace que la imagen de fondo no se mueva al hacer scroll */
 }
-
 /* Estilo para el contenedor del título y la lista de Pokémon */
 #title,
 #pokemonList {
@@ -23,6 +22,7 @@ body {
 
 /* Hacemos que el título se quede fijo en la parte superior */
 #title {
+  margin: 5vh 0 0;
   position: relative; /* Fija el título en la parte superior */
   top: 0; /* Alinea el título en la parte superior */
   left: 0; /* Alinea el título a la izquierda */

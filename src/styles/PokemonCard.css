@@ -1,6 +1,6 @@
 /* Contenedor de la carta */
 .pokemon-card-container {
-  width: 325px; /* Ajuste el ancho a 300px */
+  min-width: 325px; /* Ajuste el ancho a 300px */
   height: 540px; /* Altura ajustada */
   perspective: 1000px;
   cursor: pointer;
@@ -59,7 +59,6 @@
   border-radius: 10px;
   width: 100%;
   box-sizing: border-box;
-  height: 40%;
   display: flex;
   flex-direction: column;
   justify-content: center;

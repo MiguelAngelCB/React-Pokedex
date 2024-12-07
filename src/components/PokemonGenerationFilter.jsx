@@ -1,28 +1,39 @@
-import { PokemonGenerations } from "../enum/PokemonGenerations";
+import { usePokemonContext } from "../context/PokemonContext"; // Importamos el custom hook
 import "../styles/PokemonGenerationFilter.css";
-import PropTypes from "prop-types"; // Importamos PropTypes
+import { PokemonGenerations } from "../enum/PokemonGenerations"; // Importamos las generaciones
 
-export function PokemonGenerationFilter({
-  selectedGenerations,
-  handleGenerationChange,
-  handleShowAllGenerations,
-}) {
-  const generations = PokemonGenerations;
+export function PokemonGenerationFilter() {
+  const { selectedGenerations, setSelectedGenerations } = usePokemonContext(); // Accedemos al contexto
+
+  // Función para manejar el filtro de generaciones
+  const handleGenerationChange = (generationId) => {
+    if (selectedGenerations.includes(generationId)) {
+      setSelectedGenerations(selectedGenerations.filter((g) => g !== generationId)); // Eliminar generación
+    } else {
+      setSelectedGenerations([...selectedGenerations, generationId]); // Agregar generación
+    }
+  };
+
+  // Función para manejar el "Show All Generations"
+  const handleShowAllGenerations = () => {
+    setSelectedGenerations([]); // Deseleccionar todas las generaciones
+  };
 
   return (
     <div className="generation-filter">
       <div className="generation-checkboxes">
-        {/* Botón "Show All" con el mismo estilo que los elementos de generación */}
-        <label
-            style={{ cursor: "pointer" }}
-          >
+        {/* Botón "Show All" */}
+        <label style={{ cursor: "pointer" }}>
           <button
-          onClick={handleShowAllGenerations}
-          className="generation-item show-all-button"
-        >All</button>
-          </label>
+            onClick={handleShowAllGenerations}
+            className="generation-item show-all-button"
+          >
+            All
+          </button>
+        </label>
+
         {/* Botones de generación (con checkboxes invisibles) */}
-        {generations.map((generation) => (
+        {PokemonGenerations.map((generation) => (
           <label
             key={generation.id}
             className={`generation-item ${
@@ -48,10 +59,3 @@ export function PokemonGenerationFilter({
     </div>
   );
 }
-
-// Validación de las props
-PokemonGenerationFilter.propTypes = {
-  selectedGenerations: PropTypes.arrayOf(PropTypes.string).isRequired, // Espera un array de strings (IDs de generaciones)
-  handleGenerationChange: PropTypes.func.isRequired, // Espera una función que maneja el cambio de generación
-  handleShowAllGenerations: PropTypes.func.isRequired, // Espera una función para mostrar todas las generaciones
-};

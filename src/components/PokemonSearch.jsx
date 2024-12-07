@@ -1,30 +1,23 @@
-import { useState } from "react";
-import "../styles/PokemonSearch.css"; // Importamos el archivo CSS
-import PropTypes from "prop-types"; // Importamos PropTypes
+import { usePokemonContext } from "../context/PokemonContext"; // Usamos el contexto centralizado
+import "../styles/PokemonSearch.css"; // Aseguramos que los estilos no se pierdan
 
-export function PokemonSearch({ handleSearch }) {
-  const [searchTerm, setSearchTerm] = useState("");
+export function PokemonSearch() {
+  const { searchTerm, setSearchTerm } = usePokemonContext(); // Accedemos al contexto
 
-  const handleInputChange = (event) => {
-    setSearchTerm(event.target.value);
-    handleSearch(event.target.value); // Pasar el término de búsqueda al componente principal
+  // Función que maneja el cambio en el campo de búsqueda
+  const handleSearchChange = (event) => {
+    setSearchTerm(event.target.value.toLowerCase()); // Actualizamos el término de búsqueda en el contexto
   };
 
   return (
     <div className="search-container">
       <input
         type="text"
+        placeholder="Search by pokemon name or number"
         value={searchTerm}
-        onChange={handleInputChange}
-        placeholder="Buscar Pokémon por nombre o numero de pokedex"
+        onChange={handleSearchChange}
         className="search-input"
       />
     </div>
   );
 }
-
-// Validación de las props
-PokemonSearch.propTypes = {
-  handleSearch: PropTypes.func.isRequired, // Aseguramos que handleSearch sea una función requerida
-};
-
