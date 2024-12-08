@@ -78,12 +78,12 @@ body {
 
 /* Padding cuando el header es visible */
 .filters-header-visible {
-  padding-bottom: 20px;
+  padding-bottom: 10px;
 }
 
 /* Padding cuando el header no es visible */
 .filters-header-hidden {
-  padding: 50px 0 20px;
+  padding-top: 50px;
 }
 
 #filters,

@@ -1,8 +1,8 @@
 import { useState, useEffect } from "react";
 import PropTypes from "prop-types";
-import "../styles/PokemonCard.css";
 import PokemonFallbackImage from "./PokemonFallbackImage"; // Ruta corregida
 import { PokemonGenerations } from "../enum/PokemonGenerations";
+import "../styles/PokemonCard.css";
 
 export function PokemonCard({ pokemon, isFlipped }) {
   // El estado isFlipped ahora es controlado por el componente padre
@@ -20,9 +20,13 @@ export function PokemonCard({ pokemon, isFlipped }) {
   const generation = PokemonGenerations.find(
     (gen) => gen.id === pokemon.generation
   );
-  const totalStats = () => pokemon.stats.hp+pokemon.stats.attack+pokemon.stats.defense+pokemon.stats.speed+pokemon.stats.specialAttack+pokemon.stats.specialDefense;
-;
-
+  const totalStats = () =>
+    pokemon.stats.hp +
+    pokemon.stats.attack +
+    pokemon.stats.defense +
+    pokemon.stats.speed +
+    pokemon.stats.specialAttack +
+    pokemon.stats.specialDefense;
   const generationImage = generation.image;
 
   return (

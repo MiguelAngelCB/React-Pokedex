@@ -74,7 +74,7 @@ export function PokemonList() {
   );
 
   return (
-    <div>
+    <>
       <button
         onClick={() => setAllFlipped(!allFlipped)}
         className="flip-all-btn"
@@ -117,6 +117,6 @@ export function PokemonList() {
           onPageChange={handlePageChange}
         />
       )}
-    </div>
+    </>
   );
 }
