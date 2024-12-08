@@ -21,8 +21,14 @@ export function PokemonList() {
 
   // Siempre que los filtros cambien, se reinicia a la primera página
   useEffect(() => {
-    setCurrentPage(1);
+    handlePageChange(1);
   }, [filteredTypes, selectedGenerations, searchTerm]);
+
+  // Función para cambiar de página
+  const handlePageChange = (page) => {
+    setCurrentPage(page);
+    window.scrollTo(0, 0); // Desplaza al inicio de la página
+  };
 
   if (loading) {
     return (
@@ -67,12 +73,6 @@ export function PokemonList() {
     currentPage * itemsPerPage
   );
 
-  // Función para cambiar de página
-  const handlePageChange = (page) => {
-    setCurrentPage(page);
-    window.scrollTo(0, 0); // Desplaza al inicio de la página
-  };
-
   return (
     <div>
       <button
@@ -81,6 +81,14 @@ export function PokemonList() {
       >
         <img src="img/Flip.svg" alt="Flip All" />
       </button>
+
+      {/* Indicador de que no se encontraron Pokémon */}
+      {filteredPokemons.length === 0 && (
+        <div className="no-pokemon-indicator">
+          <img src="img/Ash.png" alt="Ash" />
+          <p>No Pokémon found. Try again later!</p>
+        </div>
+      )}
 
       {/* Solo muestra la paginación si hay Pokémon visibles */}
       {filteredPokemons.length > 0 && (

@@ -65,16 +65,27 @@ body {
   background-color: #0056b3;
 }
 
-/* Filtros */
+/* Estilo base para los filtros */
 #filters {
   display: flex;
   flex-direction: column;
-  position: sticky; /* Hace que los filtros sean sticky */
-  top: 0; /* Filtros pegados a la parte superior cuando haces scroll */
-  z-index: 1; /* Asegura que los filtros estén por encima del contenido */
-  overflow-y: auto; /* Permite scroll dentro de los filtros */
-  padding: 10px 0px;
+  position: sticky;
+  top: 0;
+  z-index: 1;
+  overflow-y: auto;
+  transition: padding 0.3s ease; /* Transición suave para el padding */
 }
+
+/* Padding cuando el header es visible */
+.filters-header-visible {
+  padding-bottom: 20px;
+}
+
+/* Padding cuando el header no es visible */
+.filters-header-hidden {
+  padding: 50px 0 20px;
+}
+
 #filters,
 #header {
   background-color: rgba(255, 255, 255, 0.7); /* Fondo semitransparente */
