@@ -90,15 +90,6 @@ export function PokemonList() {
         </div>
       )}
 
-      {/* Solo muestra la paginación si hay Pokémon visibles */}
-      {filteredPokemons.length > 0 && (
-        <PokemonPagination
-          currentPage={currentPage}
-          totalPages={totalPages}
-          onPageChange={handlePageChange}
-        />
-      )}
-
       <div id="pokemonList">
         {visiblePokemons.map((pokemon) => (
           <PokemonCard

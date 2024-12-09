@@ -70,7 +70,9 @@ export function HomePage() {
       )}
 
       {/* Lista de Pokémon */}
-      <PokemonList />
+      <div className="loadingContainer">
+        <PokemonList />
+      </div>
     </div>
   );
 }

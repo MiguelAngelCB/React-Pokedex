@@ -6,6 +6,7 @@
   flex-wrap: wrap;
   justify-content: space-evenly;
   gap: 50px;
+  padding: 50px 0 0;
 }
 /* Estilos de la animación de carga (puntos grandes y fijos) */
 .loading-container {

@@ -16,7 +16,7 @@
   color: white;
   border: none;
   border-radius: 50%; /* Forma redonda */
-  background-color: #2c71b8;
+  background-color: #713a63;
   cursor: pointer;
   transition: background-color 0.3s ease;
 }
@@ -27,11 +27,11 @@
 }
 
 .pagination button:hover {
-  background-color: #1f4f86;
+  background-color: #542c4a;
 }
 
 .pagination button:disabled {
-  background-color: #d3d3d3;
+  background-color: #999999;
   cursor: not-allowed;
 }
 

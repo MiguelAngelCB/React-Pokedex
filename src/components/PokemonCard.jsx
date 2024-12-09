@@ -39,10 +39,13 @@ export function PokemonCard({ pokemon, isFlipped }) {
         className="pokemon-card front"
         style={{
           "--card-color": pokemon.types[0]?.color
-            ? `${pokemon.types[0].color}e0`
-            : "rgba(255, 215, 0, 0.8)",
+            ? `${pokemon.types[0].color}c4`
+            : "rgba(255, 215, 0, 0.7)",
         }}
       >
+        <h3>
+          #{pokemon.id} - {pokemon.name}
+        </h3>
         <div id="divImg">
           {/* Mostrar la imagen del Pokémon o el fallback */}
           {pokemon.image ? (
@@ -51,9 +54,7 @@ export function PokemonCard({ pokemon, isFlipped }) {
             <PokemonFallbackImage color={pokemon.types[0]?.color || "#777"} />
           )}
         </div>
-        <h3>
-          #{pokemon.id} - {pokemon.name}
-        </h3>
+
         <div id="cardBody">
           <div className="types">
             {pokemon.types.map((type, index) => (
@@ -70,9 +71,9 @@ export function PokemonCard({ pokemon, isFlipped }) {
             <span>HP: {pokemon.stats.hp}</span>
             <span>Attack: {pokemon.stats.attack}</span>
             <span>Defense: {pokemon.stats.defense}</span>
-            <span>Speed: {pokemon.stats.speed}</span>
             <span>Special Attack: {pokemon.stats.specialAttack}</span>
             <span>Special Defense: {pokemon.stats.specialDefense}</span>
+            <span>Speed: {pokemon.stats.speed}</span>
             <span>Total: {totalStats()}</span>
           </div>
         </div>
@@ -83,10 +84,13 @@ export function PokemonCard({ pokemon, isFlipped }) {
         className="pokemon-card back"
         style={{
           "--card-color": pokemon.types[0]?.color
-            ? `${pokemon.types[0].color}e0`
-            : "rgba(255, 215, 0, 0.8)",
+            ? `${pokemon.types[0].color}c4`
+            : "rgba(255, 215, 0, 0.7)",
         }}
       >
+        <h3>
+          #{pokemon.id} - {pokemon.name}
+        </h3>
         <div id="divImg">
           {/* Mostrar la imagen shiny o el fallback */}
           {pokemon.shinyImage ? (
@@ -95,9 +99,7 @@ export function PokemonCard({ pokemon, isFlipped }) {
             <PokemonFallbackImage color={pokemon.types[0]?.color || "#777"} />
           )}
         </div>
-        <h3>
-          #{pokemon.id} - {pokemon.name}
-        </h3>
+
         <div id="cardBody">
           <div className="types">
             {pokemon.types.map((type, index) => (
