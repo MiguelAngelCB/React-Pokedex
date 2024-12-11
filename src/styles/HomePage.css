@@ -10,6 +10,7 @@ body {
   background-repeat: repeat; /* Repite la imagen */
   background-size: 7rem; /* Ajusta el tamaño del área de repetición */
   background-color: #2f4659;
+  background-position-x: center;
 }
 
 /* Estilo para el contenedor del título y la lista de Pokémon */
@@ -42,25 +43,8 @@ body {
   width: auto;
 }
 
-/* Estilo del botón para desplegar los filtros */
-#filters-toggle {
-  position: fixed; /* Hace que el botón sea fijo en su posición */
-  top: 10px; /* Establece un margen desde la parte superior de la pantalla */
-  left: 10px; /* Establece un margen desde la parte superior de la pantalla */
-  margin: 0;
-  padding: 0.5rem 1rem;
-  font-size: 1rem;
-  background-color: #007bff;
+#header span {
   color: white;
-  border: none;
-  border-radius: 5px;
-  cursor: pointer;
-  transition: background-color 0.3s;
-  z-index: 2; /* Asegura que el botón esté siempre visible encima de otros elementos */
-}
-
-#filters-toggle:hover {
-  background-color: #0056b3;
 }
 
 /* Estilo base para los filtros */
@@ -95,4 +79,17 @@ body {
     max-height: 60vh; /* Limita la altura de los filtros */
     overflow-y: auto; /* Permite scroll dentro de los filtros */
   }
+}
+#page {
+  display: flex;
+  flex-direction: column;
+  min-height: 100vh; /* Asegura que el contenedor ocupe al menos toda la altura de la ventana */
+}
+
+.listContainer {
+  flex: 1;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  flex-direction: column;
 }

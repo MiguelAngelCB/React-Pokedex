@@ -1,8 +1,12 @@
 import { useState, useEffect } from "react";
 import { usePokemonContext } from "../context/PokemonContext";
 import { PokemonCard } from "./PokemonCard";
-import "../styles/PokemonList.css";
 import { PokemonPagination } from "./PokemonPagination";
+import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
+import { faSyncAlt } from "@fortawesome/free-solid-svg-icons";
+import { CustomButton } from "./CustomButton";
+import "../styles/PokemonList.css";
+import { LoadingDots } from "./LoadingDots";
 
 export function PokemonList() {
   const {
@@ -29,16 +33,6 @@ export function PokemonList() {
     setCurrentPage(page);
     window.scrollTo(0, 0); // Desplaza al inicio de la página
   };
-
-  if (loading) {
-    return (
-      <div className="loading-container">
-        <div className="dot"></div>
-        <div className="dot"></div>
-        <div className="dot"></div>
-      </div>
-    );
-  }
 
   if (error) {
     return <p>Error: {error.message}</p>;
@@ -75,14 +69,9 @@ export function PokemonList() {
 
   return (
     <>
-      <button
-        onClick={() => setAllFlipped(!allFlipped)}
-        className="flip-all-btn"
-      >
-        <img src="img/Flip.svg" alt="Flip All" />
-      </button>
-
       {/* Indicador de que no se encontraron Pokémon */}
+      {loading && <LoadingDots></LoadingDots>}
+
       {filteredPokemons.length === 0 && (
         <div className="no-pokemon-indicator">
           <img src="img/Ash.png" alt="Ash" />
@@ -90,23 +79,30 @@ export function PokemonList() {
         </div>
       )}
 
-      <div id="pokemonList">
-        {visiblePokemons.map((pokemon) => (
-          <PokemonCard
-            key={pokemon.id}
-            pokemon={pokemon}
-            isFlipped={allFlipped}
-          />
-        ))}
-      </div>
-
       {/* Solo muestra la paginación si hay Pokémon visibles */}
       {filteredPokemons.length > 0 && (
-        <PokemonPagination
-          currentPage={currentPage}
-          totalPages={totalPages}
-          onPageChange={handlePageChange}
-        />
+        <>
+          <CustomButton
+            onClick={() => setAllFlipped(!allFlipped)}
+            className={"align-right background-grey"}
+          >
+            <FontAwesomeIcon icon={faSyncAlt} size="2x" color="white" />
+          </CustomButton>
+          <div id="pokemonList">
+            {visiblePokemons.map((pokemon) => (
+              <PokemonCard
+                key={pokemon.id}
+                pokemon={pokemon}
+                isFlipped={allFlipped}
+              />
+            ))}
+          </div>
+          <PokemonPagination
+            currentPage={currentPage}
+            totalPages={totalPages}
+            onPageChange={handlePageChange}
+          />
+        </>
       )}
     </>
   );

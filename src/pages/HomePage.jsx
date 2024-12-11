@@ -5,6 +5,9 @@ import { PokemonSearch } from "../components/PokemonSearch";
 import { PokemonTypeFilter } from "../components/PokemonTypeFilter";
 import { PokemonGenerationFilter } from "../components/PokemonGenerationFilter";
 import "../styles/HomePage.css";
+import { CustomButton } from "../components/CustomButton";
+import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
+import { faFilter } from "@fortawesome/free-solid-svg-icons";
 
 export function HomePage() {
   const { loading } = usePokemonContext(); // Obtiene el estado loading desde el contexto global
@@ -44,16 +47,15 @@ export function HomePage() {
         <div id="title">
           <img src="img/Logo.svg" alt="Logo" />
         </div>
+        <CustomButton
+          onClick={toggleFilters}
+          ariaExpanded={filtersVisible} // Pasando el estado a aria-expanded
+          className="align-left background-blue"
+        >
+          <FontAwesomeIcon icon={faFilter} size="2x" color="white" />
+          <span>{filtersVisible ? "▲" : "▼"}</span>
+        </CustomButton>
       </div>
-
-      {/* Botón de desplegable */}
-      <button
-        id="filters-toggle"
-        onClick={toggleFilters}
-        aria-expanded={filtersVisible}
-      >
-        <span>{filtersVisible ? "▲" : "▼"}</span> Filters
-      </button>
 
       {/* Filtros (se muestra solo cuando filtersVisible es true) */}
       {filtersVisible && !loading && (
@@ -70,7 +72,7 @@ export function HomePage() {
       )}
 
       {/* Lista de Pokémon */}
-      <div className="loadingContainer">
+      <div className="listContainer">
         <PokemonList />
       </div>
     </div>

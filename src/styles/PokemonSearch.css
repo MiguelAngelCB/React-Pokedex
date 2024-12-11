@@ -9,6 +9,10 @@
   width: 100%;
 }
 
+.input-container {
+  position: relative; /* Esto asegura que el botón se posicione dentro del contenedor */
+}
+
 .search-input {
   width: 60vw;
   height: 7vh;
@@ -16,6 +20,7 @@
   border: 2px solid #ccc;
   border-radius: 5px;
   outline: none;
+  padding: 0 10px 0 10px; /* Agregamos padding para el texto y para el botón */
   transition: border-color 0.3s ease-in-out;
 }
 
@@ -26,4 +31,18 @@
 .search-input::placeholder {
   color: #aaa;
   font-style: italic;
+}
+
+.clear-button {
+  background: none;
+  border: none;
+  font-size: 18px;
+  color: #007bff;
+  cursor: pointer;
+  position: absolute; /* Alineamos el botón dentro del input */
+  right: 10px; /* Se coloca en el lado derecho */
+  top: 50%; /* Centrado verticalmente */
+  transform: translateY(
+    -50%
+  ); /* Para que se ajuste correctamente en el medio */
 }

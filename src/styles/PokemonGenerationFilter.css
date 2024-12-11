@@ -35,12 +35,12 @@
 
 /* Estilo cuando un item está seleccionado */
 .generation-item.selected > img {
-  border: 4px solid yellow; /* Borde amarillo cuando está seleccionada */
+  border: 5px solid #90d6ff; /* Borde amarillo cuando está seleccionada */
   border-radius: 18px;
-  
 }
 
-.generation-item > img,.show-all-button {
+.generation-item > img,
+.show-all-button {
   border: 2px solid white;
   border-radius: 15px;
 }
@@ -60,7 +60,8 @@
   font-size: 23px;
 }
 
-.generation-image, .show-all-button{
+.generation-image,
+.show-all-button {
   height: 40px;
 }
 

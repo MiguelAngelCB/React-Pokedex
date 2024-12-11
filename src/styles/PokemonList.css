@@ -8,84 +8,21 @@
   gap: 50px;
   padding: 50px 0 0;
 }
-/* Estilos de la animación de carga (puntos grandes y fijos) */
-.loading-container {
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  height: 100vh; /* Ocupa toda la altura de la pantalla */
-  position: absolute; /* Asegura que la animación esté centrada incluso si hay más contenido en la página */
-  left: 0;
-  right: 0;
-  top: 0;
-  bottom: 0;
-}
-
-/* Para los puntos (.dot) */
-.dot {
-  width: 3rem; /* Tamaño fijo más grande */
-  height: 3rem; /* Tamaño fijo más grande */
-  margin: 0 30px; /* Espaciado entre puntos */
-  background-color: #ffcc00; /* Amarillo */
-  border: 10px solid #2c71b8; /* Azul Pokémon */
-  border-radius: 50%;
-  box-shadow: 0 0 0 rgb(33 56 110), -5px 3px 0 rgb(33 56 110); /* Sombra desplazada sin difuminado */
-  animation: bounce 0.8s infinite ease-in-out;
-}
-
-.dot:nth-child(1) {
-  animation-delay: 0s;
-}
-
-.dot:nth-child(2) {
-  animation-delay: 0.2s;
-}
-
-.dot:nth-child(3) {
-  animation-delay: 0.4s;
-}
-
-/* Animación para el salto de los puntos */
-@keyframes bounce {
-  0%,
-  100% {
-    transform: translateY(0); /* Puntos en su posición original */
-  }
-  50% {
-    transform: translateY(-50px); /* Salto hacia arriba */
-  }
-}
-
-.flip-all-btn {
-  transition: transform 0.3s ease; /* Transición suave para el efecto de presión */
-  position: fixed;
-  top: 10px;
-  right: 10px;
-  z-index: 2;
-  padding: 10px 20px;
-  background-color: #575757;
-  display: flex;
-  border: 2px solid white;
-  border-radius: 15px;
-  padding: 5px 15px;
-}
-/* Efecto relieve al presionar el botón (sin animación hover) */
-.flip-all-btn:hover {
-  transform: scale(1.1); /* Escalado del elemento al pasar el mouse */
-}
-.flip-all-btn > img {
-  height: 30px;
-  width: 30px;
-}
 .no-pokemon-indicator {
   text-align: center;
   font-size: 1.5rem;
-  color: #555; /* Color gris para un mensaje sutil */
-  background-color: rgba(255, 255, 255, 0.7); /* Fondo semitransparente */
-  padding: 15px;
-  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
-  font-family: "Poppins", sans-serif; /* Usamos la fuente Poppins */
-  font-weight: 600; /* Peso más fuerte para hacer el texto más destacado */
+  color: white;
+  font-family: "Poppins", sans-serif;
+  font-weight: 600;
+  width: 100%;
+  flex: 1;
+  background: linear-gradient(to top, #490ca7cf, #efff0000);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: space-around;
+  align-content: center;
+  flex-wrap: nowrap;
 }
 .no-pokemon-indicator img {
   width: auto;

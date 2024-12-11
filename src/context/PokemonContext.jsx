@@ -28,9 +28,7 @@ export function PokemonProvider({ children }) {
   };
 
   return (
-    <PokemonContext.Provider value={value}>
-      {children}
-    </PokemonContext.Provider>
+    <PokemonContext.Provider value={value}>{children}</PokemonContext.Provider>
   );
 }
 

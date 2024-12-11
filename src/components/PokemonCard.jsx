@@ -39,7 +39,7 @@ export function PokemonCard({ pokemon, isFlipped }) {
         className="pokemon-card front"
         style={{
           "--card-color": pokemon.types[0]?.color
-            ? `${pokemon.types[0].color}c4`
+            ? `${pokemon.types[0].color}eb`
             : "rgba(255, 215, 0, 0.7)",
         }}
       >
@@ -84,7 +84,7 @@ export function PokemonCard({ pokemon, isFlipped }) {
         className="pokemon-card back"
         style={{
           "--card-color": pokemon.types[0]?.color
-            ? `${pokemon.types[0].color}c4`
+            ? `${pokemon.types[0].color}eb`
             : "rgba(255, 215, 0, 0.7)",
         }}
       >

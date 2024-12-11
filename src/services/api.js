@@ -4,13 +4,12 @@ import { TypeColors } from "../enum/TypeColors";
 import { getPokemonGeneration } from "./fetchPokemonGeneration";
 import pokemons from "../json/pokemons.json";
 
-
 const BASE_URL = "https://pokeapi.co/api/v2";
 const concurrencyLimit = pLimit(10); // Limitar a 10 solicitudes simultáneas
 
 const formatName = (name) => {
   const words = name.split("-");
-  return words.slice(0, 2).join(" ");
+  return words.join(" ");
 };
 
 export const fetchAllPokemons = async () => {

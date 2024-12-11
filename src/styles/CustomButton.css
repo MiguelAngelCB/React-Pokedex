@@ -1,0 +1,31 @@
+.custombtn {
+  position: fixed;
+  z-index: 2;
+  padding: 10px 20px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border: 2px solid white;
+  border-radius: 15px;
+  padding: 5px 15px;
+  cursor: pointer;
+  transition: transform 0.3s ease;
+  top: 10px;
+}
+
+.custombtn:hover {
+  transform: scale(1.1);
+}
+
+.align-right {
+  right: 10px;
+}
+.align-left {
+  left: 10px;
+}
+.background-blue {
+  background-color: rgb(0, 153, 255);
+}
+.background-grey {
+  background-color: #575757;
+}

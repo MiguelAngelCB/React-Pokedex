@@ -9,15 +9,28 @@ export function PokemonSearch() {
     setSearchTerm(event.target.value.toLowerCase()); // Actualizamos el término de búsqueda en el contexto
   };
 
+  // Función para limpiar el campo de búsqueda
+  const clearSearch = () => {
+    setSearchTerm(""); // Limpiamos el término de búsqueda
+  };
+
   return (
     <div className="search-container">
-      <input
-        type="text"
-        placeholder="Search by pokemon name or number"
-        value={searchTerm}
-        onChange={handleSearchChange}
-        className="search-input"
-      />
+      <div className="input-container">
+        <input
+          type="text" // Cambiado a tipo texto para tener más control
+          placeholder="Search by pokemon name or number"
+          value={searchTerm}
+          onChange={handleSearchChange}
+          className="search-input"
+        />
+        {/* Botón de limpiar */}
+        {searchTerm && (
+          <button onClick={clearSearch} className="clear-button">
+            ✖
+          </button>
+        )}
+      </div>
     </div>
   );
 }

@@ -1,9 +1,11 @@
 .pagination {
+  background: linear-gradient(to top, #490ca7cf, #efff0000);
   display: flex;
   justify-content: center;
   align-items: center;
   gap: 5px; /* Espaciado entre los botones */
   padding: 20px 0px;
+  width: 100%;
 }
 
 .pagination button {
