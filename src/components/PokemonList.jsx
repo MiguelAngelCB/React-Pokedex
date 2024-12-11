@@ -6,12 +6,11 @@ import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faSyncAlt } from "@fortawesome/free-solid-svg-icons";
 import { CustomButton } from "./CustomButton";
 import "../styles/PokemonList.css";
-import { LoadingDots } from "./LoadingDots";
+import ErrorIndicator from "./ErrorIndicator";
 
 export function PokemonList() {
   const {
     pokemonList,
-    loading,
     error,
     filteredTypes,
     selectedGenerations,
@@ -33,10 +32,6 @@ export function PokemonList() {
     setCurrentPage(page);
     window.scrollTo(0, 0); // Desplaza al inicio de la página
   };
-
-  if (error) {
-    return <p>Error: {error.message}</p>;
-  }
 
   // Filtramos los Pokémon
   const filteredPokemons = (pokemonList || []).filter((pokemon) => {
@@ -69,17 +64,19 @@ export function PokemonList() {
 
   return (
     <>
-      {/* Indicador de que no se encontraron Pokémon */}
-      {loading && <LoadingDots></LoadingDots>}
-
+      {error && (
+        <ErrorIndicator>
+          <img src="img/Error.png" alt="Error" />
+          <p>Something went wrong. Vamo a calmarno!</p>
+        </ErrorIndicator>
+      )}
       {filteredPokemons.length === 0 && (
-        <div className="no-pokemon-indicator">
+        <ErrorIndicator>
           <img src="img/Ash.png" alt="Ash" />
           <p>No Pokémon found. Try again later!</p>
-        </div>
+        </ErrorIndicator>
       )}
 
-      {/* Solo muestra la paginación si hay Pokémon visibles */}
       {filteredPokemons.length > 0 && (
         <>
           <CustomButton

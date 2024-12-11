@@ -4,13 +4,14 @@ import { PokemonList } from "../components/PokemonList";
 import { PokemonSearch } from "../components/PokemonSearch";
 import { PokemonTypeFilter } from "../components/PokemonTypeFilter";
 import { PokemonGenerationFilter } from "../components/PokemonGenerationFilter";
-import "../styles/HomePage.css";
 import { CustomButton } from "../components/CustomButton";
+import { LoadingDots } from "../components/LoadingDots";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faFilter } from "@fortawesome/free-solid-svg-icons";
+import "../styles/HomePage.css";
 
 export function HomePage() {
-  const { loading } = usePokemonContext(); // Obtiene el estado loading desde el contexto global
+  const { loading, error } = usePokemonContext(); // Obtiene el estado loading desde el contexto global
   const [filtersVisible, setFiltersVisible] = useState(false); // Estado para controlar la visibilidad de los filtros
   const [headerVisible, setHeaderVisible] = useState(true); // Estado para controlar si el header es visible
   const headerRef = useRef(null); // Referencia al header
@@ -24,6 +25,7 @@ export function HomePage() {
   useEffect(() => {
     const observer = new IntersectionObserver(
       ([entry]) => {
+        console.log(entry.isIntersecting); // Verifica si el header está visible
         setHeaderVisible(entry.isIntersecting); // Actualiza si el header está visible o no
       },
       { root: null, threshold: 0 } // Detecta cuando cualquier parte del header es visible
@@ -43,38 +45,48 @@ export function HomePage() {
   return (
     <div id="page">
       {/* Header con el logo */}
+
       <div id="header" ref={headerRef}>
         <div id="title">
           <img src="img/Logo.svg" alt="Logo" />
         </div>
-        <CustomButton
-          onClick={toggleFilters}
-          ariaExpanded={filtersVisible} // Pasando el estado a aria-expanded
-          className="align-left background-blue"
-        >
-          <FontAwesomeIcon icon={faFilter} size="2x" color="white" />
-          <span>{filtersVisible ? "▲" : "▼"}</span>
-        </CustomButton>
       </div>
+      {loading && <LoadingDots />}
 
-      {/* Filtros (se muestra solo cuando filtersVisible es true) */}
-      {filtersVisible && !loading && (
-        <div
-          id="filters"
-          className={
-            headerVisible ? "filters-header-visible" : "filters-header-hidden"
-          }
-        >
-          <PokemonSearch />
-          <PokemonTypeFilter />
-          <PokemonGenerationFilter />
-        </div>
+      {!loading && !error && (
+        <>
+          <CustomButton
+            onClick={toggleFilters}
+            ariaExpanded={filtersVisible} // Pasando el estado a aria-expanded
+            className="align-left background-blue"
+          >
+            <FontAwesomeIcon icon={faFilter} size="2x" color="white" />
+            <div className="separation-container">
+              <span className="filtersVisibleIndicator">
+                {filtersVisible ? "▲" : "▼"}
+              </span>
+            </div>
+          </CustomButton>
+          {/* Filtros siempre montados, pero visibles solo cuando filtersVisible es true */}
+          <div
+            id="filters"
+            className={
+              headerVisible ? "filters-header-visible" : "filters-header-hidden"
+            }
+            style={{ display: filtersVisible ? "block" : "none" }} // Solo se muestra si filtersVisible es true
+          >
+            <PokemonSearch />
+            <PokemonTypeFilter />
+            <PokemonGenerationFilter />
+          </div>
+
+          <div className="listContainer">
+            <PokemonList />
+          </div>
+        </>
       )}
 
-      {/* Lista de Pokémon */}
-      <div className="listContainer">
-        <PokemonList />
-      </div>
+      {/* Mostrar LoadingDots o error si es necesario */}
     </div>
   );
 }

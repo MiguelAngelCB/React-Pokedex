@@ -1,0 +1,156 @@
+/* Carta */
+.pokemon-card {
+  font-family: monospace;
+  font-weight: 900;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1), 0 1px 3px rgba(0, 0, 0, 0.08);
+  border-radius: 16px;
+  width: 100%;
+  height: 100%;
+  padding: 20px;
+  text-align: center;
+  position: absolute;
+  backface-visibility: hidden;
+  transform-origin: center; /* Hace que la carta gire alrededor de su centro */
+  transition: transform 0.8s ease-in-out, box-shadow 0.3s ease;
+  box-sizing: border-box;
+  transform-style: preserve-3d; /* Garantiza que la rotación se preserve en 3D */
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.pokemon-card:hover {
+  box-shadow: 0 0 30px var(--card-color);
+  /* El zoom de la carta se ha eliminado */
+}
+
+/* Cara delantera */
+.pokemon-card.front {
+  background-color: var(--card-color, #ffcc01); /* Color de fondo dinámico */
+}
+
+/* Cara trasera */
+.pokemon-card.back {
+  background-color: var(
+    --card-color,
+    #ffcc01
+  ); /* Fondo del mismo color que el de la parte frontal */
+  transform: rotateY(180deg);
+  padding: 20px;
+  border-radius: 16px;
+  width: 100%;
+  height: 100%;
+  box-sizing: border-box;
+}
+
+/* Ajustes de imagen y cuerpo */
+.pokemon-card > #divImg,
+#cardBody {
+  background-color: #ffe4e4;
+  padding: 0em 1em;
+  border-radius: 10px;
+  width: 100%;
+  box-sizing: border-box;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  height: 12.5rem;
+}
+
+.pokemon-card > #divImg {
+  border-radius: 200px;
+  max-width: 230px;
+  min-height: 230px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  overflow: hidden;
+}
+
+/* Ajustes de imagen */
+.pokemon-card #divImg > img,
+.pokemon-card #divImg > svg {
+  width: 150px;
+  height: 150px;
+  transition: transform 0.3s ease-in-out; /* Animación de zoom para imágenes y SVG */
+}
+
+/* Animación de zoom para imágenes y SVG */
+.pokemon-card:hover #divImg > img,
+.pokemon-card:hover #divImg > svg {
+  transform: scale(
+    1.2
+  ); /* Efecto de zoom cuando se hace hover sobre la carta */
+}
+
+/* Ajustes de texto */
+.pokemon-card h3 {
+  margin: 0px;
+  font-size: 24px;
+  color: white;
+  align-content: center;
+}
+
+.pokemon-card .type {
+  display: inline-block;
+  background-color: var(
+    --card-color,
+    #ffcc01
+  ); /* Fondo de tipo del mismo color */
+  color: #fff;
+  padding: 5px 10px;
+  margin: 5px;
+  border-radius: 12px;
+  font-size: 18px;
+  text-transform: capitalize;
+}
+
+.pokemon-card .stats {
+  text-align: left;
+  margin: 5px 0px;
+}
+
+.pokemon-card .types {
+  margin-top: 7px;
+}
+
+.pokemon-card .stats span {
+  display: block;
+  margin: 2px 0;
+}
+
+.pokemon-card .additional-info {
+  margin: 5px 0px;
+  flex: 1;
+  align-content: center;
+  justify-items: inherit;
+  display: flex;
+  align-content: center;
+  flex-direction: column;
+  justify-content: space-between;
+}
+
+.additional-info {
+  text-align: left;
+}
+
+.pokemon-card .additional-info p {
+  margin: 2px 0;
+  display: flex;
+  align-items: flex-end;
+}
+
+.pokemon-card .additional-info p,
+.pokemon-card .stats {
+  font-size: 15.5px;
+}
+
+/* Ajustes para la imagen de la generación en la sección additional-info */
+.pokemon-card .additional-info img {
+  max-width: 35px; /* Puedes aumentar o disminuir según lo que necesites */
+  max-height: 35px; /* Mantener la imagen proporcional */
+  width: auto; /* Para evitar que se estire más de lo necesario */
+  height: auto; /* Para evitar que se distorsione */
+  object-fit: contain; /* Asegura que el SVG se vea bien sin perder proporciones */
+}

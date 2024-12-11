@@ -8,7 +8,7 @@ export const useFetch = (fetchFunction, deps = []) => {
   useEffect(() => {
     const fetchData = async () => {
       setLoading(true); // Comienza la carga
-      setError(null); // Resetea el error
+      setError(false); // Resetea el error
       try {
         const result = await fetchFunction(); // Llama la función de fetch
         setData(result); // Actualiza los datos
