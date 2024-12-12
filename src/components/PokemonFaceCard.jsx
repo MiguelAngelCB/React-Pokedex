@@ -3,6 +3,7 @@ import PokemonFallbackImage from "./PokemonFallbackImage"; // Ruta corregida
 import { PokemonGenerations } from "../enum/PokemonGenerations";
 import { pokemonPropTypes } from "../propTypes/pokemonPropTypes";
 import "../styles/PokemonCardFace.css";
+import PokemonTypeSVG from "./PokemonTypeSVG";
 
 function PokemonFaceCard({ pokemon, isFront }) {
   const generation = PokemonGenerations.find(
@@ -91,6 +92,15 @@ function PokemonFaceCard({ pokemon, isFront }) {
               style={{ backgroundColor: type.color }}
             >
               {type.name}
+              <PokemonTypeSVG
+                type="Bug"
+                fillColorCircle="white"
+                strokeColorCircle="none"
+                strokeWidthCircle={3}
+                fillColorPath={type.color}
+                strokeColorPath="black"
+                strokeWidthPath={4}
+              />
             </span>
           ))}
         </div>

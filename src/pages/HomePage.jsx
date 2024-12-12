@@ -25,7 +25,6 @@ export function HomePage() {
   useEffect(() => {
     const observer = new IntersectionObserver(
       ([entry]) => {
-        console.log(entry.isIntersecting); // Verifica si el header está visible
         setHeaderVisible(entry.isIntersecting); // Actualiza si el header está visible o no
       },
       { root: null, threshold: 0 } // Detecta cuando cualquier parte del header es visible

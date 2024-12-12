@@ -13,13 +13,6 @@ body {
   background-position-x: center;
 }
 
-/* Estilo para el contenedor del título y la lista de Pokémon */
-#title,
-#pokemonList {
-  display: flex;
-  justify-content: space-evenly;
-}
-
 /* El header no es sticky ahora */
 #header {
   padding: 2.5rem;

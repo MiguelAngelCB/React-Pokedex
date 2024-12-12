@@ -91,9 +91,16 @@
   color: white;
   align-content: center;
 }
+.types {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
 
 .pokemon-card .type {
-  display: inline-block;
+  display: flex;
+  align-items: center;
+  width: fit-content;
   background-color: var(
     --card-color,
     #ffcc01
@@ -104,6 +111,10 @@
   border-radius: 12px;
   font-size: 18px;
   text-transform: capitalize;
+}
+.type svg {
+  width: 30px;
+  height: 30px;
 }
 
 .pokemon-card .stats {
