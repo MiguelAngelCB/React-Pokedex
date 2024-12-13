@@ -20,6 +20,8 @@
   cursor: pointer;
   transition: all 0.3s ease;
   text-transform: capitalize; /* Para poner la primera letra en mayúsculas */
+  display: flex;
+  column-gap: 0.5rem;
 }
 
 /* Cambiar color del botón al pasar el ratón */

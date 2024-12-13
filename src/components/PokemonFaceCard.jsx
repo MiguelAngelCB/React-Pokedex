@@ -2,6 +2,7 @@ import PropTypes from "prop-types";
 import PokemonFallbackImage from "./PokemonFallbackImage"; // Ruta corregida
 import { PokemonGenerations } from "../enum/PokemonGenerations";
 import { pokemonPropTypes } from "../propTypes/pokemonPropTypes";
+import sentenceCase from "../services/sentenceCase";
 import "../styles/PokemonCardFace.css";
 import PokemonTypeSVG from "./PokemonTypeSVG";
 
@@ -21,7 +22,7 @@ function PokemonFaceCard({ pokemon, isFront }) {
       <div className="stats">
         {statEntries.map(([key, value], index) => (
           <span key={index}>
-            {key.charAt(0).toUpperCase() + key.slice(1)}: {value}
+            {sentenceCase(key)}: {value}
           </span>
         ))}
         <span>
@@ -49,7 +50,7 @@ function PokemonFaceCard({ pokemon, isFront }) {
         </p>
         {abilityEntries.map(([key, value], index) => (
           <p key={index}>
-            {key.charAt(0).toUpperCase() + key.slice(1)}: {value.join(", ")}
+            {sentenceCase(key)}: {value.join(", ")}
           </p>
         ))}
       </div>
@@ -92,15 +93,7 @@ function PokemonFaceCard({ pokemon, isFront }) {
               style={{ backgroundColor: type.color }}
             >
               {type.name}
-              <PokemonTypeSVG
-                type="Bug"
-                fillColorCircle="white"
-                strokeColorCircle="none"
-                strokeWidthCircle={3}
-                fillColorPath={type.color}
-                strokeColorPath="black"
-                strokeWidthPath={4}
-              />
+              <PokemonTypeSVG type={sentenceCase(type.name)} />
             </span>
           ))}
         </div>

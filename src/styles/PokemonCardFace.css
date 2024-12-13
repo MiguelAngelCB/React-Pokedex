@@ -111,12 +111,8 @@
   border-radius: 12px;
   font-size: 18px;
   text-transform: capitalize;
+  column-gap: 0.5rem;
 }
-.type svg {
-  width: 30px;
-  height: 30px;
-}
-
 .pokemon-card .stats {
   text-align: left;
   margin: 5px 0px;
