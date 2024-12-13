@@ -4,6 +4,7 @@ import { PokemonGenerations } from "../enum/PokemonGenerations";
 import { pokemonPropTypes } from "../propTypes/pokemonPropTypes";
 import sentenceCase from "../services/sentenceCase";
 import "../styles/PokemonCardFace.css";
+import { TypeColors } from "../enum/TypeColors"; // Importamos TypeColors
 import PokemonTypeSVG from "./PokemonTypeSVG";
 
 function PokemonFaceCard({ pokemon, isFront }) {
@@ -11,12 +12,15 @@ function PokemonFaceCard({ pokemon, isFront }) {
     (gen) => gen.id === pokemon.generation
   );
   const generationImage = generation.image;
-
   // Función para generar las estadísticas
   const renderStats = (stats) => {
     // Creamos un arreglo con las propiedades del objeto stats
     const statEntries = Object.entries(stats);
+    pokemon.types[0].color = TypeColors[pokemon.types[0].name.toLowerCase()];
 
+    if (pokemon.types.length > 1) {
+      pokemon.types[1].color = TypeColors[pokemon.types[1].name.toLowerCase()];
+    }
     // Generamos los spans con un bucle, usando la primera letra de cada clave en mayúscula
     return (
       <div className="stats">
