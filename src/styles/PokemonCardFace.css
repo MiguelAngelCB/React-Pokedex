@@ -75,8 +75,8 @@
 }
 
 /* Animación de zoom para imágenes y SVG */
-.pokemon-card:hover #divImg > img,
-.pokemon-card:hover #divImg > svg {
+#divImg:hover > img,
+#divImg:hover > svg {
   transform: scale(
     1.2
   ); /* Efecto de zoom cuando se hace hover sobre la carta */

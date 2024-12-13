@@ -13,15 +13,8 @@ export function PokemonCard({ pokemon, isFlipped }) {
     setIsCardFlipped(isFlipped);
   }, [isFlipped]);
 
-  const handleCardClick = () => {
-    setIsCardFlipped(!isCardFlipped); // Solo cambia el estado local si la carta se hace clic
-  };
-
   return (
-    <div
-      className={`pokemon-card-container ${isCardFlipped ? "flipped" : ""}`}
-      onClick={handleCardClick}
-    >
+    <div className={`pokemon-card-container ${isCardFlipped ? "flipped" : ""}`}>
       {/* Front face */}
       <PokemonFaceCard pokemon={pokemon} isFront={true} />
 
