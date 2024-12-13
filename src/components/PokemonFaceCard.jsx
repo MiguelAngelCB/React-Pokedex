@@ -61,9 +61,17 @@ function PokemonFaceCard({ pokemon, isFront }) {
     <div
       className={`pokemon-card ${isFront ? "front" : "back"}`}
       style={{
-        "--card-color": pokemon.types[0]?.color
-          ? `${pokemon.types[0].color}eb`
-          : "rgba(255, 215, 0, 0.7)",
+        "--card-color":
+          pokemon.types.length > 1
+            ? `linear-gradient(145deg, ${pokemon.types[0]?.color} 40%, ${pokemon.types[1]?.color} 40%)`
+            : `${pokemon.types[0]?.color}f5`, // Si solo tiene un tipo
+
+        "--box-shadow-color": `${pokemon.types[0]?.color}f5`, // Siempre el primer color
+
+        "--box-shadow-color2":
+          pokemon.types.length > 1
+            ? `${pokemon.types[1]?.color}f5` // Si tiene dos tipos, usamos el segundo color
+            : `${pokemon.types[0]?.color}f5`, // Si tiene un solo tipo, no usamos un segundo color
       }}
     >
       <h3>

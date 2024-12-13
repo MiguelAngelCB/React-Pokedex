@@ -21,21 +21,19 @@
 }
 
 .pokemon-card:hover {
-  box-shadow: 0 0 30px var(--card-color);
-  /* El zoom de la carta se ha eliminado */
+  box-shadow: 0 0 30px var(--box-shadow-color),
+    0 0 30px var(--box-shadow-color2); /* Dos sombras */
 }
 
 /* Cara delantera */
 .pokemon-card.front {
-  background-color: var(--card-color, #ffcc01); /* Color de fondo dinámico */
+  background: var(--card-color); /* Color de fondo dinámico */
 }
 
 /* Cara trasera */
 .pokemon-card.back {
-  background-color: var(
-    --card-color,
-    #ffcc01
-  ); /* Fondo del mismo color que el de la parte frontal */
+  background: var(--card-color); /* Color de fondo dinámico */
+  /* Fondo del mismo color que el de la parte frontal */
   transform: rotateY(180deg);
   padding: 20px;
   border-radius: 16px;
