@@ -22,6 +22,7 @@
   text-transform: capitalize; /* Para poner la primera letra en mayúsculas */
   display: flex;
   column-gap: 0.5rem;
+  align-items: center;
 }
 
 /* Cambiar color del botón al pasar el ratón */
@@ -33,6 +34,6 @@
 /* Estilo para el botón activo */
 #filter-buttons button.active {
   background-color: rgba(0, 100, 200, 1); /* Azul más oscuro */
-  border: 5px solid #9d3a00;
+  border: 5px solid #b990ff;
   color: #ffe700; /* Amarillo vibrante */
 }
