@@ -6,6 +6,7 @@ import { PokemonTypeFilter } from "../components/PokemonTypeFilter";
 import { PokemonGenerationFilter } from "../components/PokemonGenerationFilter";
 import { CustomButton } from "../components/CustomButton";
 import { LoadingDots } from "../components/LoadingDots";
+import { MenuButtons } from "../components/MenuButtons";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faFilter } from "@fortawesome/free-solid-svg-icons";
 import "../styles/HomePage.css";
@@ -54,18 +55,20 @@ export function HomePage() {
 
       {!loading && !error && (
         <>
-          <CustomButton
-            onClick={toggleFilters}
-            ariaExpanded={filtersVisible} // Pasando el estado a aria-expanded
-            className="align-left background-blue"
-          >
-            <FontAwesomeIcon icon={faFilter} size="2x" color="white" />
-            <div className="separation-container">
-              <span className="filtersVisibleIndicator">
-                {filtersVisible ? "▲" : "▼"}
-              </span>
-            </div>
-          </CustomButton>
+          <MenuButtons>
+            <CustomButton
+              onClick={toggleFilters}
+              ariaExpanded={filtersVisible} // Pasando el estado a aria-expanded
+              className="align-left background-blue"
+            >
+              <FontAwesomeIcon icon={faFilter} size="2x" color="white" />
+              <div className="separation-container">
+                <span className="filtersVisibleIndicator">
+                  {filtersVisible ? "▲" : "▼"}
+                </span>
+              </div>
+            </CustomButton>
+          </MenuButtons>
           {/* Filtros siempre montados, pero visibles solo cuando filtersVisible es true */}
           <div
             id="filters"
@@ -78,7 +81,6 @@ export function HomePage() {
             <PokemonTypeFilter />
             <PokemonGenerationFilter />
           </div>
-
           <div className="listContainer">
             <PokemonList />
           </div>

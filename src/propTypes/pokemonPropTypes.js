@@ -12,7 +12,6 @@ export const pokemonPropTypes = PropTypes.shape({
   types: PropTypes.arrayOf(
     PropTypes.shape({
       name: PropTypes.string.isRequired,
-      color: PropTypes.string.isRequired,
     })
   ).isRequired,
   stats: PropTypes.shape({

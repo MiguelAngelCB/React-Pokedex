@@ -13,6 +13,26 @@ export function PokemonProvider({ children }) {
   const [searchTerm, setSearchTerm] = useState("");
   const [allFlipped, setAllFlipped] = useState(false);
 
+  const filteredPokemons = (pokemonList || []).filter((pokemon) => {
+    const matchesType =
+      filteredTypes.length === 0 ||
+      filteredTypes.every((type) =>
+        pokemon.types.some((t) => t.name.toLowerCase() === type.toLowerCase())
+      );
+
+    const matchesGeneration =
+      selectedGenerations.length === 0 ||
+      selectedGenerations.includes(pokemon.generation);
+
+    const matchesSearch = (
+      pokemon.id +
+      " " +
+      pokemon.name.toLowerCase()
+    ).includes(searchTerm);
+
+    return matchesType && matchesGeneration && matchesSearch;
+  });
+
   const value = {
     pokemonList,
     loading,
@@ -25,6 +45,7 @@ export function PokemonProvider({ children }) {
     setSearchTerm,
     allFlipped,
     setAllFlipped,
+    filteredPokemons,
   };
 
   return (

@@ -16,5 +16,5 @@ export const TypeColors = {
   dragon: "#6d4db9",
   dark: "#383840",
   steel: "#8494a6",
-  fairy: "#ffacbd",
+  fairy: "#ff99ad",
 };

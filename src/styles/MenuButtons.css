@@ -1,0 +1,9 @@
+.menu {
+  position: fixed;
+  z-index: 2;
+  display: flex;
+  justify-content: space-between;
+  top: 10px;
+  width: 98%;
+  margin: 0 1%;
+}

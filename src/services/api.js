@@ -1,6 +1,5 @@
 import axios from "axios";
 import pLimit from "p-limit"; // Importamos p-limit para controlar la concurrencia
-import { TypeColors } from "../enum/TypeColors";
 import { getPokemonGeneration } from "./fetchPokemonGeneration";
 import pokemons from "../json/pokemons.json";
 
@@ -44,7 +43,6 @@ export const fetchAllPokemons = async () => {
             shinyImage: details.sprites.front_shiny,
             types: details.types.map((t) => ({
               name: t.type.name,
-              color: TypeColors[t.type.name] || "#777",
             })),
             stats: {
               hp: details.stats[0]?.base_stat,

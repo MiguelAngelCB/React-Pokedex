@@ -4,24 +4,16 @@ import { PokemonGenerations } from "../enum/PokemonGenerations";
 import { pokemonPropTypes } from "../propTypes/pokemonPropTypes";
 import sentenceCase from "../services/sentenceCase";
 import "../styles/PokemonCardFace.css";
-import { TypeColors } from "../enum/TypeColors"; // Importamos TypeColors
 import PokemonTypeSVG from "./PokemonTypeSVG";
+import { getTypeColor } from "../services/getTypeColor";
 
 function PokemonFaceCard({ pokemon, isFront }) {
   const generation = PokemonGenerations.find(
     (gen) => gen.id === pokemon.generation
   );
   const generationImage = generation.image;
-  // Función para generar las estadísticas
   const renderStats = (stats) => {
-    // Creamos un arreglo con las propiedades del objeto stats
     const statEntries = Object.entries(stats);
-    pokemon.types[0].color = TypeColors[pokemon.types[0].name.toLowerCase()];
-
-    if (pokemon.types.length > 1) {
-      pokemon.types[1].color = TypeColors[pokemon.types[1].name.toLowerCase()];
-    }
-    // Generamos los spans con un bucle, usando la primera letra de cada clave en mayúscula
     return (
       <div className="stats">
         {statEntries.map(([key, value], index) => (
@@ -67,15 +59,18 @@ function PokemonFaceCard({ pokemon, isFront }) {
       style={{
         "--card-color":
           pokemon.types.length > 1
-            ? `linear-gradient(145deg, ${pokemon.types[0]?.color} 40%, ${pokemon.types[1]?.color} 40%)`
-            : `${pokemon.types[0]?.color}f5`, // Si solo tiene un tipo
+            ? `linear-gradient(145deg, ${getTypeColor(
+                pokemon,
+                0
+              )} 40%, ${getTypeColor(pokemon, 1)} 40%)`
+            : `${getTypeColor(pokemon, 0)}`, // Si solo tiene un tipo
 
-        "--box-shadow-color": `${pokemon.types[0]?.color}f5`, // Siempre el primer color
+        "--box-shadow-color": `${getTypeColor(pokemon, 0)}f5`, // Siempre el primer color
 
         "--box-shadow-color2":
           pokemon.types.length > 1
-            ? `${pokemon.types[1]?.color}f5` // Si tiene dos tipos, usamos el segundo color
-            : `${pokemon.types[0]?.color}f5`, // Si tiene un solo tipo, no usamos un segundo color
+            ? `${getTypeColor(pokemon, 1)}f5` // Si tiene dos tipos, usamos el segundo color
+            : `${getTypeColor(pokemon, 0)}f5`, // Si tiene un solo tipo, no usamos un segundo color
       }}
     >
       <h3>
@@ -87,12 +82,12 @@ function PokemonFaceCard({ pokemon, isFront }) {
           pokemon.image ? (
             <img src={pokemon.image} alt={pokemon.name} />
           ) : (
-            <PokemonFallbackImage color={pokemon.types[0]?.color || "#777"} />
+            <PokemonFallbackImage color={getTypeColor(pokemon, 0) || "#777"} />
           )
         ) : pokemon.shinyImage ? (
           <img src={pokemon.shinyImage} alt={`Shiny of ${pokemon.name}`} />
         ) : (
-          <PokemonFallbackImage color={pokemon.types[0]?.color || "#777"} />
+          <PokemonFallbackImage color={getTypeColor(pokemon, 0) || "#777"} />
         )}
       </div>
 
@@ -102,7 +97,7 @@ function PokemonFaceCard({ pokemon, isFront }) {
             <span
               key={index}
               className="type"
-              style={{ backgroundColor: type.color }}
+              style={{ backgroundColor: getTypeColor(pokemon, index) }}
             >
               {type.name}
               <PokemonTypeSVG type={sentenceCase(type.name)} />
