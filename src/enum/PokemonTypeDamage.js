@@ -156,24 +156,16 @@ const TypeDamage = {
     fire: 0.5,
   },
 };
-export function calculateEffectiveness(type1, type2 = null) {
-  let results = [];
+function calculateEffectiveness(type1, type2 = null) {
+  const results = {};
 
-  // If there is only one type, calculate its damage against all other types
-  if (type2 === null) {
-    for (let type in TypeDamage[type1]) {
-      results.push({ type, effectiveness: TypeDamage[type1][type] });
-    }
-  } else {
-    // If there are two types, calculate the combined effectiveness
-    const effectivenessType1 = TypeDamage[type1][type2] || 1; // Default to 1 if no relation exists
-    const effectivenessType2 = TypeDamage[type2][type1] || 1; // Default to 1 if no relation exists
+  // Iterate over all types in the TypeDamage object
+  for (let targetType in TypeDamage) {
+    const effectivenessType1 = TypeDamage[type1]?.[targetType] || 1; // Default to 1 if no relation exists
+    const effectivenessType2 = type2 ? TypeDamage[type2]?.[targetType] || 1 : 1;
 
-    // Multiply the effectiveness of both types
-    results.push({
-      types: [type1, type2],
-      effectiveness: effectivenessType1 * effectivenessType2,
-    });
+    // Combine effectiveness of both types by multiplying them
+    results[targetType] = effectivenessType1 * effectivenessType2;
   }
 
   return results;
