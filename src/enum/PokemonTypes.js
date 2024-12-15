@@ -18,3 +18,6 @@ export const TypeColors = {
   steel: "#8494a6",
   fairy: "#ff99ad",
 };
+export const getTypeColor = (pokemon, position) => {
+  return TypeColors[pokemon.types[position].name.toLowerCase()];
+};

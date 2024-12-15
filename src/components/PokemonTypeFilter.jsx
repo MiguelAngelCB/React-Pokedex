@@ -1,6 +1,6 @@
 import { usePokemonContext } from "../context/PokemonContext"; // Importamos el custom hook
 import "../styles/PokemonTypeFilter.css";
-import { TypeColors } from "../enum/TypeColors"; // Importamos TypeColors
+import { TypeColors } from "../enum/PokemonTypes"; // Importamos TypeColors
 import PokemonTypeSVG from "./PokemonTypeSVG";
 import sentenceCase from "../services/sentenceCase";
 
@@ -10,12 +10,11 @@ export function PokemonTypeFilter() {
   // Obtenemos los tipos dinámicamente desde TypeColors
   const types = Object.keys(TypeColors);
 
-  // Función para manejar el filtro de tipos
   const handleFilter = (type) => {
     if (filteredTypes.includes(type)) {
       setFilteredTypes(filteredTypes.filter((t) => t !== type)); // Eliminar tipo del filtro
     } else if (filteredTypes.length < 2) {
-      setFilteredTypes([...filteredTypes, type]); // Agregar tipo al filtro
+      setFilteredTypes([...filteredTypes, type]);
     }
   };
 

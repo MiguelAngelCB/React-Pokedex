@@ -9,9 +9,8 @@ export function PokemonSearch() {
     setSearchTerm(event.target.value.toLowerCase()); // Actualizamos el término de búsqueda en el contexto
   };
 
-  // Función para limpiar el campo de búsqueda
   const clearSearch = () => {
-    setSearchTerm(""); // Limpiamos el término de búsqueda
+    setSearchTerm("");
   };
 
   return (

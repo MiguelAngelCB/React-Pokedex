@@ -67,6 +67,7 @@ export const fetchAllPokemons = async () => {
     return [];
   }
 };
+
 export const fetchPokemonsFromFile = () => {
   return pokemons;
 };

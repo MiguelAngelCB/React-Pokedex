@@ -8,15 +8,16 @@ export function PokemonGenerationFilter() {
   // Función para manejar el filtro de generaciones
   const handleGenerationChange = (generationId) => {
     if (selectedGenerations.includes(generationId)) {
-      setSelectedGenerations(selectedGenerations.filter((g) => g !== generationId)); // Eliminar generación
+      setSelectedGenerations(
+        selectedGenerations.filter((g) => g !== generationId)
+      ); // Eliminar generación
     } else {
       setSelectedGenerations([...selectedGenerations, generationId]); // Agregar generación
     }
   };
 
-  // Función para manejar el "Show All Generations"
   const handleShowAllGenerations = () => {
-    setSelectedGenerations([]); // Deseleccionar todas las generaciones
+    setSelectedGenerations([]);
   };
 
   return (

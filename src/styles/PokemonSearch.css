@@ -16,16 +16,20 @@
 .search-input {
   width: 70vw;
   height: 7vh;
-  font-size: 16px;
   border: 2px solid #ccc;
-  border-radius: 5px;
   outline: none;
   padding: 0 10px 0 10px; /* Agregamos padding para el texto y para el botón */
+  border-radius: 2rem;
+  background: #2b2f2e;
+  color: #ffc65a;
+  font-size: 2em;
+  font-family: monospace;
   transition: border-color 0.3s ease-in-out;
+  padding: 0 1.5rem;
 }
 
 .search-input:focus {
-  border-color: #007bff;
+  border-color: #ffc65a;
 }
 
 .search-input::placeholder {
@@ -37,10 +41,10 @@
   background: none;
   border: none;
   font-size: 18px;
-  color: #007bff;
+  color: #ffc65a;
   cursor: pointer;
   position: absolute; /* Alineamos el botón dentro del input */
-  right: 10px; /* Se coloca en el lado derecho */
+  right: 1.5rem;
   top: 50%; /* Centrado verticalmente */
   transform: translateY(
     -50%
