@@ -32,6 +32,10 @@ export function PokemonProvider({ children }) {
 
     return matchesType && matchesGeneration && matchesSearch;
   });
+  const getPokemonById = (id) => {
+    const pokemon = pokemonList.find((p) => p.id === parseInt(id));
+    return pokemon;
+  };
 
   const value = {
     pokemonList,
@@ -46,6 +50,7 @@ export function PokemonProvider({ children }) {
     allFlipped,
     setAllFlipped,
     filteredPokemons,
+    getPokemonById,
   };
 
   return (

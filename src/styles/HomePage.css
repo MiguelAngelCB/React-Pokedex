@@ -1,7 +1,6 @@
 html,
 body {
   margin: 0; /* Eliminamos márgenes por defecto */
-  height: 100%; /* Asegura que ocupe toda la pantalla */
 }
 
 /* Fondo de pantalla */

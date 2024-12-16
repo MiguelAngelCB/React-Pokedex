@@ -11,7 +11,7 @@ import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faFilter } from "@fortawesome/free-solid-svg-icons";
 import "../styles/HomePage.css";
 
-export function HomePage() {
+export function PokemonHomePage() {
   const { loading, error } = usePokemonContext(); // Obtiene el estado loading desde el contexto global
   const [filtersVisible, setFiltersVisible] = useState(false); // Estado para controlar la visibilidad de los filtros
   const [headerVisible, setHeaderVisible] = useState(true); // Estado para controlar si el header es visible

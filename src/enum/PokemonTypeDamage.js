@@ -156,7 +156,7 @@ const TypeDamage = {
     fire: 0.5,
   },
 };
-function calculateEffectiveness(type1, type2 = null) {
+export function calculateEffectiveness(type1, type2 = null) {
   const results = {};
 
   // Iterate over all types in the TypeDamage object

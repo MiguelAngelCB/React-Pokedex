@@ -1,7 +1,7 @@
 /* Contenedor de la carta */
 .pokemon-card-container {
   min-width: 325px; /* Ajuste el ancho a 300px */
-  height: 540px; /* Altura ajustada */
+  height: 36rem;
   perspective: 1000px;
   cursor: pointer;
   position: relative; /* Necesario para alinear las caras dentro del contenedor */

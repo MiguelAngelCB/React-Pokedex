@@ -11,7 +11,7 @@
   position: absolute;
   backface-visibility: hidden;
   transform-origin: center; /* Hace que la carta gire alrededor de su centro */
-  transition: transform 0.8s ease-in-out, box-shadow 0.3s ease;
+  transition: transform 1.5s ease-in-out, box-shadow 0.3s ease;
   box-sizing: border-box;
   transform-style: preserve-3d; /* Garantiza que la rotación se preserve en 3D */
   display: flex;
@@ -55,7 +55,10 @@
   justify-content: center;
   height: 12.5rem;
 }
-
+.pokemon-card,
+#divImg {
+  border: white 8px solid;
+}
 .pokemon-card > #divImg {
   border-radius: 200px;
   max-width: 230px;
