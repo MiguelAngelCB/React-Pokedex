@@ -46,34 +46,30 @@ const PokedexContainer = ({ pokemon }) => {
   const weaknesses = [];
   const neutral = [];
 
-  // Recorre los tipos para clasificar las fortalezas y debilidades
   for (let targetType in effectiveness) {
     const value = effectiveness[targetType];
     if (value > 1) {
-      strengths.push(targetType); // Añadir a fortalezas si el valor es mayor que 1
+      strengths.push(targetType);
     } else if (value < 1) {
-      weaknesses.push(targetType); // Añadir a debilidades si el valor es menor que 1
+      weaknesses.push(targetType);
     } else {
-      neutral.push(targetType); // Añadir a neutral si el valor es igual a 1
+      neutral.push(targetType);
     }
   }
 
-  // Función para mostrar la cadena evolutiva en el formato básico -> evo1 -> evo2
   const renderEvolutionChain = (chain) => {
     const evolutions = [];
     let current = chain;
 
     while (current) {
-      evolutions.push(current.species.name); // Agregar el nombre del Pokémon a la cadena de evolución
+      evolutions.push(current.species.name);
       current = current.evolves_to.length > 0 ? current.evolves_to[0] : null;
     }
 
-    // Si no hay evolución, solo mostrar el Pokémon básico
     if (evolutions.length === 1) {
       return <span>{evolutions[0]}</span>;
     }
 
-    // Si hay evoluciones, mostrar en formato básico -> evo1 -> evo2
     return evolutions.map((evolution, index) => (
       <span key={index}>
         {evolution}
@@ -83,96 +79,97 @@ const PokedexContainer = ({ pokemon }) => {
   };
 
   return (
-    <div className="container">
-      <div className="left-screen">
-        <div className="left-screen__top">
-          <button className="light-button">
-            <div className="light-container">
-              <div className="light light--blue"></div>
+    <div className="pokedex-body"> {/* Nuevo contenedor raíz */}
+      <div className="container">
+        <div className="left-screen">
+          <div className="left-screen__top">
+            <button className="light-button">
+              <div className="light-container">
+                <div className="light light--blue"></div>
+              </div>
+            </button>
+            <div className="lights-container">
+              <div className="light light--red"></div>
+              <div className="light light--yellow"></div>
+              <div className="light light--green"></div>
             </div>
-          </button>
+          </div>
+          <div className="left-screen__bottom">
+            <div className="main-screen">
+              <div className="main-screen__top-lights"></div>
+              <div id="display" className="main-screen__display">
+                <div className="pokemon-image">
+                  <img src={pokemon.image} alt={pokemon.name} />
+                </div>
+                <div className="pokemon-name">{pokemon.name}</div>
+                <div className="search-message">Searching...</div>
+                <div className="not-found-message">
+                  Pokemon <br />Not Found
+                </div>
+              </div>
+              <div className="pokemon-location-container">
+                <div className="pokemon-location">Location: Unknown</div>
+              </div>
+              <div className="main-screen__speaker-light"></div>
+              <div className="main-screen__speaker">
+                <div></div>
+                <div></div>
+                <div></div>
+                <div></div>
+              </div>
+            </div>
+          </div>
+          <div className="left-screen__joint">
+            <div className="joint"></div>
+            <div className="joint"></div>
+            <div className="joint"></div>
+            <div className="joint"></div>
+            <div className="joint__reflextion"></div>
+          </div>
+        </div>
+        <div className="right-screen">
+          <div className="right-screen__bottom">
+            {/* Display de evolución */}
+            <div id="display-evolution" className="main-screen__display">
+              <div id="evolution-container">
+                <h3>Evolution Line</h3>
+                <div id="evolution-line">
+                  {evolution ? renderEvolutionChain(evolution) : <p>Loading evolution...</p>}
+                </div>
+              </div>
+            </div>
 
-          <div className="lights-container">
-            <div className="light light--red"></div>
-            <div className="light light--yellow"></div>
-            <div className="light light--green"></div>
-          </div>
-        </div>
-        <div className="left-screen__bottom">
-          <div className="main-screen">
-            <div className="main-screen__top-lights"></div>
-            <div id="display" className="main-screen__display">
-              <div className="pokemon-image">
-                <img src={pokemon.image} alt={pokemon.name} />
+            {/* Display de fortalezas y debilidades */}
+            <div id="display-strength-weakness" className="main-screen__display">
+              <div id="weakness-container">
+                <h3>Weak Against</h3>
+                <div id="weakness-types" className="type-icons">
+                  {weaknesses.length > 0 ? (
+                    weaknesses.map((type, index) => <div key={index} className="type-icon">{type}</div>)
+                  ) : (
+                    <p>No weaknesses found</p>
+                  )}
+                </div>
               </div>
-              <div className="pokemon-name">{pokemon.name}</div>
-              <div className="search-message">Searching...</div>
-              <div className="not-found-message">
-                Pokemon <br />Not Found
+              <div id="strength-container">
+                <h3>Strong Against</h3>
+                <div id="strength-types" className="type-icons">
+                  {strengths.length > 0 ? (
+                    strengths.map((type, index) => <div key={index} className="type-icon">{type}</div>)
+                  ) : (
+                    <p>No strengths found</p>
+                  )}
+                </div>
               </div>
-            </div>
-            <div className="pokemon-location-container">
-              <div className="pokemon-location">Location: Unknown</div>
-            </div>
-            <div className="main-screen__speaker-light"></div>
-            <div className="main-screen__speaker">
-              <div></div>
-              <div></div>
-              <div></div>
-              <div></div>
-            </div>
-          </div>
-        </div>
-        <div className="left-screen__joint">
-          <div className="joint"></div>
-          <div className="joint"></div>
-          <div className="joint"></div>
-          <div className="joint"></div>
-          <div className="joint__reflextion"></div>
-        </div>
-      </div>
-      <div className="right-screen">
-        <div className="right-screen__bottom">
-          {/* Display de evolución */}
-          <div id="display-evolution" className="main-screen__display">
-            <div id="evolution-container">
-              <h3>Evolution Line</h3>
-              <div id="evolution-line">
-                {evolution ? renderEvolutionChain(evolution) : <p>Loading evolution...</p>}
-              </div>
-            </div>
-          </div>
-
-          {/* Display de fortalezas y debilidades */}
-          <div id="display-strength-weakness" className="main-screen__display">
-            <div id="weakness-container">
-              <h3>Weak Against</h3>
-              <div id="weakness-types" className="type-icons">
-                {weaknesses.length > 0 ? (
-                  weaknesses.map((type, index) => <div key={index} className="type-icon">{type}</div>)
-                ) : (
-                  <p>No weaknesses found</p>
-                )}
-              </div>
-            </div>
-            <div id="strength-container">
-              <h3>Strong Against</h3>
-              <div id="strength-types" className="type-icons">
-                {strengths.length > 0 ? (
-                  strengths.map((type, index) => <div key={index} className="type-icon">{type}</div>)
-                ) : (
-                  <p>No strengths found</p>
-                )}
-              </div>
-            </div>
-            <div id="neutral-container">
-              <h3>Neutral Against</h3>
-              <div id="neutral-types" className="type-icons">
-                {neutral.length > 0 ? (
-                  neutral.map((type, index) => <div key={index} className="type-icon">{type}</div>)
-                ) : (
-                  <p>No neutral types found</p>
-                )}
+              <div id="neutral-container">
+                <h3>Neutral Against</h3>
+                <div id="neutral-types" className="type-icons">
+                  {neutral.length > 0 ? (
+                    neutral.map((type, index) => <div key={index} className="type-icon">{type}</div>)
+                  ) : (
+                    <p>No neutral types found</p>
+                  )}
+                </div>
               </div>
             </div>
           </div>
@@ -183,3 +180,4 @@ const PokedexContainer = ({ pokemon }) => {
 };
 
 export default PokedexContainer;
+

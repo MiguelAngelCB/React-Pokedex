@@ -40,13 +40,14 @@
 .container .left-screen__bottom .main-screen-right__top-lights,
 .container .left-screen__bottom,
 .container .left-screen__top .light-container,
-body {
+
+.pokedex-body {
   display: flex;
   align-items: center;
   justify-content: center;
 }
 
-* {
+.pokedex-body * {
   margin: 0;
   padding: 0;
   box-sizing: border-box;
@@ -56,6 +57,26 @@ body {
 body {
   min-height: 100vh;
   min-width: 100vw;
+}
+
+.pokedex-body {
+  min-height: 100vh;
+  min-width: 100vw;
+}
+
+.pokedex-active body {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  min-height: 100vh;
+  min-width: 100vw;
+}
+
+.pokedex-active * {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: "Saira Semi Condensed", sans-serif;
 }
 
 .container {
@@ -405,6 +426,7 @@ body {
   grid-template-rows: 0.1fr 0.75fr 0.15fr;
   align-items: center;
   justify-content: center;
+  padding-top: 10px;;
 }
 /* Pantalla derecha */
 .container .right-screen__bottom .main-screen {
@@ -466,7 +488,7 @@ body {
   width: 100%;
   height: 100%;
   grid-column: 1 / span 2;
-  margin-bottom: 5px;
+  margin-bottom: 10px;
 }
 .container .left-screen__bottom .main-screen-right__top-lights {
   position: relative;
