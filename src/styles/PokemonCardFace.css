@@ -86,8 +86,8 @@
   margin: 0px;
   font-size: 24px;
   color: white;
-  align-content: center;
-  height: 3.5rem;
+  align-content: end;
+  height: 2.5rem;
 }
 .types {
   display: flex;
@@ -110,7 +110,7 @@
   border-radius: 12px;
   font-size: 18px;
   text-transform: capitalize;
-  column-gap: 0.5rem;
+  column-gap: 0.3rem;
 }
 .pokemon-card .stats {
   text-align: left;

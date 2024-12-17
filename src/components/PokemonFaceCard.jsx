@@ -5,7 +5,7 @@ import { pokemonPropTypes } from "../propTypes/pokemonPropTypes";
 import sentenceCase from "../services/sentenceCase";
 import "../styles/PokemonCardFace.css";
 import PokemonTypeSVG from "./PokemonTypeSVG";
-import { getTypeColor } from "../enum/PokemonTypes";
+import { getTypeColor } from "../enum/PokemonTypesColors";
 
 function PokemonFaceCard({ pokemon, isFront }) {
   const generation = PokemonGenerations.find(
