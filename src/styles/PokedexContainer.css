@@ -426,7 +426,8 @@ body {
   grid-template-rows: 0.1fr 0.75fr 0.15fr;
   align-items: center;
   justify-content: center;
-  padding-top: 10px;;
+  padding-top: 10px;
+  padding-bottom: 370px;
 }
 /* Pantalla derecha */
 .container .right-screen__bottom .main-screen {
@@ -655,10 +656,12 @@ h3 {
   margin-left: 0.5rem;
   border: 1px solid black;
   border-radius: 100%;
+  margin-top: 20px;
 }
 .container .left-screen__bottom .main-screen__speaker {
   margin-left: auto;
   margin-right: 0.5rem;
+  margin-top: 10px;
 }
 .container .left-screen__bottom .main-screen__speaker > * {
   width: 3.8rem;
