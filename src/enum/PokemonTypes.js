@@ -1,7 +1,7 @@
 export const TypeColors = {
   normal: "#A8A77A",
   fire: "#EE8130",
-  water: "#4266b3",
+  water: "#3c7dab",
   electric: "#ddbd10",
   grass: "#54a769",
   ice: "#69b1ae",
@@ -13,7 +13,7 @@ export const TypeColors = {
   bug: "#82a437",
   rock: "#B6A136",
   ghost: "#7045a3",
-  dragon: "#6d4db9",
+  dragon: "#3e1f87",
   dark: "#383840",
   steel: "#8494a6",
   fairy: "#ff99ad",
