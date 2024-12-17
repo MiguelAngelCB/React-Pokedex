@@ -1,6 +1,6 @@
 import { usePokemonContext } from "../context/PokemonContext"; // Importamos el custom hook
 import "../styles/PokemonTypeFilter.css";
-import { TypeColors } from "../enum/PokemonTypes"; // Importamos TypeColors
+import { TypeColors } from "../enum/PokemonTypesColors"; // Importamos TypeColors
 import PokemonTypeSVG from "./PokemonTypeSVG";
 import sentenceCase from "../services/sentenceCase";
 
