@@ -1,3 +1,5 @@
+@import url("https://fonts.googleapis.com/css2?family=Saira+Semi+Condensed:wght@300;400;500;600&display=swap");
+
 .pokedex-container {
   padding: 20px;
   border: 1px solid #ddd;
@@ -27,4 +29,673 @@
   text-align: center;
   font-size: 18px;
   color: #666;
+}
+
+
+.flex-center,
+.container .right-screen__bottom .info-container,
+.container .left-screen__bottom .main-screen__display .not-found-message,
+.container .left-screen__bottom .main-screen__display .search-message,
+.container .left-screen__bottom .main-screen__top-lights,
+.container .left-screen__bottom .main-screen-right__top-lights,
+.container .left-screen__bottom,
+.container .left-screen__top .light-container,
+body {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: "Saira Semi Condensed", sans-serif;
+}
+
+body {
+  min-height: 100vh;
+  min-width: 100vw;
+}
+
+.container {
+  min-width: 750px;
+  min-height: 500px;
+  margin-left: 4rem;
+  display: grid;
+  grid-template-columns: 1fr 1fr; /* Dos columnas por defecto */
+  grid-template-rows: auto; /* Una sola fila */
+  grid-template-areas:
+    "left right"; /* Áreas para pantallas grandes */
+}
+
+
+/* Joint */
+.joint-container {
+  grid-area: joint;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 0.5rem;
+  background-color: #ff0000;
+  border: 1px solid black;
+  border-radius: 10px;
+  padding: 1rem;
+}
+
+/* Media Query for small screens */
+@media (max-width: 768px) {
+  .container {
+    display: grid;
+    grid-template-columns: 1fr; /* One column layout */
+    grid-template-rows: auto auto auto; /* Three rows: left, joint, and right */
+    grid-template-areas:
+      "left"
+      "joint"
+      "right"; /* Joint under the left screen */
+    gap: 0; /* No gap between elements */
+    justify-items: center; /* Center horizontally */
+    align-items: start; /* Align items at the top */
+  }
+
+  .left-screen {
+    grid-area: left; /* Left screen */
+    width: 90%; /* 90% of available width */
+    max-width: 500px; /* Max width of 500px */
+    background-color: #dedede;
+    border: 1px solid black;
+    border-radius: 10px;
+    padding: 1rem;
+    box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.1);
+    position: relative; /* Needed for absolute positioning of the joint */
+    bottom: 40px;
+  }
+
+  .left-screen__joint {
+    position: absolute;
+    top: 18%;
+    left: 50%;
+    transform: translateX(-50%) rotate(90deg);
+    width: 90%;
+    height: 500px !important;
+    background-color: #cd1030;
+    border: 1px solid black;
+    border-radius: 10px;
+    z-index: 1;
+    transition: transform 0.5s ease-in-out;
+  }
+
+  .left-screen__joint::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    width: 100%;
+    height: 20px;
+    border-radius: 50%;
+  }
+
+  .left-screen__joint::after {
+    content: "";
+    position: absolute;
+    bottom: -2px;
+    width: 100%;
+    height: 18px;
+    background-color: #891524;
+    border: 2px solid #73121e;
+    border-radius: 50%;
+  }
+
+  .right-screen {
+    grid-area: right; /* Right screen */
+    width: 90%; /* 90% of available width */
+    max-width: 500px; /* Max width of 500px */
+    background-color: #dedede;
+    border: 1px solid black;
+    border-radius: 10px;
+    padding: 1rem;
+    box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.1);
+  }
+}
+
+.container .left-screen {
+  position: relative;
+  background-color: #cd1030;
+  border: 2px solid #000000;
+  border-radius: 20px;
+}
+
+.left-screen {
+  grid-area: left;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  align-items: center;
+  background-color: #dedede;
+  border: 1px solid black;
+  border-radius: 10px;
+  padding: 1rem;
+}
+
+.container .right-screen {
+  position: relative;
+  background-color: #cd1030;
+  border: 2px solid #73121e;
+  border-radius: 20px;
+}
+
+.right-screen {
+  grid-area: right;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  background-color: #dedede;
+  border: 1px solid black;
+  border-radius: 10px;
+  padding: 1rem;
+}
+
+.container .left-screen::before {
+  content: "";
+  position: absolute;
+}
+.container .right-screen::before {
+  content: "";
+  position: absolute;
+}
+.container .left-screen::before {
+  width: 100%;
+  height: 101%;
+  top: -2px;
+  left: -3%;
+  z-index: -1;
+  background-color: #73121e;
+  border: 2px solid #73121e;
+  border-radius: 20px;
+}
+.container .right-screen::before {
+  width: 100%;
+  height: 101%;
+  top: -2px;
+  left: -3%;
+  z-index: -1;
+  background-color: #73121e;
+  border: 2px solid #73121e;
+  border-radius: 20px;
+}
+.container .left-screen__top {
+  width: 100%;
+  height: 18%;
+  position: relative;
+  display: flex;
+  justify-content: left; /* Centrar horizontalmente */
+  align-items: center; /* Centrar verticalmente */
+  /* overflow: hidden; Elimina cualquier contenido sobrante que sobresalga */
+  margin-left: 10px;
+}
+.container .right-screen__top {
+  width: 100%;
+  height: 18%;
+  position: relative;
+  display: flex;
+  justify-content: center; /* Centrar horizontalmente */
+  align-items: center; /* Centrar verticalmente */
+  gap: 1rem; /* Espaciado entre los elementos */
+  overflow: hidden; /* Elimina cualquier contenido sobrante que sobresalga */
+}
+.container .left-screen__top::before {
+  content: "";
+  position: absolute;
+}
+.container .right-screen__top::before {
+  content: "";
+  position: absolute;
+}
+.container .left-screen__top::after {
+  top: 20%;
+  right: 0;
+  width: 46%;
+  border-top: 5px solid rgba(0, 0, 0, 0.5);
+}
+.container .right-screen__top::after {
+  top: 20%;
+  right: 0;
+  width: 46%;
+  border-top: 5px solid rgba(0, 0, 0, 0.5);
+}
+.container .left-screen__top .light {
+  position: relative;
+  height: 1.5rem;
+  width: 1.5rem;
+  margin-top: -20px;
+  margin-right: 0.5rem;
+  margin-left: 0.1rem;
+  border: 1px solid black;
+  border-radius: 100%;
+}
+
+.container .left-screen__top .lights-container {
+  display: flex; /* Para alinearlas en fila */
+  margin-left: 1rem; /* Ajusta este valor para separar las luces del botón */
+}
+
+.container .left-screen__top .light::before {
+  content: "";
+  position: absolute;
+}
+.container .left-screen__top .light::after {
+  content: "";
+  position: absolute;
+}
+.container .left-screen__top .light--red {
+  background-color: #ee0707;
+}
+.container .left-screen__top .light--red::after {
+  background-color: #ee0707;
+}
+.container .left-screen__top .light--yellow {
+  background-color: #dde214;
+}
+.container .left-screen__top .light--yellow::after {
+  background-color: #dde214;
+}
+.container .left-screen__top .light--green {
+  background-color: #91f913;
+}
+.container .left-screen__top .light--green::after {
+  background-color: #91f913;
+}
+.container .left-screen__top .light--blue {
+  background-color: #0ad1ff;
+}
+.container .left-screen__top .light--blue::after {
+  background-color: #ffffff;
+}
+.container .left-screen__top .light::before {
+  width: 90%;
+  height: 90%;
+  bottom: 0;
+  left: 50%;
+  transform: translateX(-50%);
+  border-radius: 100%;
+  background-color: rgba(0, 0, 0, 0.2);
+}
+.container .left-screen__top .light::after {
+  width: 40%;
+  height: 40%;
+  right: 15%;
+  top: 15%;
+  border-radius: 100%;
+}
+
+/* Botón de luz azul */
+.container .left-screen__top .light-button {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background: none; /* Sin fondo adicional */
+  border: none; /* Sin borde adicional */
+  padding: 0;
+  margin: 0;
+  cursor: pointer;
+}
+
+/* Contenedor de la luz azul dentro del botón */
+.container .left-screen__top .light-button .light-container {
+  position: relative;
+  width: 4rem;
+  height: 4rem;
+  background-color: white;
+  border: 1px solid black;
+  border-radius: 100%;
+  display: flex; /* Para centrar la luz dentro del contenedor */
+  justify-content: center; /* Centrar horizontalmente */
+  align-items: center; /* Centrar verticalmente */
+  overflow: hidden; /* Asegurar que no haya desbordamientos visibles */
+}
+
+/* Luz interior con color azul */
+.light.light--blue {
+  width: 60%;
+  height: 60%;
+  background-color: #007bff; /* Color azul */
+  border-radius: 50%;
+  transition: background-color 0.2s ease; /* Cambio de color al interactuar */
+}
+
+/* Efectos al hacer hover sobre el botón */
+.light-button:hover {
+  transform: scale(1.1); /* Aumenta el tamaño ligeramente */
+}
+
+/* Efectos al presionar el botón (estado activo) */
+.light-button:active {
+  transform: scale(1); /* Vuelve al tamaño original */
+}
+
+/* Puedes cambiar el color de la luz cuando el botón es presionado */
+.light-button:active .light.light--blue {
+  background-color: #0056b3; /* Azul más oscuro cuando se presiona */
+}
+.container .left-screen__top .light-container .light {
+  width: 2.8rem;
+  height: 2.8rem;
+  margin: 0;
+}
+.container .left-screen__bottom {
+  position: relative;
+  height: 78%;
+}
+.container .left-screen__bottom::after {
+  content: "";
+  position: absolute;
+}
+.container .left-screen__bottom .main-screen {
+  position: relative;
+  width: 75%;
+  height: 100%;
+  background-color: #dedede;
+  border: 1px solid black;
+  border-radius: 10px;
+  padding: 0 1rem;
+  margin-right: 0.8rem;
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  grid-template-rows: 0.1fr 0.75fr 0.15fr;
+  align-items: center;
+  justify-content: center;
+}
+/* Pantalla derecha */
+.container .right-screen__bottom .main-screen {
+  position: relative;
+  width: 75%;
+  height: 100%; /* Cambié de 110% a 100% para que coincida con la pantalla izquierda */
+  background-color: #dedede;
+  border: 1px solid black;
+  border-radius: 10px;
+  padding: 0 1rem;
+  margin-right: 0.8rem;
+  margin-top: 0; /* Elimino el margen superior para que coincidan las pantallas */
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  grid-template-rows: 0.1fr 0.75fr 0.15fr;
+  align-items: center;
+  justify-items: center;
+  gap: 1rem;
+}
+/* Pantalla derecha */
+.container .right-screen {
+  display: flex;
+  flex-direction: column;
+  justify-content: center; /* Centra los divs verticalmente */
+  align-items: center; /* Centra los divs horizontalmente */
+  background-color: #cd1030;
+  border: 2px solid black;
+  border-radius: 10px;
+  padding: 1rem;
+}
+.container .right-screen__bottom {
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+  height: 100%; /* Asegura que ocupe todo el espacio disponible */
+  gap: 1rem; /* Espaciado entre los divs */
+}
+/* Ajustes de los displays dentro de la pantalla derecha */
+.container .right-screen .main-screen__display {
+  width: 100%; /* Ocupa todo el ancho disponible */
+  height: 100%; /* Asegura que el display ocupe toda la altura disponible */
+  background-color: #ffffff;
+  border: 1px solid #000000;
+  border-radius: 10px;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+  padding: 1rem;
+  display: flex;
+  flex-direction: column; /* Los elementos se organizarán de manera vertical */
+  align-items: stretch; /* Los elementos dentro de este contenedor ocuparán todo el ancho */
+  justify-content: flex-start; /* Los elementos se alinearán al inicio (parte superior) */
+}
+.container .left-screen__bottom .main-screen__top-lights {
+  position: relative;
+  width: 100%;
+  height: 100%;
+  grid-column: 1 / span 2;
+  margin-bottom: 5px;
+}
+.container .left-screen__bottom .main-screen-right__top-lights {
+  position: relative;
+  width: 100%;
+  height: 100%;
+  grid-column: 1 / span 2;
+}
+.container .left-screen__bottom .main-screen-right__top-lights {
+  position: relative;
+  width: 100%;
+  height: 100%;
+  grid-column: 1 / span 2;
+}
+.container .left-screen__bottom .main-screen__top-lights::before,
+.container .left-screen__bottom .main-screen__top-lights::after {
+  content: "";
+  width: 10px;
+  height: 10px;
+  background-color: #cd1030;
+  border: 2px solid #73121e;
+  border-radius: 100%;
+}
+.container .left-screen__bottom .main-screen-right__top-lights::before,
+.container .left-screen__bottom .main-screen-right__top-lights::after {
+  content: "";
+  width: 10px;
+  height: 10px;
+  background-color: #cd1030;
+  border: 2px solid #73121e;
+  border-radius: 100%;
+}
+.container .left-screen__bottom .main-screen__top-lights::before {
+  margin-right: 1rem;
+}
+.container .left-screen__bottom .main-screen-right__top-lights::before {
+  margin-right: 1rem;
+}
+.pokemon-location-container {
+  margin-top: 1rem; /* Espacio entre el display y la localización */
+  background-color: #ffffff; /* Fondo blanco */
+  border: 1px solid #000000; /* Borde gris para separar visualmente */
+  border-radius: 8px; /* Bordes redondeados */
+  padding: 1rem; /* Espacio interior */
+  width: 200%; /* Para que ocupe todo el ancho del contenedor */
+  text-align: center; /* Centra el texto */
+}
+
+.pokemon-location {
+  font-size: 1rem;
+  font-weight: bold;
+  color: #333; /* Color de la localización */
+}
+.container .left-screen__bottom .main-screen__display {
+  grid-column: 1 / span 2;
+  width: 100%;
+  height: 100%;
+  background-color: white;
+  border: 1px solid black;
+  border-radius: 10px;
+}
+.container .left-screen .main-screen-right__display {
+  grid-column: 1 / span 2;
+  width: 50%;
+  height: 50%;
+  background-color: white;
+  border: 1px solid black;
+  border-radius: 10px;
+}
+.main-screen__display {
+  width: 100%;
+  height: 45%;
+  background-color: white;
+  border: 1px solid black;
+  border-radius: 10px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  padding: 1rem;
+  box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.1);
+  margin-bottom: 1rem;
+}
+
+#display-evolution {
+  /* Estilo específico para el display de evolución */
+}
+
+#display-strength-weakness {
+  /* Estilo específico para el display de fortalezas y debilidades */
+}
+
+.type-icons {
+  display: flex;
+  gap: 0.5rem;
+}
+
+h3 {
+  margin-bottom: 1rem;
+}
+
+.container .left-screen__bottom .main-screen__display .pokemon-image {
+  width: 100%;
+  height: 100%;
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: center;
+  position: relative;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.container .left-screen__bottom .main-screen__display .pokemon-image img {
+  width: 80%; /* Ajusta este valor según el tamaño deseado */
+  height: 70%;
+  object-fit: contain; /* Para asegurarse de que la imagen no se deforme */
+}
+.container .left-screen__bottom .main-screen__display .not-found-message,
+.container .left-screen__bottom .main-screen__display .search-message {
+  height: 100%;
+  font-size: 1.8rem;
+  display: none;
+}
+.container .left-screen__bottom .main-screen__display .search-message {
+  animation: blinking 0.6s ease-in-out infinite alternate;
+}
+@keyframes blinking {
+  from {
+    color: white;
+  }
+  to {
+    color: black;
+  }
+}
+.container
+  .left-screen__bottom
+  .main-screen__display.is-searching
+  .pokemon-image {
+  display: none;
+}
+.container
+  .left-screen__bottom
+  .main-screen__display.is-searching
+  .search-message {
+  display: flex;
+}
+.container
+  .left-screen__bottom
+  .main-screen__display.is-not-found
+  .pokemon-image {
+  display: none;
+}
+.container
+  .left-screen__bottom
+  .main-screen__display.is-not-found
+  .not-found-message {
+  display: flex;
+}
+.container .left-screen__bottom .main-screen__speaker-light {
+  grid-column: 1 / span 1;
+  width: 1.8rem;
+  height: 1.8rem;
+  background-color: #cd1030;
+  margin-left: 0.5rem;
+  border: 1px solid black;
+  border-radius: 100%;
+}
+.container .left-screen__bottom .main-screen__speaker {
+  margin-left: auto;
+  margin-right: 0.5rem;
+}
+.container .left-screen__bottom .main-screen__speaker > * {
+  width: 3.8rem;
+  height: 0.3rem;
+  margin-top: 3px;
+  border-radius: 10px;
+  background-color: #4d4d4d;
+}
+.container .left-screen__joint {
+  position: absolute;
+  width: 10%;
+  height: 98%;
+  bottom: -2px;
+  right: -15px; /* Para modificar la posicion horizontal*/
+  background-color: #cd1030;
+  z-index: 2;
+  border-left: 2px solid #73121e;
+  border-right: 2px solid #73121e;
+  border-radius: 15px;
+  overflow: hidden;
+}
+.container .left-screen__joint::before {
+  content: "";
+  position: absolute;
+}
+.container .left-screen__joint::after {
+  content: "";
+  position: absolute;
+}
+.container .left-screen__joint::before {
+  width: 100%;
+  height: 20px;
+  border-radius: 50%;
+  border-top: 2px solid #73121e;
+}
+.container .left-screen__joint::after {
+  width: 100%;
+  height: 18px;
+  bottom: -2px;
+  right: -2px;
+  background-color: #891524;
+  border: 2px solid #73121e;
+  border-radius: 50%;
+}
+.container .left-screen__joint .joint {
+  position: absolute;
+  top: 6%;
+  width: 100%;
+  height: 1rem;
+  border-top: 2px solid #73121e;
+  border-radius: 100%;
+  z-index: 3;
+}
+.container .left-screen__joint .joint:nth-of-type(2) {
+  top: 8%;
+}
+.container .left-screen__joint .joint:nth-of-type(3) {
+  top: 88%;
+}
+.container .left-screen__joint .joint:nth-of-type(4) {
+  top: 90%;
+}
+.container .left-screen__joint .joint__reflextion {
+  position: absolute;
+  width: 15%;
+  height: 98%;
+  left: 10%;
+  background-color: rgba(255, 255, 255, 0.2);
 }
