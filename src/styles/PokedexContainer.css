@@ -113,7 +113,7 @@ body {
 
   .left-screen__joint {
     position: absolute;
-    top: 18%;
+    top: 49%;
     left: 50%;
     transform: translateX(-50%) rotate(90deg);
     width: 90%;
@@ -443,7 +443,7 @@ body {
 }
 /* Ajustes de los displays dentro de la pantalla derecha */
 .container .right-screen .main-screen__display {
-  width: 100%; /* Ocupa todo el ancho disponible */
+  width: 90%; /* Ocupa todo el ancho disponible */
   height: 100%; /* Asegura que el display ocupe toda la altura disponible */
   background-color: #ffffff;
   border: 1px solid #000000;
@@ -454,6 +454,8 @@ body {
   flex-direction: column; /* Los elementos se organizarán de manera vertical */
   align-items: stretch; /* Los elementos dentro de este contenedor ocuparán todo el ancho */
   justify-content: flex-start; /* Los elementos se alinearán al inicio (parte superior) */
+  margin-left: 5%;
+  overflow: scroll;
 }
 .container .left-screen__bottom .main-screen__top-lights {
   position: relative;
@@ -506,6 +508,7 @@ body {
   padding: 1rem; /* Espacio interior */
   width: 200%; /* Para que ocupe todo el ancho del contenedor */
   text-align: center; /* Centra el texto */
+  overflow: hidden;
 }
 
 .pokemon-location {
@@ -643,7 +646,7 @@ h3 {
   width: 10%;
   height: 98%;
   bottom: -2px;
-  right: -15px; /* Para modificar la posicion horizontal*/
+  right: -30px; /* Para modificar la posicion horizontal*/
   background-color: #cd1030;
   z-index: 2;
   border-left: 2px solid #73121e;
