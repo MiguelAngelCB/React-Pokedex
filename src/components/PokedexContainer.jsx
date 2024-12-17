@@ -1,6 +1,7 @@
 import React, { useState, useEffect } from "react";
 import "../styles/PokedexContainer.css";
 import { calculateEffectiveness } from "../enum/PokemonTypeDamage";
+import { useNavigate } from "react-router-dom"; // Importar useNavigate
 
 // Función para obtener la línea evolutiva de un Pokémon
 const getEvolutionData = async (pokemonId) => {
@@ -17,6 +18,7 @@ const getEvolutions = async (url) => {
 
 const PokedexContainer = ({ pokemon }) => {
   const [evolution, setEvolution] = useState(null);
+  const navigate = useNavigate(); // Instanciar navigate
 
   useEffect(() => {
     if (pokemon && pokemon.id) {
@@ -83,7 +85,7 @@ const PokedexContainer = ({ pokemon }) => {
       <div className="container">
         <div className="left-screen">
           <div className="left-screen__top">
-            <button className="light-button">
+            <button className="light-button" onClick={() => navigate(-1)}>
               <div className="light-container">
                 <div className="light light--blue"></div>
               </div>
