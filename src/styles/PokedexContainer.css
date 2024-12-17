@@ -113,7 +113,7 @@ body {
 
   .left-screen__joint {
     position: absolute;
-    top: 49%;
+    top: 54%;
     left: 50%;
     transform: translateX(-50%) rotate(90deg);
     width: 90%;
@@ -168,12 +168,13 @@ body {
   grid-area: left;
   display: flex;
   flex-direction: column;
-  justify-content: space-between;
   align-items: center;
   background-color: #dedede;
   border: 1px solid black;
   border-radius: 10px;
   padding: 1rem;
+  width: 500px; /* O cualquier valor en px que desees */
+  height: 500px; /* O cualquier valor en px que desees */
 }
 
 .container .right-screen {
@@ -191,7 +192,7 @@ body {
   align-items: center;
   background-color: #dedede;
   border: 1px solid black;
-  border-radius: 10px;
+  border-radius: 20px;
   padding: 1rem;
 }
 
@@ -431,7 +432,7 @@ body {
   align-items: center; /* Centra los divs horizontalmente */
   background-color: #cd1030;
   border: 2px solid black;
-  border-radius: 10px;
+  border-radius: 20px;
   padding: 1rem;
 }
 .container .right-screen__bottom {
@@ -456,6 +457,7 @@ body {
   justify-content: flex-start; /* Los elementos se alinearán al inicio (parte superior) */
   margin-left: 5%;
   overflow: scroll;
+  top: -5%;
 }
 .container .left-screen__bottom .main-screen__top-lights {
   position: relative;
