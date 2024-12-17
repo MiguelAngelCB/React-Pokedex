@@ -6,6 +6,7 @@ import sentenceCase from "../services/sentenceCase";
 import "../styles/PokemonCardFace.css";
 import PokemonTypeSVG from "./PokemonTypeSVG";
 import { getTypeColor } from "../enum/PokemonTypesColors";
+import { Link } from "react-router-dom";
 
 function PokemonFaceCard({ pokemon, isFront }) {
   const generation = PokemonGenerations.find(
@@ -54,61 +55,65 @@ function PokemonFaceCard({ pokemon, isFront }) {
   };
 
   return (
-    <div
-      className={`pokemon-card ${isFront ? "front" : "back"}`}
-      style={{
-        "--card-color":
-          pokemon.types.length > 1
-            ? `linear-gradient(145deg, ${getTypeColor(
-                pokemon,
-                0
-              )} 40%, ${getTypeColor(pokemon, 1)} 40%)`
-            : `${getTypeColor(pokemon, 0)}`, // Si solo tiene un tipo
+    <Link to={`/individual/${pokemon.id}`}>
+      <div
+        className={`pokemon-card ${isFront ? "front" : "back"}`}
+        style={{
+          "--card-color":
+            pokemon.types.length > 1
+              ? `linear-gradient(145deg, ${getTypeColor(
+                  pokemon,
+                  0
+                )} 40%, ${getTypeColor(pokemon, 1)} 40%)`
+              : `${getTypeColor(pokemon, 0)}`, // Si solo tiene un tipo
 
-        "--box-shadow-color": `${getTypeColor(pokemon, 0)}f5`, // Siempre el primer color
+          "--box-shadow-color": `${getTypeColor(pokemon, 0)}f5`, // Siempre el primer color
 
-        "--box-shadow-color2":
-          pokemon.types.length > 1
-            ? `${getTypeColor(pokemon, 1)}f5` // Si tiene dos tipos, usamos el segundo color
-            : `${getTypeColor(pokemon, 0)}f5`, // Si tiene un solo tipo, no usamos un segundo color
-      }}
-    >
-      <h3>
-        #{pokemon.id} - {pokemon.name}
-      </h3>
-      <div id="divImg">
-        {/* Mostrar la imagen del Pokémon o el fallback */}
-        {isFront ? (
-          pokemon.image ? (
-            <img src={pokemon.image} alt={pokemon.name} />
+          "--box-shadow-color2":
+            pokemon.types.length > 1
+              ? `${getTypeColor(pokemon, 1)}f5` // Si tiene dos tipos, usamos el segundo color
+              : `${getTypeColor(pokemon, 0)}f5`, // Si tiene un solo tipo, no usamos un segundo color
+        }}
+      >
+        <h3>
+          #{pokemon.id} - {pokemon.name}
+        </h3>
+        <div id="divImg">
+          {/* Mostrar la imagen del Pokémon o el fallback */}
+          {isFront ? (
+            pokemon.image ? (
+              <img src={pokemon.image} alt={pokemon.name} />
+            ) : (
+              <PokemonFallbackImage
+                color={getTypeColor(pokemon, 0) || "#777"}
+              />
+            )
+          ) : pokemon.shinyImage ? (
+            <img src={pokemon.shinyImage} alt={`Shiny of ${pokemon.name}`} />
           ) : (
             <PokemonFallbackImage color={getTypeColor(pokemon, 0) || "#777"} />
-          )
-        ) : pokemon.shinyImage ? (
-          <img src={pokemon.shinyImage} alt={`Shiny of ${pokemon.name}`} />
-        ) : (
-          <PokemonFallbackImage color={getTypeColor(pokemon, 0) || "#777"} />
-        )}
-      </div>
-
-      <div id="cardBody">
-        <div className="types">
-          {pokemon.types.map((type, index) => (
-            <span
-              key={index}
-              className="type"
-              style={{ backgroundColor: getTypeColor(pokemon, index) }}
-            >
-              {type.name}
-              <PokemonTypeSVG type={sentenceCase(type.name)} />
-            </span>
-          ))}
+          )}
         </div>
-        {isFront
-          ? renderStats(pokemon.stats)
-          : renderAbilities(pokemon.abilities)}
+
+        <div id="cardBody">
+          <div className="types">
+            {pokemon.types.map((type, index) => (
+              <span
+                key={index}
+                className="type"
+                style={{ backgroundColor: getTypeColor(pokemon, index) }}
+              >
+                {type.name}
+                <PokemonTypeSVG type={sentenceCase(type.name)} />
+              </span>
+            ))}
+          </div>
+          {isFront
+            ? renderStats(pokemon.stats)
+            : renderAbilities(pokemon.abilities)}
+        </div>
       </div>
-    </div>
+    </Link>
   );
 }
 

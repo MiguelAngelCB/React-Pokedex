@@ -2,7 +2,6 @@ import { useState, useEffect } from "react";
 import PropTypes from "prop-types";
 import PokemonFaceCard from "./PokemonFaceCard"; // Ruta del nuevo componente
 import { pokemonPropTypes } from "../propTypes/pokemonPropTypes";
-import { Link } from "react-router-dom";
 import "../styles/PokemonCard.css";
 
 export function PokemonCard({ pokemon, isFlipped }) {
@@ -15,18 +14,13 @@ export function PokemonCard({ pokemon, isFlipped }) {
   }, [isFlipped]);
 
   return (
-    <Link to={`/individual/${pokemon.id}`}>
-      {" "}
-      <div
-        className={`pokemon-card-container ${isCardFlipped ? "flipped" : ""}`}
-      >
-        {/* Front face */}
-        <PokemonFaceCard pokemon={pokemon} isFront={true} />
+    <div className={`pokemon-card-container ${isCardFlipped ? "flipped" : ""}`}>
+      {/* Front face */}
+      <PokemonFaceCard pokemon={pokemon} isFront={true} />
 
-        {/* Back face */}
-        <PokemonFaceCard pokemon={pokemon} isFront={false} />
-      </div>
-    </Link>
+      {/* Back face */}
+      <PokemonFaceCard pokemon={pokemon} isFront={false} />
+    </div>
   );
 }
 
