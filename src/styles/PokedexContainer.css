@@ -434,6 +434,8 @@ body {
   border: 2px solid black;
   border-radius: 20px;
   padding: 1rem;
+  width: 500px;
+  height: 500px;
 }
 .container .right-screen__bottom {
   display: flex;
