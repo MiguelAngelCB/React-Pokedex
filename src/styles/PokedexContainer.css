@@ -6,7 +6,6 @@
   border-radius: 10px;
   background-color: #f9f9f9;
   max-width: 400px;
-  margin: 20px auto;
   box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
   text-align: center;
 }
@@ -25,22 +24,12 @@
   object-fit: cover;
 }
 
-.loading {
-  text-align: center;
-  font-size: 18px;
-  color: #666;
-}
-
-
 .flex-center,
 .container .right-screen__bottom .info-container,
-.container .left-screen__bottom .main-screen__display .not-found-message,
-.container .left-screen__bottom .main-screen__display .search-message,
 .container .left-screen__bottom .main-screen__top-lights,
 .container .left-screen__bottom .main-screen-right__top-lights,
 .container .left-screen__bottom,
 .container .left-screen__top .light-container,
-
 .pokedex-body {
   display: flex;
   align-items: center;
@@ -54,42 +43,20 @@
   font-family: "Saira Semi Condensed", sans-serif;
 }
 
-body {
-  min-height: 100vh;
-  min-width: 100vw;
-}
-
 .pokedex-body {
   min-height: 100vh;
   min-width: 100vw;
 }
 
-.pokedex-active body {
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  min-height: 100vh;
-  min-width: 100vw;
-}
-
-.pokedex-active * {
-  margin: 0;
-  padding: 0;
-  box-sizing: border-box;
-  font-family: "Saira Semi Condensed", sans-serif;
-}
-
 .container {
   min-width: 750px;
   min-height: 500px;
-  margin-left: 4rem;
+  height: 80%;
   display: grid;
   grid-template-columns: 1fr 1fr; /* Dos columnas por defecto */
   grid-template-rows: auto; /* Una sola fila */
-  grid-template-areas:
-    "left right"; /* Áreas para pantallas grandes */
+  grid-template-areas: "left right"; /* Áreas para pantallas grandes */
 }
-
 
 /* Joint */
 .joint-container {
@@ -105,18 +72,19 @@ body {
 }
 
 /* Media Query for small screens */
-@media (max-width: 768px) {
+@media (max-width: 1035px) {
   .container {
     display: grid;
-    grid-template-columns: 1fr; /* One column layout */
-    grid-template-rows: auto auto auto; /* Three rows: left, joint, and right */
+    grid-template-columns: 1fr;
+    grid-template-rows: auto auto auto;
     grid-template-areas:
-      "left"
+      "left "
       "joint"
-      "right"; /* Joint under the left screen */
-    gap: 0; /* No gap between elements */
-    justify-items: center; /* Center horizontally */
-    align-items: start; /* Align items at the top */
+      "right";
+    gap: 0;
+    justify-items: center;
+    align-items: center;
+    height: 100vh;
   }
 
   .left-screen {
@@ -129,7 +97,6 @@ body {
     padding: 1rem;
     box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.1);
     position: relative; /* Needed for absolute positioning of the joint */
-    bottom: 40px;
   }
 
   .left-screen__joint {
@@ -143,7 +110,6 @@ body {
     border: 1px solid black;
     border-radius: 10px;
     z-index: 1;
-    transition: transform 0.5s ease-in-out;
   }
 
   .left-screen__joint::before {
@@ -397,7 +363,7 @@ body {
 
 /* Puedes cambiar el color de la luz cuando el botón es presionado */
 .light-button:active .light.light--blue {
-  background-color: #0056b3; /* Azul más oscuro cuando se presiona */
+  background-color: #51a3fb; /* Azul más oscuro cuando se presiona */
 }
 .container .left-screen__top .light-container .light {
   width: 2.8rem;
@@ -406,28 +372,21 @@ body {
 }
 .container .left-screen__bottom {
   position: relative;
-  height: 78%;
-}
-.container .left-screen__bottom::after {
-  content: "";
-  position: absolute;
+  height: 80%;
+  width: 100%;
 }
 .container .left-screen__bottom .main-screen {
   position: relative;
-  width: 75%;
-  height: 100%;
   background-color: #dedede;
   border: 1px solid black;
   border-radius: 10px;
-  padding: 0 1rem;
-  margin-right: 0.8rem;
-  display: grid;
-  grid-template-columns: 1fr 1fr;
-  grid-template-rows: 0.1fr 0.75fr 0.15fr;
+  display: flex;
+  flex-direction: column;
   align-items: center;
   justify-content: center;
-  padding-top: 10px;
-  padding-bottom: 370px;
+  padding: 10px 20px;
+  width: 90%;
+  height: 100%;
 }
 /* Pantalla derecha */
 .container .right-screen__bottom .main-screen {
@@ -488,20 +447,17 @@ body {
   position: relative;
   width: 100%;
   height: 100%;
-  grid-column: 1 / span 2;
   margin-bottom: 10px;
 }
 .container .left-screen__bottom .main-screen-right__top-lights {
   position: relative;
   width: 100%;
   height: 100%;
-  grid-column: 1 / span 2;
 }
 .container .left-screen__bottom .main-screen-right__top-lights {
   position: relative;
   width: 100%;
   height: 100%;
-  grid-column: 1 / span 2;
 }
 .container .left-screen__bottom .main-screen__top-lights::before,
 .container .left-screen__bottom .main-screen__top-lights::after {
@@ -533,9 +489,8 @@ body {
   border: 1px solid #000000; /* Borde gris para separar visualmente */
   border-radius: 8px; /* Bordes redondeados */
   padding: 1rem; /* Espacio interior */
-  width: 200%; /* Para que ocupe todo el ancho del contenedor */
+  width: 100%; /* Para que ocupe todo el ancho del contenedor */
   text-align: center; /* Centra el texto */
-  overflow: hidden;
 }
 
 .pokemon-location {
@@ -573,15 +528,6 @@ body {
   box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.1);
   margin-bottom: 1rem;
 }
-
-#display-evolution {
-  /* Estilo específico para el display de evolución */
-}
-
-#display-strength-weakness {
-  /* Estilo específico para el display de fortalezas y debilidades */
-}
-
 .type-icons {
   display: flex;
   gap: 0.5rem;
@@ -603,38 +549,8 @@ h3 {
   align-items: center;
 }
 .container .left-screen__bottom .main-screen__display .pokemon-image img {
-  width: 80%; /* Ajusta este valor según el tamaño deseado */
-  height: 70%;
+  width: 50%; /* Ajusta este valor según el tamaño deseado */
   object-fit: contain; /* Para asegurarse de que la imagen no se deforme */
-}
-.container .left-screen__bottom .main-screen__display .not-found-message,
-.container .left-screen__bottom .main-screen__display .search-message {
-  height: 100%;
-  font-size: 1.8rem;
-  display: none;
-}
-.container .left-screen__bottom .main-screen__display .search-message {
-  animation: blinking 0.6s ease-in-out infinite alternate;
-}
-@keyframes blinking {
-  from {
-    color: white;
-  }
-  to {
-    color: black;
-  }
-}
-.container
-  .left-screen__bottom
-  .main-screen__display.is-searching
-  .pokemon-image {
-  display: none;
-}
-.container
-  .left-screen__bottom
-  .main-screen__display.is-searching
-  .search-message {
-  display: flex;
 }
 .container
   .left-screen__bottom

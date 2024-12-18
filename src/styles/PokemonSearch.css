@@ -15,7 +15,7 @@
 
 .search-input {
   width: 70vw;
-  height: 7vh;
+  height: 3.5rem;
   border: 2px solid #ccc;
   outline: none;
   padding: 0 10px 0 10px; /* Agregamos padding para el texto y para el botón */
