@@ -1,33 +1,6 @@
 @import url("https://fonts.googleapis.com/css2?family=Saira+Semi+Condensed:wght@300;400;500;600&display=swap");
 
-.pokedex-container {
-  padding: 20px;
-  border: 1px solid #ddd;
-  border-radius: 10px;
-  background-color: #f9f9f9;
-  max-width: 400px;
-  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
-  text-align: center;
-}
-
-.pokedex-title {
-  font-size: 24px;
-  text-align: center;
-  color: #333;
-}
-
-.pokedex-image {
-  display: block;
-  margin: 10px auto;
-  width: 200px;
-  height: 200px;
-  object-fit: cover;
-}
-
-.flex-center,
-.container .right-screen__bottom .info-container,
 .container .left-screen__bottom .main-screen__top-lights,
-.container .left-screen__bottom .main-screen-right__top-lights,
 .container .left-screen__bottom,
 .container .left-screen__top .light-container,
 .pokedex-body {
@@ -59,17 +32,6 @@
 }
 
 /* Joint */
-.joint-container {
-  grid-area: joint;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  gap: 0.5rem;
-  background-color: #ff0000;
-  border: 1px solid black;
-  border-radius: 10px;
-  padding: 1rem;
-}
 
 /* Media Query for small screens */
 @media (max-width: 1035px) {
@@ -221,31 +183,11 @@
   /* overflow: hidden; Elimina cualquier contenido sobrante que sobresalga */
   margin-left: 10px;
 }
-.container .right-screen__top {
-  width: 100%;
-  height: 18%;
-  position: relative;
-  display: flex;
-  justify-content: center; /* Centrar horizontalmente */
-  align-items: center; /* Centrar verticalmente */
-  gap: 1rem; /* Espaciado entre los elementos */
-  overflow: hidden; /* Elimina cualquier contenido sobrante que sobresalga */
-}
 .container .left-screen__top::before {
   content: "";
   position: absolute;
 }
-.container .right-screen__top::before {
-  content: "";
-  position: absolute;
-}
 .container .left-screen__top::after {
-  top: 20%;
-  right: 0;
-  width: 46%;
-  border-top: 5px solid rgba(0, 0, 0, 0.5);
-}
-.container .right-screen__top::after {
   top: 20%;
   right: 0;
   width: 46%;
@@ -449,16 +391,6 @@
   height: 100%;
   margin-bottom: 10px;
 }
-.container .left-screen__bottom .main-screen-right__top-lights {
-  position: relative;
-  width: 100%;
-  height: 100%;
-}
-.container .left-screen__bottom .main-screen-right__top-lights {
-  position: relative;
-  width: 100%;
-  height: 100%;
-}
 .container .left-screen__bottom .main-screen__top-lights::before,
 .container .left-screen__bottom .main-screen__top-lights::after {
   content: "";
@@ -468,19 +400,7 @@
   border: 2px solid #73121e;
   border-radius: 100%;
 }
-.container .left-screen__bottom .main-screen-right__top-lights::before,
-.container .left-screen__bottom .main-screen-right__top-lights::after {
-  content: "";
-  width: 10px;
-  height: 10px;
-  background-color: #cd1030;
-  border: 2px solid #73121e;
-  border-radius: 100%;
-}
 .container .left-screen__bottom .main-screen__top-lights::before {
-  margin-right: 1rem;
-}
-.container .left-screen__bottom .main-screen-right__top-lights::before {
   margin-right: 1rem;
 }
 .pokemon-location-container {
@@ -502,14 +422,6 @@
   grid-column: 1 / span 2;
   width: 100%;
   height: 100%;
-  background-color: white;
-  border: 1px solid black;
-  border-radius: 10px;
-}
-.container .left-screen .main-screen-right__display {
-  grid-column: 1 / span 2;
-  width: 50%;
-  height: 50%;
   background-color: white;
   border: 1px solid black;
   border-radius: 10px;
@@ -551,40 +463,6 @@ h3 {
 .container .left-screen__bottom .main-screen__display .pokemon-image img {
   width: 50%; /* Ajusta este valor según el tamaño deseado */
   object-fit: contain; /* Para asegurarse de que la imagen no se deforme */
-}
-.container
-  .left-screen__bottom
-  .main-screen__display.is-not-found
-  .pokemon-image {
-  display: none;
-}
-.container
-  .left-screen__bottom
-  .main-screen__display.is-not-found
-  .not-found-message {
-  display: flex;
-}
-.container .left-screen__bottom .main-screen__speaker-light {
-  grid-column: 1 / span 1;
-  width: 1.8rem;
-  height: 1.8rem;
-  background-color: #cd1030;
-  margin-left: 0.5rem;
-  border: 1px solid black;
-  border-radius: 100%;
-  margin-top: 20px;
-}
-.container .left-screen__bottom .main-screen__speaker {
-  margin-left: auto;
-  margin-right: 0.5rem;
-  margin-top: 10px;
-}
-.container .left-screen__bottom .main-screen__speaker > * {
-  width: 3.8rem;
-  height: 0.3rem;
-  margin-top: 3px;
-  border-radius: 10px;
-  background-color: #4d4d4d;
 }
 .container .left-screen__joint {
   position: absolute;

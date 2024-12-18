@@ -2,7 +2,6 @@ html,
 body {
   margin: 0; /* Eliminamos márgenes por defecto */
 }
-
 /* Fondo de pantalla */
 body {
   background-image: url(../../public/img/pokeball.svg);
@@ -11,7 +10,6 @@ body {
   background-color: #2f4659;
   background-position-x: center;
 }
-
 /* El header no es sticky ahora */
 #header {
   padding: 2.5rem;
