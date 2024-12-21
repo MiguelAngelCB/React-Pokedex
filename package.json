@@ -8,7 +8,7 @@
     "build": "vite build",
     "lint": "eslint .",
     "preview": "vite preview",
-    "build:css": "purgecss --css ./src/styles/PokedexContainer.css --content './src/components/**/*.jsx' './src/pages/**/*.jsx' --output ./src/styles/build/corregido.css"
+    "build:css": "purgecss --css ./src/styles/PokedexContainer.css --content ./src/components/PokedexContainer.jsx --output ./src/styles/build/corregido.css"
   },
   "dependencies": {
     "@fortawesome/free-solid-svg-icons": "^6.7.1",
