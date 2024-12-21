@@ -34,11 +34,11 @@
 }
 
 .pokemon-name {
-  width: 100%;
-  background-color: #ffffff85;
+  background-color: #cd1030;
   text-transform: uppercase;
   text-align: center;
-  color: #cd1030;
+  color: white;
+  padding: 0 1rem;
   font-size: x-large;
   font-weight: bolder;
   border-radius: inherit;

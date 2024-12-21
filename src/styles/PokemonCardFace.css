@@ -40,7 +40,7 @@
 /* Ajustes de imagen y cuerpo */
 .pokemon-card > #divImg,
 #cardBody {
-  background-color: #ffe4e4;
+  background-color: #f6eff1;
   padding: 0em 1em;
   border-radius: 10px;
   width: 100%;
@@ -88,6 +88,7 @@
   color: white;
   align-content: end;
   height: 2.5rem;
+  text-transform: capitalize;
 }
 .types {
   display: flex;

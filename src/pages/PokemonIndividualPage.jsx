@@ -1,5 +1,5 @@
 import { useEffect, useState } from "react";
-import { useParams } from "react-router-dom";
+import { useParams, useNavigate } from "react-router-dom"; // Import useNavigate
 import PokedexContainer from "../components/PokedexContainer";
 import { usePokemonContext } from "../context/PokemonContext";
 import { LoadingDots } from "../components/LoadingDots";
@@ -7,6 +7,7 @@ import { LoadingDots } from "../components/LoadingDots";
 export function PokemonIndividualPage() {
   const { id } = useParams(); // Obtén el ID de la URL
   const { pokemonList, loading, error, getPokemonById } = usePokemonContext(); // Usamos el contexto
+  const navigate = useNavigate(); // Initialize navigate
 
   const [pokemon, setPokemon] = useState(null);
 
@@ -15,8 +16,11 @@ export function PokemonIndividualPage() {
       // Solo se ejecuta después de que pokemonList esté disponible
       const foundPokemon = getPokemonById(id);
       setPokemon(foundPokemon);
+      if (!foundPokemon) {
+        navigate("/"); // Redirect to home page if Pokémon is not found
+      }
     }
-  }, [loading, error, pokemonList, id]); // Dependencias actualizadas
+  }, [loading, error, pokemonList, id, navigate]); // Dependencias actualizadas
   return (
     <>
       {loading && <LoadingDots />}

@@ -1,17 +1,14 @@
 import { pokemonPropTypes } from "../propTypes/pokemonPropTypes";
 import "../styles/PokedexContainer.css";
-import { useNavigate } from "react-router-dom"; // Importar useNavigate
 
 const PokedexContainer = ({ pokemon }) => {
-  const navigate = useNavigate(); // Instanciar navigate
-
   return (
     <div className="pokedex-body">
       {/* Nuevo contenedor raíz */}
       <div className="container">
         <div className="left-screen">
           <div className="left-screen__top">
-            <button className="light-button" onClick={() => navigate(-1)}>
+            <button className="light-button">
               <div className="light-container">
                 <div className="light light--blue"></div>
               </div>
