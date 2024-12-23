@@ -26,4 +26,12 @@ export const pokemonPropTypes = PropTypes.shape({
     normal: PropTypes.arrayOf(PropTypes.string),
     hidden: PropTypes.arrayOf(PropTypes.string),
   }).isRequired,
+  moves: PropTypes.arrayOf(
+    PropTypes.shape({
+      name: PropTypes.string.isRequired,
+      method: PropTypes.string.isRequired,
+      level: PropTypes.number.isRequired,
+    })
+  ).isRequired,
+  evolutionChainId: PropTypes.number.isRequired,
 });

@@ -26,7 +26,9 @@ const PokedexContainer = ({ pokemon }) => {
                 <div className="pokemon-image">
                   <img src={pokemon.image} alt={pokemon.name} />
                 </div>
-                <div className="pokemon-name">{pokemon.name}</div>
+                <div className="pokemon-name">
+                  #{pokemon.id} - {pokemon.name}
+                </div>
               </div>
               <div className="pokemon-location-container">
                 <div className="pokemon-location">Location: Unknown</div>
@@ -43,15 +45,6 @@ const PokedexContainer = ({ pokemon }) => {
         </div>
         <div className="right-screen">
           <div className="right-screen__bottom">
-            {/* Display de evolución */}
-            <div id="display-evolution" className="main-screen__display">
-              <div id="evolution-container">
-                <h3>Evolution Line</h3>
-                <div id="evolution-line"></div>
-              </div>
-            </div>
-
-            {/* Display de fortalezas y debilidades */}
             <div
               id="display-strength-weakness"
               className="main-screen__display"

@@ -23,6 +23,7 @@ export const fetchAllPokemons = async () => {
       data.results.map((pokemon) =>
         concurrencyLimit(async () => {
           const { data: details } = await axios.get(pokemon.url);
+          const { data: species } = await axios.get(details.species.url);
           const generation = await getPokemonGeneration(details.species.url);
 
           const abilities = {
@@ -35,6 +36,16 @@ export const fetchAllPokemons = async () => {
           };
 
           const normalImage = details.sprites.front_default; // Puedes usar una URL predeterminada de imagen o un SVG fallback
+
+          const moves = details.moves.map((move) => ({
+            name: move.move.name,
+            method: move.version_group_details[0].move_learn_method.name,
+            level: move.version_group_details[0].level_learned_at,
+          }));
+          const evolutionChainId = parseInt(
+            species.evolution_chain.url.split("/").slice(-2, -1)[0],
+            10
+          );
 
           return {
             id: details.id,
@@ -56,11 +67,12 @@ export const fetchAllPokemons = async () => {
             abilities,
             weight: details.weight / 10,
             height: details.height / 10,
+            moves, // Add moves
+            evolutionChainId, // Add evolution chain ID
           };
         })
       )
     );
-
     return pokemonDetails.filter((pokemon) => pokemon !== null);
   } catch (error) {
     console.error("Error fetching Pokémon:", error);

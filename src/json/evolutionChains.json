@@ -1,0 +1,7373 @@
+[
+  {
+    "id": 1,
+    "name": "bulbasaur",
+    "evolves_to": [
+      {
+        "id": 2,
+        "name": "ivysaur",
+        "requirements": {
+          "type": "level",
+          "level": 16
+        },
+        "evolves_to": [
+          {
+            "id": 3,
+            "name": "venusaur",
+            "requirements": {
+              "type": "level",
+              "level": 32
+            },
+            "evolves_to": []
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "id": 4,
+    "name": "charmander",
+    "evolves_to": [
+      {
+        "id": 5,
+        "name": "charmeleon",
+        "requirements": {
+          "type": "level",
+          "level": 16
+        },
+        "evolves_to": [
+          {
+            "id": 6,
+            "name": "charizard",
+            "requirements": {
+              "type": "level",
+              "level": 36
+            },
+            "evolves_to": []
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "id": 7,
+    "name": "squirtle",
+    "evolves_to": [
+      {
+        "id": 8,
+        "name": "wartortle",
+        "requirements": {
+          "type": "level",
+          "level": 16
+        },
+        "evolves_to": [
+          {
+            "id": 9,
+            "name": "blastoise",
+            "requirements": {
+              "type": "level",
+              "level": 36
+            },
+            "evolves_to": []
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "id": 10,
+    "name": "caterpie",
+    "evolves_to": [
+      {
+        "id": 11,
+        "name": "metapod",
+        "requirements": {
+          "type": "level",
+          "level": 7
+        },
+        "evolves_to": [
+          {
+            "id": 12,
+            "name": "butterfree",
+            "requirements": {
+              "type": "level",
+              "level": 10
+            },
+            "evolves_to": []
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "id": 13,
+    "name": "weedle",
+    "evolves_to": [
+      {
+        "id": 14,
+        "name": "kakuna",
+        "requirements": {
+          "type": "level",
+          "level": 7
+        },
+        "evolves_to": [
+          {
+            "id": 15,
+            "name": "beedrill",
+            "requirements": {
+              "type": "level",
+              "level": 10
+            },
+            "evolves_to": []
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "id": 16,
+    "name": "pidgey",
+    "evolves_to": [
+      {
+        "id": 17,
+        "name": "pidgeotto",
+        "requirements": {
+          "type": "level",
+          "level": 18
+        },
+        "evolves_to": [
+          {
+            "id": 18,
+            "name": "pidgeot",
+            "requirements": {
+              "type": "level",
+              "level": 36
+            },
+            "evolves_to": []
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "id": 19,
+    "name": "rattata",
+    "evolves_to": [
+      {
+        "id": 20,
+        "name": "raticate",
+        "requirements": {
+          "type": "level",
+          "level": 20
+        },
+        "evolves_to": []
+      }
+    ]
+  },
+  {
+    "id": 21,
+    "name": "spearow",
+    "evolves_to": [
+      {
+        "id": 22,
+        "name": "fearow",
+        "requirements": {
+          "type": "level",
+          "level": 20
+        },
+        "evolves_to": []
+      }
+    ]
+  },
+  {
+    "id": 23,
+    "name": "ekans",
+    "evolves_to": [
+      {
+        "id": 24,
+        "name": "arbok",
+        "requirements": {
+          "type": "level",
+          "level": 22
+        },
+        "evolves_to": []
+      }
+    ]
+  },
+  {
+    "id": 172,
+    "name": "pichu",
+    "evolves_to": [
+      {
+        "id": 25,
+        "name": "pikachu",
+        "requirements": null,
+        "evolves_to": [
+          {
+            "id": 26,
+            "name": "raichu",
+            "requirements": {
+              "type": "item",
+              "item": "thunder-stone"
+            },
+            "evolves_to": []
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "id": 27,
+    "name": "sandshrew",
+    "evolves_to": [
+      {
+        "id": 28,
+        "name": "sandslash",
+        "requirements": {
+          "type": "item",
+          "item": "ice-stone"
+        },
+        "evolves_to": []
+      }
+    ]
+  },
+  {
+    "id": 29,
+    "name": "nidoran-f",
+    "evolves_to": [
+      {
+        "id": 30,
+        "name": "nidorina",
+        "requirements": {
+          "type": "level",
+          "level": 16
+        },
+        "evolves_to": [
+          {
+            "id": 31,
+            "name": "nidoqueen",
+            "requirements": {
+              "type": "item",
+              "item": "moon-stone"
+            },
+            "evolves_to": []
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "id": 32,
+    "name": "nidoran-m",
+    "evolves_to": [
+      {
+        "id": 33,
+        "name": "nidorino",
+        "requirements": {
+          "type": "level",
+          "level": 16
+        },
+        "evolves_to": [
+          {
+            "id": 34,
+            "name": "nidoking",
+            "requirements": {
+              "type": "item",
+              "item": "moon-stone"
+            },
+            "evolves_to": []
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "id": 173,
+    "name": "cleffa",
+    "evolves_to": [
+      {
+        "id": 35,
+        "name": "clefairy",
+        "requirements": null,
+        "evolves_to": [
+          {
+            "id": 36,
+            "name": "clefable",
+            "requirements": {
+              "type": "item",
+              "item": "moon-stone"
+            },
+            "evolves_to": []
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "id": 37,
+    "name": "vulpix",
+    "evolves_to": [
+      {
+        "id": 38,
+        "name": "ninetales",
+        "requirements": {
+          "type": "item",
+          "item": "ice-stone"
+        },
+        "evolves_to": []
+      }
+    ]
+  },
+  {
+    "id": 174,
+    "name": "igglybuff",
+    "evolves_to": [
+      {
+        "id": 39,
+        "name": "jigglypuff",
+        "requirements": null,
+        "evolves_to": [
+          {
+            "id": 40,
+            "name": "wigglytuff",
+            "requirements": {
+              "type": "item",
+              "item": "moon-stone"
+            },
+            "evolves_to": []
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "id": 41,
+    "name": "zubat",
+    "evolves_to": [
+      {
+        "id": 42,
+        "name": "golbat",
+        "requirements": {
+          "type": "level",
+          "level": 22
+        },
+        "evolves_to": [
+          {
+            "id": 169,
+            "name": "crobat",
+            "requirements": null,
+            "evolves_to": []
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "id": 43,
+    "name": "oddish",
+    "evolves_to": [
+      {
+        "id": 44,
+        "name": "gloom",
+        "requirements": {
+          "type": "level",
+          "level": 21
+        },
+        "evolves_to": [
+          {
+            "id": 45,
+            "name": "vileplume",
+            "requirements": {
+              "type": "item",
+              "item": "leaf-stone"
+            },
+            "evolves_to": []
+          },
+          {
+            "id": 182,
+            "name": "bellossom",
+            "requirements": {
+              "type": "item",
+              "item": "sun-stone"
+            },
+            "evolves_to": []
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "id": 46,
+    "name": "paras",
+    "evolves_to": [
+      {
+        "id": 47,
+        "name": "parasect",
+        "requirements": {
+          "type": "level",
+          "level": 24
+        },
+        "evolves_to": []
+      }
+    ]
+  },
+  {
+    "id": 48,
+    "name": "venonat",
+    "evolves_to": [
+      {
+        "id": 49,
+        "name": "venomoth",
+        "requirements": {
+          "type": "level",
+          "level": 31
+        },
+        "evolves_to": []
+      }
+    ]
+  },
+  {
+    "id": 50,
+    "name": "diglett",
+    "evolves_to": [
+      {
+        "id": 51,
+        "name": "dugtrio",
+        "requirements": {
+          "type": "level",
+          "level": 26
+        },
+        "evolves_to": []
+      }
+    ]
+  },
+  {
+    "id": 52,
+    "name": "meowth",
+    "evolves_to": [
+      {
+        "id": 53,
+        "name": "persian",
+        "requirements": null,
+        "evolves_to": []
+      },
+      {
+        "id": 863,
+        "name": "perrserker",
+        "requirements": {
+          "type": "level",
+          "level": 28
+        },
+        "evolves_to": []
+      }
+    ]
+  },
+  {
+    "id": 54,
+    "name": "psyduck",
+    "evolves_to": [
+      {
+        "id": 55,
+        "name": "golduck",
+        "requirements": {
+          "type": "level",
+          "level": 33
+        },
+        "evolves_to": []
+      }
+    ]
+  },
+  {
+    "id": 56,
+    "name": "mankey",
+    "evolves_to": [
+      {
+        "id": 57,
+        "name": "primeape",
+        "requirements": {
+          "type": "level",
+          "level": 28
+        },
+        "evolves_to": [
+          {
+            "id": 979,
+            "name": "annihilape",
+            "requirements": null,
+            "evolves_to": []
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "id": 58,
+    "name": "growlithe",
+    "evolves_to": [
+      {
+        "id": 59,
+        "name": "arcanine",
+        "requirements": {
+          "type": "item",
+          "item": "fire-stone"
+        },
+        "evolves_to": []
+      }
+    ]
+  },
+  {
+    "id": 60,
+    "name": "poliwag",
+    "evolves_to": [
+      {
+        "id": 61,
+        "name": "poliwhirl",
+        "requirements": {
+          "type": "level",
+          "level": 25
+        },
+        "evolves_to": [
+          {
+            "id": 62,
+            "name": "poliwrath",
+            "requirements": {
+              "type": "item",
+              "item": "water-stone"
+            },
+            "evolves_to": []
+          },
+          {
+            "id": 186,
+            "name": "politoed",
+            "requirements": {
+              "type": "trade"
+            },
+            "evolves_to": []
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "id": 63,
+    "name": "abra",
+    "evolves_to": [
+      {
+        "id": 64,
+        "name": "kadabra",
+        "requirements": {
+          "type": "level",
+          "level": 16
+        },
+        "evolves_to": [
+          {
+            "id": 65,
+            "name": "alakazam",
+            "requirements": {
+              "type": "trade"
+            },
+            "evolves_to": []
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "id": 66,
+    "name": "machop",
+    "evolves_to": [
+      {
+        "id": 67,
+        "name": "machoke",
+        "requirements": {
+          "type": "level",
+          "level": 28
+        },
+        "evolves_to": [
+          {
+            "id": 68,
+            "name": "machamp",
+            "requirements": {
+              "type": "trade"
+            },
+            "evolves_to": []
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "id": 69,
+    "name": "bellsprout",
+    "evolves_to": [
+      {
+        "id": 70,
+        "name": "weepinbell",
+        "requirements": {
+          "type": "level",
+          "level": 21
+        },
+        "evolves_to": [
+          {
+            "id": 71,
+            "name": "victreebel",
+            "requirements": {
+              "type": "item",
+              "item": "leaf-stone"
+            },
+            "evolves_to": []
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "id": 72,
+    "name": "tentacool",
+    "evolves_to": [
+      {
+        "id": 73,
+        "name": "tentacruel",
+        "requirements": {
+          "type": "level",
+          "level": 30
+        },
+        "evolves_to": []
+      }
+    ]
+  },
+  {
+    "id": 74,
+    "name": "geodude",
+    "evolves_to": [
+      {
+        "id": 75,
+        "name": "graveler",
+        "requirements": {
+          "type": "level",
+          "level": 25
+        },
+        "evolves_to": [
+          {
+            "id": 76,
+            "name": "golem",
+            "requirements": {
+              "type": "trade"
+            },
+            "evolves_to": []
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "id": 77,
+    "name": "ponyta",
+    "evolves_to": [
+      {
+        "id": 78,
+        "name": "rapidash",
+        "requirements": {
+          "type": "level",
+          "level": 40
+        },
+        "evolves_to": []
+      }
+    ]
+  },
+  {
+    "id": 79,
+    "name": "slowpoke",
+    "evolves_to": [
+      {
+        "id": 80,
+        "name": "slowbro",
+        "requirements": {
+          "type": "item",
+          "item": "galarica-cuff"
+        },
+        "evolves_to": []
+      },
+      {
+        "id": 199,
+        "name": "slowking",
+        "requirements": {
+          "type": "item",
+          "item": "galarica-wreath"
+        },
+        "evolves_to": []
+      }
+    ]
+  },
+  {
+    "id": 81,
+    "name": "magnemite",
+    "evolves_to": [
+      {
+        "id": 82,
+        "name": "magneton",
+        "requirements": {
+          "type": "level",
+          "level": 30
+        },
+        "evolves_to": [
+          {
+            "id": 462,
+            "name": "magnezone",
+            "requirements": {
+              "type": "item",
+              "item": "thunder-stone"
+            },
+            "evolves_to": []
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "id": 83,
+    "name": "farfetchd",
+    "evolves_to": [
+      {
+        "id": 865,
+        "name": "sirfetchd",
+        "requirements": null,
+        "evolves_to": []
+      }
+    ]
+  },
+  {
+    "id": 84,
+    "name": "doduo",
+    "evolves_to": [
+      {
+        "id": 85,
+        "name": "dodrio",
+        "requirements": {
+          "type": "level",
+          "level": 31
+        },
+        "evolves_to": []
+      }
+    ]
+  },
+  {
+    "id": 86,
+    "name": "seel",
+    "evolves_to": [
+      {
+        "id": 87,
+        "name": "dewgong",
+        "requirements": {
+          "type": "level",
+          "level": 34
+        },
+        "evolves_to": []
+      }
+    ]
+  },
+  {
+    "id": 88,
+    "name": "grimer",
+    "evolves_to": [
+      {
+        "id": 89,
+        "name": "muk",
+        "requirements": {
+          "type": "level",
+          "level": 38
+        },
+        "evolves_to": []
+      }
+    ]
+  },
+  {
+    "id": 90,
+    "name": "shellder",
+    "evolves_to": [
+      {
+        "id": 91,
+        "name": "cloyster",
+        "requirements": {
+          "type": "item",
+          "item": "water-stone"
+        },
+        "evolves_to": []
+      }
+    ]
+  },
+  {
+    "id": 92,
+    "name": "gastly",
+    "evolves_to": [
+      {
+        "id": 93,
+        "name": "haunter",
+        "requirements": {
+          "type": "level",
+          "level": 25
+        },
+        "evolves_to": [
+          {
+            "id": 94,
+            "name": "gengar",
+            "requirements": {
+              "type": "trade"
+            },
+            "evolves_to": []
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "id": 95,
+    "name": "onix",
+    "evolves_to": [
+      {
+        "id": 208,
+        "name": "steelix",
+        "requirements": {
+          "type": "trade"
+        },
+        "evolves_to": []
+      }
+    ]
+  },
+  {
+    "id": 96,
+    "name": "drowzee",
+    "evolves_to": [
+      {
+        "id": 97,
+        "name": "hypno",
+        "requirements": {
+          "type": "level",
+          "level": 26
+        },
+        "evolves_to": []
+      }
+    ]
+  },
+  {
+    "id": 98,
+    "name": "krabby",
+    "evolves_to": [
+      {
+        "id": 99,
+        "name": "kingler",
+        "requirements": {
+          "type": "level",
+          "level": 28
+        },
+        "evolves_to": []
+      }
+    ]
+  },
+  {
+    "id": 100,
+    "name": "voltorb",
+    "evolves_to": [
+      {
+        "id": 101,
+        "name": "electrode",
+        "requirements": {
+          "type": "level",
+          "level": 30
+        },
+        "evolves_to": []
+      }
+    ]
+  },
+  {
+    "id": 102,
+    "name": "exeggcute",
+    "evolves_to": [
+      {
+        "id": 103,
+        "name": "exeggutor",
+        "requirements": {
+          "type": "item",
+          "item": "leaf-stone"
+        },
+        "evolves_to": []
+      }
+    ]
+  },
+  {
+    "id": 104,
+    "name": "cubone",
+    "evolves_to": [
+      {
+        "id": 105,
+        "name": "marowak",
+        "requirements": {
+          "type": "level",
+          "level": 28
+        },
+        "evolves_to": []
+      }
+    ]
+  },
+  {
+    "id": 236,
+    "name": "tyrogue",
+    "evolves_to": [
+      {
+        "id": 106,
+        "name": "hitmonlee",
+        "requirements": {
+          "type": "level",
+          "level": 20
+        },
+        "evolves_to": []
+      },
+      {
+        "id": 107,
+        "name": "hitmonchan",
+        "requirements": {
+          "type": "level",
+          "level": 20
+        },
+        "evolves_to": []
+      },
+      {
+        "id": 237,
+        "name": "hitmontop",
+        "requirements": {
+          "type": "level",
+          "level": 20
+        },
+        "evolves_to": []
+      }
+    ]
+  },
+  {
+    "id": 108,
+    "name": "lickitung",
+    "evolves_to": [
+      {
+        "id": 463,
+        "name": "lickilicky",
+        "requirements": {
+          "type": "move",
+          "move": "rollout"
+        },
+        "evolves_to": []
+      }
+    ]
+  },
+  {
+    "id": 109,
+    "name": "koffing",
+    "evolves_to": [
+      {
+        "id": 110,
+        "name": "weezing",
+        "requirements": {
+          "type": "level",
+          "level": 35
+        },
+        "evolves_to": []
+      }
+    ]
+  },
+  {
+    "id": 111,
+    "name": "rhyhorn",
+    "evolves_to": [
+      {
+        "id": 112,
+        "name": "rhydon",
+        "requirements": {
+          "type": "level",
+          "level": 42
+        },
+        "evolves_to": [
+          {
+            "id": 464,
+            "name": "rhyperior",
+            "requirements": {
+              "type": "trade"
+            },
+            "evolves_to": []
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "id": 440,
+    "name": "happiny",
+    "evolves_to": [
+      {
+        "id": 113,
+        "name": "chansey",
+        "requirements": {
+          "type": "held_item",
+          "item": "oval-stone"
+        },
+        "evolves_to": [
+          {
+            "id": 242,
+            "name": "blissey",
+            "requirements": null,
+            "evolves_to": []
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "id": 114,
+    "name": "tangela",
+    "evolves_to": [
+      {
+        "id": 465,
+        "name": "tangrowth",
+        "requirements": {
+          "type": "move",
+          "move": "ancient-power"
+        },
+        "evolves_to": []
+      }
+    ]
+  },
+  {
+    "id": 115,
+    "name": "kangaskhan",
+    "evolves_to": []
+  },
+  {
+    "id": 116,
+    "name": "horsea",
+    "evolves_to": [
+      {
+        "id": 117,
+        "name": "seadra",
+        "requirements": {
+          "type": "level",
+          "level": 32
+        },
+        "evolves_to": [
+          {
+            "id": 230,
+            "name": "kingdra",
+            "requirements": {
+              "type": "trade"
+            },
+            "evolves_to": []
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "id": 118,
+    "name": "goldeen",
+    "evolves_to": [
+      {
+        "id": 119,
+        "name": "seaking",
+        "requirements": {
+          "type": "level",
+          "level": 33
+        },
+        "evolves_to": []
+      }
+    ]
+  },
+  {
+    "id": 120,
+    "name": "staryu",
+    "evolves_to": [
+      {
+        "id": 121,
+        "name": "starmie",
+        "requirements": {
+          "type": "item",
+          "item": "water-stone"
+        },
+        "evolves_to": []
+      }
+    ]
+  },
+  {
+    "id": 439,
+    "name": "mime-jr",
+    "evolves_to": [
+      {
+        "id": 122,
+        "name": "mr-mime",
+        "requirements": {
+          "type": "move",
+          "move": "mimic"
+        },
+        "evolves_to": [
+          {
+            "id": 866,
+            "name": "mr-rime",
+            "requirements": {
+              "type": "level",
+              "level": 42
+            },
+            "evolves_to": []
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "id": 123,
+    "name": "scyther",
+    "evolves_to": [
+      {
+        "id": 212,
+        "name": "scizor",
+        "requirements": {
+          "type": "trade"
+        },
+        "evolves_to": []
+      },
+      {
+        "id": 900,
+        "name": "kleavor",
+        "requirements": {
+          "type": "item",
+          "item": "black-augurite"
+        },
+        "evolves_to": []
+      }
+    ]
+  },
+  {
+    "id": 238,
+    "name": "smoochum",
+    "evolves_to": [
+      {
+        "id": 124,
+        "name": "jynx",
+        "requirements": {
+          "type": "level",
+          "level": 30
+        },
+        "evolves_to": []
+      }
+    ]
+  },
+  {
+    "id": 239,
+    "name": "elekid",
+    "evolves_to": [
+      {
+        "id": 125,
+        "name": "electabuzz",
+        "requirements": {
+          "type": "level",
+          "level": 30
+        },
+        "evolves_to": [
+          {
+            "id": 466,
+            "name": "electivire",
+            "requirements": {
+              "type": "trade"
+            },
+            "evolves_to": []
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "id": 240,
+    "name": "magby",
+    "evolves_to": [
+      {
+        "id": 126,
+        "name": "magmar",
+        "requirements": {
+          "type": "level",
+          "level": 30
+        },
+        "evolves_to": [
+          {
+            "id": 467,
+            "name": "magmortar",
+            "requirements": {
+              "type": "trade"
+            },
+            "evolves_to": []
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "id": 127,
+    "name": "pinsir",
+    "evolves_to": []
+  },
+  {
+    "id": 128,
+    "name": "tauros",
+    "evolves_to": []
+  },
+  {
+    "id": 129,
+    "name": "magikarp",
+    "evolves_to": [
+      {
+        "id": 130,
+        "name": "gyarados",
+        "requirements": {
+          "type": "level",
+          "level": 20
+        },
+        "evolves_to": []
+      }
+    ]
+  },
+  {
+    "id": 131,
+    "name": "lapras",
+    "evolves_to": []
+  },
+  {
+    "id": 132,
+    "name": "ditto",
+    "evolves_to": []
+  },
+  {
+    "id": 133,
+    "name": "eevee",
+    "evolves_to": [
+      {
+        "id": 134,
+        "name": "vaporeon",
+        "requirements": {
+          "type": "item",
+          "item": "water-stone"
+        },
+        "evolves_to": []
+      },
+      {
+        "id": 135,
+        "name": "jolteon",
+        "requirements": {
+          "type": "item",
+          "item": "thunder-stone"
+        },
+        "evolves_to": []
+      },
+      {
+        "id": 136,
+        "name": "flareon",
+        "requirements": {
+          "type": "item",
+          "item": "fire-stone"
+        },
+        "evolves_to": []
+      },
+      {
+        "id": 196,
+        "name": "espeon",
+        "requirements": null,
+        "evolves_to": []
+      },
+      {
+        "id": 197,
+        "name": "umbreon",
+        "requirements": null,
+        "evolves_to": []
+      },
+      {
+        "id": 470,
+        "name": "leafeon",
+        "requirements": {
+          "type": "item",
+          "item": "leaf-stone"
+        },
+        "evolves_to": []
+      },
+      {
+        "id": 471,
+        "name": "glaceon",
+        "requirements": {
+          "type": "item",
+          "item": "ice-stone"
+        },
+        "evolves_to": []
+      },
+      {
+        "id": 700,
+        "name": "sylveon",
+        "requirements": null,
+        "evolves_to": []
+      }
+    ]
+  },
+  {
+    "id": 137,
+    "name": "porygon",
+    "evolves_to": [
+      {
+        "id": 233,
+        "name": "porygon2",
+        "requirements": {
+          "type": "trade"
+        },
+        "evolves_to": [
+          {
+            "id": 474,
+            "name": "porygon-z",
+            "requirements": {
+              "type": "trade"
+            },
+            "evolves_to": []
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "id": 138,
+    "name": "omanyte",
+    "evolves_to": [
+      {
+        "id": 139,
+        "name": "omastar",
+        "requirements": {
+          "type": "level",
+          "level": 40
+        },
+        "evolves_to": []
+      }
+    ]
+  },
+  {
+    "id": 140,
+    "name": "kabuto",
+    "evolves_to": [
+      {
+        "id": 141,
+        "name": "kabutops",
+        "requirements": {
+          "type": "level",
+          "level": 40
+        },
+        "evolves_to": []
+      }
+    ]
+  },
+  {
+    "id": 142,
+    "name": "aerodactyl",
+    "evolves_to": []
+  },
+  {
+    "id": 446,
+    "name": "munchlax",
+    "evolves_to": [
+      {
+        "id": 143,
+        "name": "snorlax",
+        "requirements": null,
+        "evolves_to": []
+      }
+    ]
+  },
+  {
+    "id": 144,
+    "name": "articuno",
+    "evolves_to": []
+  },
+  {
+    "id": 145,
+    "name": "zapdos",
+    "evolves_to": []
+  },
+  {
+    "id": 146,
+    "name": "moltres",
+    "evolves_to": []
+  },
+  {
+    "id": 147,
+    "name": "dratini",
+    "evolves_to": [
+      {
+        "id": 148,
+        "name": "dragonair",
+        "requirements": {
+          "type": "level",
+          "level": 30
+        },
+        "evolves_to": [
+          {
+            "id": 149,
+            "name": "dragonite",
+            "requirements": {
+              "type": "level",
+              "level": 55
+            },
+            "evolves_to": []
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "id": 150,
+    "name": "mewtwo",
+    "evolves_to": []
+  },
+  {
+    "id": 151,
+    "name": "mew",
+    "evolves_to": []
+  },
+  {
+    "id": 152,
+    "name": "chikorita",
+    "evolves_to": [
+      {
+        "id": 153,
+        "name": "bayleef",
+        "requirements": {
+          "type": "level",
+          "level": 16
+        },
+        "evolves_to": [
+          {
+            "id": 154,
+            "name": "meganium",
+            "requirements": {
+              "type": "level",
+              "level": 32
+            },
+            "evolves_to": []
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "id": 155,
+    "name": "cyndaquil",
+    "evolves_to": [
+      {
+        "id": 156,
+        "name": "quilava",
+        "requirements": {
+          "type": "level",
+          "level": 14
+        },
+        "evolves_to": [
+          {
+            "id": 157,
+            "name": "typhlosion",
+            "requirements": {
+              "type": "level",
+              "level": 36
+            },
+            "evolves_to": []
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "id": 158,
+    "name": "totodile",
+    "evolves_to": [
+      {
+        "id": 159,
+        "name": "croconaw",
+        "requirements": {
+          "type": "level",
+          "level": 18
+        },
+        "evolves_to": [
+          {
+            "id": 160,
+            "name": "feraligatr",
+            "requirements": {
+              "type": "level",
+              "level": 30
+            },
+            "evolves_to": []
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "id": 161,
+    "name": "sentret",
+    "evolves_to": [
+      {
+        "id": 162,
+        "name": "furret",
+        "requirements": {
+          "type": "level",
+          "level": 15
+        },
+        "evolves_to": []
+      }
+    ]
+  },
+  {
+    "id": 163,
+    "name": "hoothoot",
+    "evolves_to": [
+      {
+        "id": 164,
+        "name": "noctowl",
+        "requirements": {
+          "type": "level",
+          "level": 20
+        },
+        "evolves_to": []
+      }
+    ]
+  },
+  {
+    "id": 165,
+    "name": "ledyba",
+    "evolves_to": [
+      {
+        "id": 166,
+        "name": "ledian",
+        "requirements": {
+          "type": "level",
+          "level": 18
+        },
+        "evolves_to": []
+      }
+    ]
+  },
+  {
+    "id": 167,
+    "name": "spinarak",
+    "evolves_to": [
+      {
+        "id": 168,
+        "name": "ariados",
+        "requirements": {
+          "type": "level",
+          "level": 22
+        },
+        "evolves_to": []
+      }
+    ]
+  },
+  {
+    "id": 170,
+    "name": "chinchou",
+    "evolves_to": [
+      {
+        "id": 171,
+        "name": "lanturn",
+        "requirements": {
+          "type": "level",
+          "level": 27
+        },
+        "evolves_to": []
+      }
+    ]
+  },
+  {
+    "id": 175,
+    "name": "togepi",
+    "evolves_to": [
+      {
+        "id": 176,
+        "name": "togetic",
+        "requirements": null,
+        "evolves_to": [
+          {
+            "id": 468,
+            "name": "togekiss",
+            "requirements": {
+              "type": "item",
+              "item": "shiny-stone"
+            },
+            "evolves_to": []
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "id": 177,
+    "name": "natu",
+    "evolves_to": [
+      {
+        "id": 178,
+        "name": "xatu",
+        "requirements": {
+          "type": "level",
+          "level": 25
+        },
+        "evolves_to": []
+      }
+    ]
+  },
+  {
+    "id": 179,
+    "name": "mareep",
+    "evolves_to": [
+      {
+        "id": 180,
+        "name": "flaaffy",
+        "requirements": {
+          "type": "level",
+          "level": 15
+        },
+        "evolves_to": [
+          {
+            "id": 181,
+            "name": "ampharos",
+            "requirements": {
+              "type": "level",
+              "level": 30
+            },
+            "evolves_to": []
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "id": 298,
+    "name": "azurill",
+    "evolves_to": [
+      {
+        "id": 183,
+        "name": "marill",
+        "requirements": null,
+        "evolves_to": [
+          {
+            "id": 184,
+            "name": "azumarill",
+            "requirements": {
+              "type": "level",
+              "level": 18
+            },
+            "evolves_to": []
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "id": 438,
+    "name": "bonsly",
+    "evolves_to": [
+      {
+        "id": 185,
+        "name": "sudowoodo",
+        "requirements": {
+          "type": "move",
+          "move": "mimic"
+        },
+        "evolves_to": []
+      }
+    ]
+  },
+  {
+    "id": 187,
+    "name": "hoppip",
+    "evolves_to": [
+      {
+        "id": 188,
+        "name": "skiploom",
+        "requirements": {
+          "type": "level",
+          "level": 18
+        },
+        "evolves_to": [
+          {
+            "id": 189,
+            "name": "jumpluff",
+            "requirements": {
+              "type": "level",
+              "level": 27
+            },
+            "evolves_to": []
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "id": 190,
+    "name": "aipom",
+    "evolves_to": [
+      {
+        "id": 424,
+        "name": "ambipom",
+        "requirements": {
+          "type": "move",
+          "move": "double-hit"
+        },
+        "evolves_to": []
+      }
+    ]
+  },
+  {
+    "id": 191,
+    "name": "sunkern",
+    "evolves_to": [
+      {
+        "id": 192,
+        "name": "sunflora",
+        "requirements": {
+          "type": "item",
+          "item": "sun-stone"
+        },
+        "evolves_to": []
+      }
+    ]
+  },
+  {
+    "id": 193,
+    "name": "yanma",
+    "evolves_to": [
+      {
+        "id": 469,
+        "name": "yanmega",
+        "requirements": {
+          "type": "move",
+          "move": "ancient-power"
+        },
+        "evolves_to": []
+      }
+    ]
+  },
+  {
+    "id": 194,
+    "name": "wooper",
+    "evolves_to": [
+      {
+        "id": 195,
+        "name": "quagsire",
+        "requirements": {
+          "type": "level",
+          "level": 20
+        },
+        "evolves_to": []
+      },
+      {
+        "id": 980,
+        "name": "clodsire",
+        "requirements": {
+          "type": "level",
+          "level": 20
+        },
+        "evolves_to": []
+      }
+    ]
+  },
+  {
+    "id": 198,
+    "name": "murkrow",
+    "evolves_to": [
+      {
+        "id": 430,
+        "name": "honchkrow",
+        "requirements": {
+          "type": "item",
+          "item": "dusk-stone"
+        },
+        "evolves_to": []
+      }
+    ]
+  },
+  {
+    "id": 200,
+    "name": "misdreavus",
+    "evolves_to": [
+      {
+        "id": 429,
+        "name": "mismagius",
+        "requirements": {
+          "type": "item",
+          "item": "dusk-stone"
+        },
+        "evolves_to": []
+      }
+    ]
+  },
+  {
+    "id": 201,
+    "name": "unown",
+    "evolves_to": []
+  },
+  {
+    "id": 360,
+    "name": "wynaut",
+    "evolves_to": [
+      {
+        "id": 202,
+        "name": "wobbuffet",
+        "requirements": {
+          "type": "level",
+          "level": 15
+        },
+        "evolves_to": []
+      }
+    ]
+  },
+  {
+    "id": 203,
+    "name": "girafarig",
+    "evolves_to": [
+      {
+        "id": 981,
+        "name": "farigiraf",
+        "requirements": {
+          "type": "move",
+          "move": "twin-beam"
+        },
+        "evolves_to": []
+      }
+    ]
+  },
+  {
+    "id": 204,
+    "name": "pineco",
+    "evolves_to": [
+      {
+        "id": 205,
+        "name": "forretress",
+        "requirements": {
+          "type": "level",
+          "level": 31
+        },
+        "evolves_to": []
+      }
+    ]
+  },
+  {
+    "id": 206,
+    "name": "dunsparce",
+    "evolves_to": [
+      {
+        "id": 982,
+        "name": "dudunsparce",
+        "requirements": {
+          "type": "move",
+          "move": "hyper-drill"
+        },
+        "evolves_to": []
+      }
+    ]
+  },
+  {
+    "id": 207,
+    "name": "gligar",
+    "evolves_to": [
+      {
+        "id": 472,
+        "name": "gliscor",
+        "requirements": {
+          "type": "held_item",
+          "item": "razor-fang"
+        },
+        "evolves_to": []
+      }
+    ]
+  },
+  {
+    "id": 209,
+    "name": "snubbull",
+    "evolves_to": [
+      {
+        "id": 210,
+        "name": "granbull",
+        "requirements": {
+          "type": "level",
+          "level": 23
+        },
+        "evolves_to": []
+      }
+    ]
+  },
+  {
+    "id": 211,
+    "name": "qwilfish",
+    "evolves_to": [
+      {
+        "id": 904,
+        "name": "overqwil",
+        "requirements": {
+          "type": "move",
+          "move": "barb-barrage"
+        },
+        "evolves_to": []
+      }
+    ]
+  },
+  {
+    "id": 213,
+    "name": "shuckle",
+    "evolves_to": []
+  },
+  {
+    "id": 214,
+    "name": "heracross",
+    "evolves_to": []
+  },
+  {
+    "id": 215,
+    "name": "sneasel",
+    "evolves_to": [
+      {
+        "id": 461,
+        "name": "weavile",
+        "requirements": {
+          "type": "held_item",
+          "item": "razor-claw"
+        },
+        "evolves_to": []
+      },
+      {
+        "id": 903,
+        "name": "sneasler",
+        "requirements": {
+          "type": "held_item",
+          "item": "razor-claw"
+        },
+        "evolves_to": []
+      }
+    ]
+  },
+  {
+    "id": 216,
+    "name": "teddiursa",
+    "evolves_to": [
+      {
+        "id": 217,
+        "name": "ursaring",
+        "requirements": {
+          "type": "level",
+          "level": 30
+        },
+        "evolves_to": [
+          {
+            "id": 901,
+            "name": "ursaluna",
+            "requirements": {
+              "type": "item",
+              "item": "peat-block"
+            },
+            "evolves_to": []
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "id": 218,
+    "name": "slugma",
+    "evolves_to": [
+      {
+        "id": 219,
+        "name": "magcargo",
+        "requirements": {
+          "type": "level",
+          "level": 38
+        },
+        "evolves_to": []
+      }
+    ]
+  },
+  {
+    "id": 220,
+    "name": "swinub",
+    "evolves_to": [
+      {
+        "id": 221,
+        "name": "piloswine",
+        "requirements": {
+          "type": "level",
+          "level": 33
+        },
+        "evolves_to": [
+          {
+            "id": 473,
+            "name": "mamoswine",
+            "requirements": {
+              "type": "move",
+              "move": "ancient-power"
+            },
+            "evolves_to": []
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "id": 222,
+    "name": "corsola",
+    "evolves_to": [
+      {
+        "id": 864,
+        "name": "cursola",
+        "requirements": {
+          "type": "level",
+          "level": 38
+        },
+        "evolves_to": []
+      }
+    ]
+  },
+  {
+    "id": 223,
+    "name": "remoraid",
+    "evolves_to": [
+      {
+        "id": 224,
+        "name": "octillery",
+        "requirements": {
+          "type": "level",
+          "level": 25
+        },
+        "evolves_to": []
+      }
+    ]
+  },
+  {
+    "id": 225,
+    "name": "delibird",
+    "evolves_to": []
+  },
+  {
+    "id": 458,
+    "name": "mantyke",
+    "evolves_to": [
+      {
+        "id": 226,
+        "name": "mantine",
+        "requirements": null,
+        "evolves_to": []
+      }
+    ]
+  },
+  {
+    "id": 227,
+    "name": "skarmory",
+    "evolves_to": []
+  },
+  {
+    "id": 228,
+    "name": "houndour",
+    "evolves_to": [
+      {
+        "id": 229,
+        "name": "houndoom",
+        "requirements": {
+          "type": "level",
+          "level": 24
+        },
+        "evolves_to": []
+      }
+    ]
+  },
+  {
+    "id": 231,
+    "name": "phanpy",
+    "evolves_to": [
+      {
+        "id": 232,
+        "name": "donphan",
+        "requirements": {
+          "type": "level",
+          "level": 25
+        },
+        "evolves_to": []
+      }
+    ]
+  },
+  {
+    "id": 234,
+    "name": "stantler",
+    "evolves_to": [
+      {
+        "id": 899,
+        "name": "wyrdeer",
+        "requirements": {
+          "type": "move",
+          "move": "psyshield-bash"
+        },
+        "evolves_to": []
+      }
+    ]
+  },
+  {
+    "id": 235,
+    "name": "smeargle",
+    "evolves_to": []
+  },
+  {
+    "id": 241,
+    "name": "miltank",
+    "evolves_to": []
+  },
+  {
+    "id": 243,
+    "name": "raikou",
+    "evolves_to": []
+  },
+  {
+    "id": 244,
+    "name": "entei",
+    "evolves_to": []
+  },
+  {
+    "id": 245,
+    "name": "suicune",
+    "evolves_to": []
+  },
+  {
+    "id": 246,
+    "name": "larvitar",
+    "evolves_to": [
+      {
+        "id": 247,
+        "name": "pupitar",
+        "requirements": {
+          "type": "level",
+          "level": 30
+        },
+        "evolves_to": [
+          {
+            "id": 248,
+            "name": "tyranitar",
+            "requirements": {
+              "type": "level",
+              "level": 55
+            },
+            "evolves_to": []
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "id": 249,
+    "name": "lugia",
+    "evolves_to": []
+  },
+  {
+    "id": 250,
+    "name": "ho-oh",
+    "evolves_to": []
+  },
+  {
+    "id": 251,
+    "name": "celebi",
+    "evolves_to": []
+  },
+  {
+    "id": 252,
+    "name": "treecko",
+    "evolves_to": [
+      {
+        "id": 253,
+        "name": "grovyle",
+        "requirements": {
+          "type": "level",
+          "level": 16
+        },
+        "evolves_to": [
+          {
+            "id": 254,
+            "name": "sceptile",
+            "requirements": {
+              "type": "level",
+              "level": 36
+            },
+            "evolves_to": []
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "id": 255,
+    "name": "torchic",
+    "evolves_to": [
+      {
+        "id": 256,
+        "name": "combusken",
+        "requirements": {
+          "type": "level",
+          "level": 16
+        },
+        "evolves_to": [
+          {
+            "id": 257,
+            "name": "blaziken",
+            "requirements": {
+              "type": "level",
+              "level": 36
+            },
+            "evolves_to": []
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "id": 258,
+    "name": "mudkip",
+    "evolves_to": [
+      {
+        "id": 259,
+        "name": "marshtomp",
+        "requirements": {
+          "type": "level",
+          "level": 16
+        },
+        "evolves_to": [
+          {
+            "id": 260,
+            "name": "swampert",
+            "requirements": {
+              "type": "level",
+              "level": 36
+            },
+            "evolves_to": []
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "id": 261,
+    "name": "poochyena",
+    "evolves_to": [
+      {
+        "id": 262,
+        "name": "mightyena",
+        "requirements": {
+          "type": "level",
+          "level": 18
+        },
+        "evolves_to": []
+      }
+    ]
+  },
+  {
+    "id": 263,
+    "name": "zigzagoon",
+    "evolves_to": [
+      {
+        "id": 264,
+        "name": "linoone",
+        "requirements": {
+          "type": "level",
+          "level": 20
+        },
+        "evolves_to": [
+          {
+            "id": 862,
+            "name": "obstagoon",
+            "requirements": {
+              "type": "level",
+              "level": 35
+            },
+            "evolves_to": []
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "id": 265,
+    "name": "wurmple",
+    "evolves_to": [
+      {
+        "id": 266,
+        "name": "silcoon",
+        "requirements": {
+          "type": "level",
+          "level": 7
+        },
+        "evolves_to": [
+          {
+            "id": 267,
+            "name": "beautifly",
+            "requirements": {
+              "type": "level",
+              "level": 10
+            },
+            "evolves_to": []
+          }
+        ]
+      },
+      {
+        "id": 268,
+        "name": "cascoon",
+        "requirements": {
+          "type": "level",
+          "level": 7
+        },
+        "evolves_to": [
+          {
+            "id": 269,
+            "name": "dustox",
+            "requirements": {
+              "type": "level",
+              "level": 10
+            },
+            "evolves_to": []
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "id": 270,
+    "name": "lotad",
+    "evolves_to": [
+      {
+        "id": 271,
+        "name": "lombre",
+        "requirements": {
+          "type": "level",
+          "level": 14
+        },
+        "evolves_to": [
+          {
+            "id": 272,
+            "name": "ludicolo",
+            "requirements": {
+              "type": "item",
+              "item": "water-stone"
+            },
+            "evolves_to": []
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "id": 273,
+    "name": "seedot",
+    "evolves_to": [
+      {
+        "id": 274,
+        "name": "nuzleaf",
+        "requirements": {
+          "type": "level",
+          "level": 14
+        },
+        "evolves_to": [
+          {
+            "id": 275,
+            "name": "shiftry",
+            "requirements": {
+              "type": "item",
+              "item": "leaf-stone"
+            },
+            "evolves_to": []
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "id": 276,
+    "name": "taillow",
+    "evolves_to": [
+      {
+        "id": 277,
+        "name": "swellow",
+        "requirements": {
+          "type": "level",
+          "level": 22
+        },
+        "evolves_to": []
+      }
+    ]
+  },
+  {
+    "id": 278,
+    "name": "wingull",
+    "evolves_to": [
+      {
+        "id": 279,
+        "name": "pelipper",
+        "requirements": {
+          "type": "level",
+          "level": 25
+        },
+        "evolves_to": []
+      }
+    ]
+  },
+  {
+    "id": 280,
+    "name": "ralts",
+    "evolves_to": [
+      {
+        "id": 281,
+        "name": "kirlia",
+        "requirements": {
+          "type": "level",
+          "level": 20
+        },
+        "evolves_to": [
+          {
+            "id": 282,
+            "name": "gardevoir",
+            "requirements": {
+              "type": "level",
+              "level": 30
+            },
+            "evolves_to": []
+          },
+          {
+            "id": 475,
+            "name": "gallade",
+            "requirements": {
+              "type": "item",
+              "item": "dawn-stone"
+            },
+            "evolves_to": []
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "id": 283,
+    "name": "surskit",
+    "evolves_to": [
+      {
+        "id": 284,
+        "name": "masquerain",
+        "requirements": {
+          "type": "level",
+          "level": 22
+        },
+        "evolves_to": []
+      }
+    ]
+  },
+  {
+    "id": 285,
+    "name": "shroomish",
+    "evolves_to": [
+      {
+        "id": 286,
+        "name": "breloom",
+        "requirements": {
+          "type": "level",
+          "level": 23
+        },
+        "evolves_to": []
+      }
+    ]
+  },
+  {
+    "id": 287,
+    "name": "slakoth",
+    "evolves_to": [
+      {
+        "id": 288,
+        "name": "vigoroth",
+        "requirements": {
+          "type": "level",
+          "level": 18
+        },
+        "evolves_to": [
+          {
+            "id": 289,
+            "name": "slaking",
+            "requirements": {
+              "type": "level",
+              "level": 36
+            },
+            "evolves_to": []
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "id": 290,
+    "name": "nincada",
+    "evolves_to": [
+      {
+        "id": 291,
+        "name": "ninjask",
+        "requirements": {
+          "type": "level",
+          "level": 20
+        },
+        "evolves_to": []
+      },
+      {
+        "id": 292,
+        "name": "shedinja",
+        "requirements": null,
+        "evolves_to": []
+      }
+    ]
+  },
+  {
+    "id": 293,
+    "name": "whismur",
+    "evolves_to": [
+      {
+        "id": 294,
+        "name": "loudred",
+        "requirements": {
+          "type": "level",
+          "level": 20
+        },
+        "evolves_to": [
+          {
+            "id": 295,
+            "name": "exploud",
+            "requirements": {
+              "type": "level",
+              "level": 40
+            },
+            "evolves_to": []
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "id": 296,
+    "name": "makuhita",
+    "evolves_to": [
+      {
+        "id": 297,
+        "name": "hariyama",
+        "requirements": {
+          "type": "level",
+          "level": 24
+        },
+        "evolves_to": []
+      }
+    ]
+  },
+  {
+    "id": 299,
+    "name": "nosepass",
+    "evolves_to": [
+      {
+        "id": 476,
+        "name": "probopass",
+        "requirements": null,
+        "evolves_to": []
+      }
+    ]
+  },
+  {
+    "id": 300,
+    "name": "skitty",
+    "evolves_to": [
+      {
+        "id": 301,
+        "name": "delcatty",
+        "requirements": {
+          "type": "item",
+          "item": "moon-stone"
+        },
+        "evolves_to": []
+      }
+    ]
+  },
+  {
+    "id": 302,
+    "name": "sableye",
+    "evolves_to": []
+  },
+  {
+    "id": 303,
+    "name": "mawile",
+    "evolves_to": []
+  },
+  {
+    "id": 304,
+    "name": "aron",
+    "evolves_to": [
+      {
+        "id": 305,
+        "name": "lairon",
+        "requirements": {
+          "type": "level",
+          "level": 32
+        },
+        "evolves_to": [
+          {
+            "id": 306,
+            "name": "aggron",
+            "requirements": {
+              "type": "level",
+              "level": 42
+            },
+            "evolves_to": []
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "id": 307,
+    "name": "meditite",
+    "evolves_to": [
+      {
+        "id": 308,
+        "name": "medicham",
+        "requirements": {
+          "type": "level",
+          "level": 37
+        },
+        "evolves_to": []
+      }
+    ]
+  },
+  {
+    "id": 309,
+    "name": "electrike",
+    "evolves_to": [
+      {
+        "id": 310,
+        "name": "manectric",
+        "requirements": {
+          "type": "level",
+          "level": 26
+        },
+        "evolves_to": []
+      }
+    ]
+  },
+  {
+    "id": 311,
+    "name": "plusle",
+    "evolves_to": []
+  },
+  {
+    "id": 312,
+    "name": "minun",
+    "evolves_to": []
+  },
+  {
+    "id": 313,
+    "name": "volbeat",
+    "evolves_to": []
+  },
+  {
+    "id": 314,
+    "name": "illumise",
+    "evolves_to": []
+  },
+  {
+    "id": 406,
+    "name": "budew",
+    "evolves_to": [
+      {
+        "id": 315,
+        "name": "roselia",
+        "requirements": null,
+        "evolves_to": [
+          {
+            "id": 407,
+            "name": "roserade",
+            "requirements": {
+              "type": "item",
+              "item": "shiny-stone"
+            },
+            "evolves_to": []
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "id": 316,
+    "name": "gulpin",
+    "evolves_to": [
+      {
+        "id": 317,
+        "name": "swalot",
+        "requirements": {
+          "type": "level",
+          "level": 26
+        },
+        "evolves_to": []
+      }
+    ]
+  },
+  {
+    "id": 318,
+    "name": "carvanha",
+    "evolves_to": [
+      {
+        "id": 319,
+        "name": "sharpedo",
+        "requirements": {
+          "type": "level",
+          "level": 30
+        },
+        "evolves_to": []
+      }
+    ]
+  },
+  {
+    "id": 320,
+    "name": "wailmer",
+    "evolves_to": [
+      {
+        "id": 321,
+        "name": "wailord",
+        "requirements": {
+          "type": "level",
+          "level": 40
+        },
+        "evolves_to": []
+      }
+    ]
+  },
+  {
+    "id": 322,
+    "name": "numel",
+    "evolves_to": [
+      {
+        "id": 323,
+        "name": "camerupt",
+        "requirements": {
+          "type": "level",
+          "level": 33
+        },
+        "evolves_to": []
+      }
+    ]
+  },
+  {
+    "id": 324,
+    "name": "torkoal",
+    "evolves_to": []
+  },
+  {
+    "id": 325,
+    "name": "spoink",
+    "evolves_to": [
+      {
+        "id": 326,
+        "name": "grumpig",
+        "requirements": {
+          "type": "level",
+          "level": 32
+        },
+        "evolves_to": []
+      }
+    ]
+  },
+  {
+    "id": 327,
+    "name": "spinda",
+    "evolves_to": []
+  },
+  {
+    "id": 328,
+    "name": "trapinch",
+    "evolves_to": [
+      {
+        "id": 329,
+        "name": "vibrava",
+        "requirements": {
+          "type": "level",
+          "level": 35
+        },
+        "evolves_to": [
+          {
+            "id": 330,
+            "name": "flygon",
+            "requirements": {
+              "type": "level",
+              "level": 45
+            },
+            "evolves_to": []
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "id": 331,
+    "name": "cacnea",
+    "evolves_to": [
+      {
+        "id": 332,
+        "name": "cacturne",
+        "requirements": {
+          "type": "level",
+          "level": 32
+        },
+        "evolves_to": []
+      }
+    ]
+  },
+  {
+    "id": 333,
+    "name": "swablu",
+    "evolves_to": [
+      {
+        "id": 334,
+        "name": "altaria",
+        "requirements": {
+          "type": "level",
+          "level": 35
+        },
+        "evolves_to": []
+      }
+    ]
+  },
+  {
+    "id": 335,
+    "name": "zangoose",
+    "evolves_to": []
+  },
+  {
+    "id": 336,
+    "name": "seviper",
+    "evolves_to": []
+  },
+  {
+    "id": 337,
+    "name": "lunatone",
+    "evolves_to": []
+  },
+  {
+    "id": 338,
+    "name": "solrock",
+    "evolves_to": []
+  },
+  {
+    "id": 339,
+    "name": "barboach",
+    "evolves_to": [
+      {
+        "id": 340,
+        "name": "whiscash",
+        "requirements": {
+          "type": "level",
+          "level": 30
+        },
+        "evolves_to": []
+      }
+    ]
+  },
+  {
+    "id": 341,
+    "name": "corphish",
+    "evolves_to": [
+      {
+        "id": 342,
+        "name": "crawdaunt",
+        "requirements": {
+          "type": "level",
+          "level": 30
+        },
+        "evolves_to": []
+      }
+    ]
+  },
+  {
+    "id": 343,
+    "name": "baltoy",
+    "evolves_to": [
+      {
+        "id": 344,
+        "name": "claydol",
+        "requirements": {
+          "type": "level",
+          "level": 36
+        },
+        "evolves_to": []
+      }
+    ]
+  },
+  {
+    "id": 345,
+    "name": "lileep",
+    "evolves_to": [
+      {
+        "id": 346,
+        "name": "cradily",
+        "requirements": {
+          "type": "level",
+          "level": 40
+        },
+        "evolves_to": []
+      }
+    ]
+  },
+  {
+    "id": 347,
+    "name": "anorith",
+    "evolves_to": [
+      {
+        "id": 348,
+        "name": "armaldo",
+        "requirements": {
+          "type": "level",
+          "level": 40
+        },
+        "evolves_to": []
+      }
+    ]
+  },
+  {
+    "id": 349,
+    "name": "feebas",
+    "evolves_to": [
+      {
+        "id": 350,
+        "name": "milotic",
+        "requirements": null,
+        "evolves_to": []
+      }
+    ]
+  },
+  {
+    "id": 351,
+    "name": "castform",
+    "evolves_to": []
+  },
+  {
+    "id": 352,
+    "name": "kecleon",
+    "evolves_to": []
+  },
+  {
+    "id": 353,
+    "name": "shuppet",
+    "evolves_to": [
+      {
+        "id": 354,
+        "name": "banette",
+        "requirements": {
+          "type": "level",
+          "level": 37
+        },
+        "evolves_to": []
+      }
+    ]
+  },
+  {
+    "id": 355,
+    "name": "duskull",
+    "evolves_to": [
+      {
+        "id": 356,
+        "name": "dusclops",
+        "requirements": {
+          "type": "level",
+          "level": 37
+        },
+        "evolves_to": [
+          {
+            "id": 477,
+            "name": "dusknoir",
+            "requirements": {
+              "type": "trade"
+            },
+            "evolves_to": []
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "id": 357,
+    "name": "tropius",
+    "evolves_to": []
+  },
+  {
+    "id": 433,
+    "name": "chingling",
+    "evolves_to": [
+      {
+        "id": 358,
+        "name": "chimecho",
+        "requirements": null,
+        "evolves_to": []
+      }
+    ]
+  },
+  {
+    "id": 359,
+    "name": "absol",
+    "evolves_to": []
+  },
+  {
+    "id": 361,
+    "name": "snorunt",
+    "evolves_to": [
+      {
+        "id": 362,
+        "name": "glalie",
+        "requirements": {
+          "type": "level",
+          "level": 42
+        },
+        "evolves_to": []
+      },
+      {
+        "id": 478,
+        "name": "froslass",
+        "requirements": {
+          "type": "item",
+          "item": "dawn-stone"
+        },
+        "evolves_to": []
+      }
+    ]
+  },
+  {
+    "id": 363,
+    "name": "spheal",
+    "evolves_to": [
+      {
+        "id": 364,
+        "name": "sealeo",
+        "requirements": {
+          "type": "level",
+          "level": 32
+        },
+        "evolves_to": [
+          {
+            "id": 365,
+            "name": "walrein",
+            "requirements": {
+              "type": "level",
+              "level": 44
+            },
+            "evolves_to": []
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "id": 366,
+    "name": "clamperl",
+    "evolves_to": [
+      {
+        "id": 367,
+        "name": "huntail",
+        "requirements": {
+          "type": "trade"
+        },
+        "evolves_to": []
+      },
+      {
+        "id": 368,
+        "name": "gorebyss",
+        "requirements": {
+          "type": "trade"
+        },
+        "evolves_to": []
+      }
+    ]
+  },
+  {
+    "id": 369,
+    "name": "relicanth",
+    "evolves_to": []
+  },
+  {
+    "id": 370,
+    "name": "luvdisc",
+    "evolves_to": []
+  },
+  {
+    "id": 371,
+    "name": "bagon",
+    "evolves_to": [
+      {
+        "id": 372,
+        "name": "shelgon",
+        "requirements": {
+          "type": "level",
+          "level": 30
+        },
+        "evolves_to": [
+          {
+            "id": 373,
+            "name": "salamence",
+            "requirements": {
+              "type": "level",
+              "level": 50
+            },
+            "evolves_to": []
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "id": 374,
+    "name": "beldum",
+    "evolves_to": [
+      {
+        "id": 375,
+        "name": "metang",
+        "requirements": {
+          "type": "level",
+          "level": 20
+        },
+        "evolves_to": [
+          {
+            "id": 376,
+            "name": "metagross",
+            "requirements": {
+              "type": "level",
+              "level": 45
+            },
+            "evolves_to": []
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "id": 377,
+    "name": "regirock",
+    "evolves_to": []
+  },
+  {
+    "id": 378,
+    "name": "regice",
+    "evolves_to": []
+  },
+  {
+    "id": 379,
+    "name": "registeel",
+    "evolves_to": []
+  },
+  {
+    "id": 380,
+    "name": "latias",
+    "evolves_to": []
+  },
+  {
+    "id": 381,
+    "name": "latios",
+    "evolves_to": []
+  },
+  {
+    "id": 382,
+    "name": "kyogre",
+    "evolves_to": []
+  },
+  {
+    "id": 383,
+    "name": "groudon",
+    "evolves_to": []
+  },
+  {
+    "id": 384,
+    "name": "rayquaza",
+    "evolves_to": []
+  },
+  {
+    "id": 385,
+    "name": "jirachi",
+    "evolves_to": []
+  },
+  {
+    "id": 386,
+    "name": "deoxys",
+    "evolves_to": []
+  },
+  {
+    "id": 387,
+    "name": "turtwig",
+    "evolves_to": [
+      {
+        "id": 388,
+        "name": "grotle",
+        "requirements": {
+          "type": "level",
+          "level": 18
+        },
+        "evolves_to": [
+          {
+            "id": 389,
+            "name": "torterra",
+            "requirements": {
+              "type": "level",
+              "level": 32
+            },
+            "evolves_to": []
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "id": 390,
+    "name": "chimchar",
+    "evolves_to": [
+      {
+        "id": 391,
+        "name": "monferno",
+        "requirements": {
+          "type": "level",
+          "level": 14
+        },
+        "evolves_to": [
+          {
+            "id": 392,
+            "name": "infernape",
+            "requirements": {
+              "type": "level",
+              "level": 36
+            },
+            "evolves_to": []
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "id": 393,
+    "name": "piplup",
+    "evolves_to": [
+      {
+        "id": 394,
+        "name": "prinplup",
+        "requirements": {
+          "type": "level",
+          "level": 16
+        },
+        "evolves_to": [
+          {
+            "id": 395,
+            "name": "empoleon",
+            "requirements": {
+              "type": "level",
+              "level": 36
+            },
+            "evolves_to": []
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "id": 396,
+    "name": "starly",
+    "evolves_to": [
+      {
+        "id": 397,
+        "name": "staravia",
+        "requirements": {
+          "type": "level",
+          "level": 14
+        },
+        "evolves_to": [
+          {
+            "id": 398,
+            "name": "staraptor",
+            "requirements": {
+              "type": "level",
+              "level": 34
+            },
+            "evolves_to": []
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "id": 399,
+    "name": "bidoof",
+    "evolves_to": [
+      {
+        "id": 400,
+        "name": "bibarel",
+        "requirements": {
+          "type": "level",
+          "level": 15
+        },
+        "evolves_to": []
+      }
+    ]
+  },
+  {
+    "id": 401,
+    "name": "kricketot",
+    "evolves_to": [
+      {
+        "id": 402,
+        "name": "kricketune",
+        "requirements": {
+          "type": "level",
+          "level": 10
+        },
+        "evolves_to": []
+      }
+    ]
+  },
+  {
+    "id": 403,
+    "name": "shinx",
+    "evolves_to": [
+      {
+        "id": 404,
+        "name": "luxio",
+        "requirements": {
+          "type": "level",
+          "level": 15
+        },
+        "evolves_to": [
+          {
+            "id": 405,
+            "name": "luxray",
+            "requirements": {
+              "type": "level",
+              "level": 30
+            },
+            "evolves_to": []
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "id": 408,
+    "name": "cranidos",
+    "evolves_to": [
+      {
+        "id": 409,
+        "name": "rampardos",
+        "requirements": {
+          "type": "level",
+          "level": 30
+        },
+        "evolves_to": []
+      }
+    ]
+  },
+  {
+    "id": 410,
+    "name": "shieldon",
+    "evolves_to": [
+      {
+        "id": 411,
+        "name": "bastiodon",
+        "requirements": {
+          "type": "level",
+          "level": 30
+        },
+        "evolves_to": []
+      }
+    ]
+  },
+  {
+    "id": 412,
+    "name": "burmy",
+    "evolves_to": [
+      {
+        "id": 413,
+        "name": "wormadam",
+        "requirements": {
+          "type": "level",
+          "level": 20
+        },
+        "evolves_to": []
+      },
+      {
+        "id": 414,
+        "name": "mothim",
+        "requirements": {
+          "type": "level",
+          "level": 20
+        },
+        "evolves_to": []
+      }
+    ]
+  },
+  {
+    "id": 415,
+    "name": "combee",
+    "evolves_to": [
+      {
+        "id": 416,
+        "name": "vespiquen",
+        "requirements": {
+          "type": "level",
+          "level": 21
+        },
+        "evolves_to": []
+      }
+    ]
+  },
+  {
+    "id": 417,
+    "name": "pachirisu",
+    "evolves_to": []
+  },
+  {
+    "id": 418,
+    "name": "buizel",
+    "evolves_to": [
+      {
+        "id": 419,
+        "name": "floatzel",
+        "requirements": {
+          "type": "level",
+          "level": 26
+        },
+        "evolves_to": []
+      }
+    ]
+  },
+  {
+    "id": 420,
+    "name": "cherubi",
+    "evolves_to": [
+      {
+        "id": 421,
+        "name": "cherrim",
+        "requirements": {
+          "type": "level",
+          "level": 25
+        },
+        "evolves_to": []
+      }
+    ]
+  },
+  {
+    "id": 422,
+    "name": "shellos",
+    "evolves_to": [
+      {
+        "id": 423,
+        "name": "gastrodon",
+        "requirements": {
+          "type": "level",
+          "level": 30
+        },
+        "evolves_to": []
+      }
+    ]
+  },
+  {
+    "id": 425,
+    "name": "drifloon",
+    "evolves_to": [
+      {
+        "id": 426,
+        "name": "drifblim",
+        "requirements": {
+          "type": "level",
+          "level": 28
+        },
+        "evolves_to": []
+      }
+    ]
+  },
+  {
+    "id": 427,
+    "name": "buneary",
+    "evolves_to": [
+      {
+        "id": 428,
+        "name": "lopunny",
+        "requirements": null,
+        "evolves_to": []
+      }
+    ]
+  },
+  {
+    "id": 431,
+    "name": "glameow",
+    "evolves_to": [
+      {
+        "id": 432,
+        "name": "purugly",
+        "requirements": {
+          "type": "level",
+          "level": 38
+        },
+        "evolves_to": []
+      }
+    ]
+  },
+  {
+    "id": 434,
+    "name": "stunky",
+    "evolves_to": [
+      {
+        "id": 435,
+        "name": "skuntank",
+        "requirements": {
+          "type": "level",
+          "level": 34
+        },
+        "evolves_to": []
+      }
+    ]
+  },
+  {
+    "id": 436,
+    "name": "bronzor",
+    "evolves_to": [
+      {
+        "id": 437,
+        "name": "bronzong",
+        "requirements": {
+          "type": "level",
+          "level": 33
+        },
+        "evolves_to": []
+      }
+    ]
+  },
+  {
+    "id": 441,
+    "name": "chatot",
+    "evolves_to": []
+  },
+  {
+    "id": 442,
+    "name": "spiritomb",
+    "evolves_to": []
+  },
+  {
+    "id": 443,
+    "name": "gible",
+    "evolves_to": [
+      {
+        "id": 444,
+        "name": "gabite",
+        "requirements": {
+          "type": "level",
+          "level": 24
+        },
+        "evolves_to": [
+          {
+            "id": 445,
+            "name": "garchomp",
+            "requirements": {
+              "type": "level",
+              "level": 48
+            },
+            "evolves_to": []
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "id": 447,
+    "name": "riolu",
+    "evolves_to": [
+      {
+        "id": 448,
+        "name": "lucario",
+        "requirements": null,
+        "evolves_to": []
+      }
+    ]
+  },
+  {
+    "id": 449,
+    "name": "hippopotas",
+    "evolves_to": [
+      {
+        "id": 450,
+        "name": "hippowdon",
+        "requirements": {
+          "type": "level",
+          "level": 34
+        },
+        "evolves_to": []
+      }
+    ]
+  },
+  {
+    "id": 451,
+    "name": "skorupi",
+    "evolves_to": [
+      {
+        "id": 452,
+        "name": "drapion",
+        "requirements": {
+          "type": "level",
+          "level": 40
+        },
+        "evolves_to": []
+      }
+    ]
+  },
+  {
+    "id": 453,
+    "name": "croagunk",
+    "evolves_to": [
+      {
+        "id": 454,
+        "name": "toxicroak",
+        "requirements": {
+          "type": "level",
+          "level": 37
+        },
+        "evolves_to": []
+      }
+    ]
+  },
+  {
+    "id": 455,
+    "name": "carnivine",
+    "evolves_to": []
+  },
+  {
+    "id": 456,
+    "name": "finneon",
+    "evolves_to": [
+      {
+        "id": 457,
+        "name": "lumineon",
+        "requirements": {
+          "type": "level",
+          "level": 31
+        },
+        "evolves_to": []
+      }
+    ]
+  },
+  {
+    "id": 459,
+    "name": "snover",
+    "evolves_to": [
+      {
+        "id": 460,
+        "name": "abomasnow",
+        "requirements": {
+          "type": "level",
+          "level": 40
+        },
+        "evolves_to": []
+      }
+    ]
+  },
+  {
+    "id": 479,
+    "name": "rotom",
+    "evolves_to": []
+  },
+  {
+    "id": 480,
+    "name": "uxie",
+    "evolves_to": []
+  },
+  {
+    "id": 481,
+    "name": "mesprit",
+    "evolves_to": []
+  },
+  {
+    "id": 482,
+    "name": "azelf",
+    "evolves_to": []
+  },
+  {
+    "id": 483,
+    "name": "dialga",
+    "evolves_to": []
+  },
+  {
+    "id": 484,
+    "name": "palkia",
+    "evolves_to": []
+  },
+  {
+    "id": 485,
+    "name": "heatran",
+    "evolves_to": []
+  },
+  {
+    "id": 486,
+    "name": "regigigas",
+    "evolves_to": []
+  },
+  {
+    "id": 487,
+    "name": "giratina",
+    "evolves_to": []
+  },
+  {
+    "id": 488,
+    "name": "cresselia",
+    "evolves_to": []
+  },
+  {
+    "id": 489,
+    "name": "phione",
+    "evolves_to": [
+      {
+        "id": 490,
+        "name": "manaphy",
+        "requirements": null,
+        "evolves_to": []
+      }
+    ]
+  },
+  {
+    "id": 491,
+    "name": "darkrai",
+    "evolves_to": []
+  },
+  {
+    "id": 492,
+    "name": "shaymin",
+    "evolves_to": []
+  },
+  {
+    "id": 493,
+    "name": "arceus",
+    "evolves_to": []
+  },
+  {
+    "id": 494,
+    "name": "victini",
+    "evolves_to": []
+  },
+  {
+    "id": 495,
+    "name": "snivy",
+    "evolves_to": [
+      {
+        "id": 496,
+        "name": "servine",
+        "requirements": {
+          "type": "level",
+          "level": 17
+        },
+        "evolves_to": [
+          {
+            "id": 497,
+            "name": "serperior",
+            "requirements": {
+              "type": "level",
+              "level": 36
+            },
+            "evolves_to": []
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "id": 498,
+    "name": "tepig",
+    "evolves_to": [
+      {
+        "id": 499,
+        "name": "pignite",
+        "requirements": {
+          "type": "level",
+          "level": 17
+        },
+        "evolves_to": [
+          {
+            "id": 500,
+            "name": "emboar",
+            "requirements": {
+              "type": "level",
+              "level": 36
+            },
+            "evolves_to": []
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "id": 501,
+    "name": "oshawott",
+    "evolves_to": [
+      {
+        "id": 502,
+        "name": "dewott",
+        "requirements": {
+          "type": "level",
+          "level": 17
+        },
+        "evolves_to": [
+          {
+            "id": 503,
+            "name": "samurott",
+            "requirements": {
+              "type": "level",
+              "level": 36
+            },
+            "evolves_to": []
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "id": 504,
+    "name": "patrat",
+    "evolves_to": [
+      {
+        "id": 505,
+        "name": "watchog",
+        "requirements": {
+          "type": "level",
+          "level": 20
+        },
+        "evolves_to": []
+      }
+    ]
+  },
+  {
+    "id": 506,
+    "name": "lillipup",
+    "evolves_to": [
+      {
+        "id": 507,
+        "name": "herdier",
+        "requirements": {
+          "type": "level",
+          "level": 16
+        },
+        "evolves_to": [
+          {
+            "id": 508,
+            "name": "stoutland",
+            "requirements": {
+              "type": "level",
+              "level": 32
+            },
+            "evolves_to": []
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "id": 509,
+    "name": "purrloin",
+    "evolves_to": [
+      {
+        "id": 510,
+        "name": "liepard",
+        "requirements": {
+          "type": "level",
+          "level": 20
+        },
+        "evolves_to": []
+      }
+    ]
+  },
+  {
+    "id": 511,
+    "name": "pansage",
+    "evolves_to": [
+      {
+        "id": 512,
+        "name": "simisage",
+        "requirements": {
+          "type": "item",
+          "item": "leaf-stone"
+        },
+        "evolves_to": []
+      }
+    ]
+  },
+  {
+    "id": 513,
+    "name": "pansear",
+    "evolves_to": [
+      {
+        "id": 514,
+        "name": "simisear",
+        "requirements": {
+          "type": "item",
+          "item": "fire-stone"
+        },
+        "evolves_to": []
+      }
+    ]
+  },
+  {
+    "id": 515,
+    "name": "panpour",
+    "evolves_to": [
+      {
+        "id": 516,
+        "name": "simipour",
+        "requirements": {
+          "type": "item",
+          "item": "water-stone"
+        },
+        "evolves_to": []
+      }
+    ]
+  },
+  {
+    "id": 517,
+    "name": "munna",
+    "evolves_to": [
+      {
+        "id": 518,
+        "name": "musharna",
+        "requirements": {
+          "type": "item",
+          "item": "moon-stone"
+        },
+        "evolves_to": []
+      }
+    ]
+  },
+  {
+    "id": 519,
+    "name": "pidove",
+    "evolves_to": [
+      {
+        "id": 520,
+        "name": "tranquill",
+        "requirements": {
+          "type": "level",
+          "level": 21
+        },
+        "evolves_to": [
+          {
+            "id": 521,
+            "name": "unfezant",
+            "requirements": {
+              "type": "level",
+              "level": 32
+            },
+            "evolves_to": []
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "id": 522,
+    "name": "blitzle",
+    "evolves_to": [
+      {
+        "id": 523,
+        "name": "zebstrika",
+        "requirements": {
+          "type": "level",
+          "level": 27
+        },
+        "evolves_to": []
+      }
+    ]
+  },
+  {
+    "id": 524,
+    "name": "roggenrola",
+    "evolves_to": [
+      {
+        "id": 525,
+        "name": "boldore",
+        "requirements": {
+          "type": "level",
+          "level": 25
+        },
+        "evolves_to": [
+          {
+            "id": 526,
+            "name": "gigalith",
+            "requirements": {
+              "type": "trade"
+            },
+            "evolves_to": []
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "id": 527,
+    "name": "woobat",
+    "evolves_to": [
+      {
+        "id": 528,
+        "name": "swoobat",
+        "requirements": null,
+        "evolves_to": []
+      }
+    ]
+  },
+  {
+    "id": 529,
+    "name": "drilbur",
+    "evolves_to": [
+      {
+        "id": 530,
+        "name": "excadrill",
+        "requirements": {
+          "type": "level",
+          "level": 31
+        },
+        "evolves_to": []
+      }
+    ]
+  },
+  {
+    "id": 531,
+    "name": "audino",
+    "evolves_to": []
+  },
+  {
+    "id": 532,
+    "name": "timburr",
+    "evolves_to": [
+      {
+        "id": 533,
+        "name": "gurdurr",
+        "requirements": {
+          "type": "level",
+          "level": 25
+        },
+        "evolves_to": [
+          {
+            "id": 534,
+            "name": "conkeldurr",
+            "requirements": {
+              "type": "trade"
+            },
+            "evolves_to": []
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "id": 535,
+    "name": "tympole",
+    "evolves_to": [
+      {
+        "id": 536,
+        "name": "palpitoad",
+        "requirements": {
+          "type": "level",
+          "level": 25
+        },
+        "evolves_to": [
+          {
+            "id": 537,
+            "name": "seismitoad",
+            "requirements": {
+              "type": "level",
+              "level": 36
+            },
+            "evolves_to": []
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "id": 538,
+    "name": "throh",
+    "evolves_to": []
+  },
+  {
+    "id": 539,
+    "name": "sawk",
+    "evolves_to": []
+  },
+  {
+    "id": 540,
+    "name": "sewaddle",
+    "evolves_to": [
+      {
+        "id": 541,
+        "name": "swadloon",
+        "requirements": {
+          "type": "level",
+          "level": 20
+        },
+        "evolves_to": [
+          {
+            "id": 542,
+            "name": "leavanny",
+            "requirements": null,
+            "evolves_to": []
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "id": 543,
+    "name": "venipede",
+    "evolves_to": [
+      {
+        "id": 544,
+        "name": "whirlipede",
+        "requirements": {
+          "type": "level",
+          "level": 22
+        },
+        "evolves_to": [
+          {
+            "id": 545,
+            "name": "scolipede",
+            "requirements": {
+              "type": "level",
+              "level": 30
+            },
+            "evolves_to": []
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "id": 546,
+    "name": "cottonee",
+    "evolves_to": [
+      {
+        "id": 547,
+        "name": "whimsicott",
+        "requirements": {
+          "type": "item",
+          "item": "sun-stone"
+        },
+        "evolves_to": []
+      }
+    ]
+  },
+  {
+    "id": 548,
+    "name": "petilil",
+    "evolves_to": [
+      {
+        "id": 549,
+        "name": "lilligant",
+        "requirements": {
+          "type": "item",
+          "item": "sun-stone"
+        },
+        "evolves_to": []
+      }
+    ]
+  },
+  {
+    "id": 550,
+    "name": "basculin",
+    "evolves_to": [
+      {
+        "id": 902,
+        "name": "basculegion",
+        "requirements": null,
+        "evolves_to": []
+      }
+    ]
+  },
+  {
+    "id": 551,
+    "name": "sandile",
+    "evolves_to": [
+      {
+        "id": 552,
+        "name": "krokorok",
+        "requirements": {
+          "type": "level",
+          "level": 29
+        },
+        "evolves_to": [
+          {
+            "id": 553,
+            "name": "krookodile",
+            "requirements": {
+              "type": "level",
+              "level": 40
+            },
+            "evolves_to": []
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "id": 554,
+    "name": "darumaka",
+    "evolves_to": [
+      {
+        "id": 555,
+        "name": "darmanitan",
+        "requirements": {
+          "type": "item",
+          "item": "ice-stone"
+        },
+        "evolves_to": []
+      }
+    ]
+  },
+  {
+    "id": 556,
+    "name": "maractus",
+    "evolves_to": []
+  },
+  {
+    "id": 557,
+    "name": "dwebble",
+    "evolves_to": [
+      {
+        "id": 558,
+        "name": "crustle",
+        "requirements": {
+          "type": "level",
+          "level": 34
+        },
+        "evolves_to": []
+      }
+    ]
+  },
+  {
+    "id": 559,
+    "name": "scraggy",
+    "evolves_to": [
+      {
+        "id": 560,
+        "name": "scrafty",
+        "requirements": {
+          "type": "level",
+          "level": 39
+        },
+        "evolves_to": []
+      }
+    ]
+  },
+  {
+    "id": 561,
+    "name": "sigilyph",
+    "evolves_to": []
+  },
+  {
+    "id": 562,
+    "name": "yamask",
+    "evolves_to": [
+      {
+        "id": 563,
+        "name": "cofagrigus",
+        "requirements": {
+          "type": "level",
+          "level": 34
+        },
+        "evolves_to": []
+      },
+      {
+        "id": 867,
+        "name": "runerigus",
+        "requirements": null,
+        "evolves_to": []
+      }
+    ]
+  },
+  {
+    "id": 564,
+    "name": "tirtouga",
+    "evolves_to": [
+      {
+        "id": 565,
+        "name": "carracosta",
+        "requirements": {
+          "type": "level",
+          "level": 37
+        },
+        "evolves_to": []
+      }
+    ]
+  },
+  {
+    "id": 566,
+    "name": "archen",
+    "evolves_to": [
+      {
+        "id": 567,
+        "name": "archeops",
+        "requirements": {
+          "type": "level",
+          "level": 37
+        },
+        "evolves_to": []
+      }
+    ]
+  },
+  {
+    "id": 568,
+    "name": "trubbish",
+    "evolves_to": [
+      {
+        "id": 569,
+        "name": "garbodor",
+        "requirements": {
+          "type": "level",
+          "level": 36
+        },
+        "evolves_to": []
+      }
+    ]
+  },
+  {
+    "id": 570,
+    "name": "zorua",
+    "evolves_to": [
+      {
+        "id": 571,
+        "name": "zoroark",
+        "requirements": {
+          "type": "level",
+          "level": 30
+        },
+        "evolves_to": []
+      }
+    ]
+  },
+  {
+    "id": 572,
+    "name": "minccino",
+    "evolves_to": [
+      {
+        "id": 573,
+        "name": "cinccino",
+        "requirements": {
+          "type": "item",
+          "item": "shiny-stone"
+        },
+        "evolves_to": []
+      }
+    ]
+  },
+  {
+    "id": 574,
+    "name": "gothita",
+    "evolves_to": [
+      {
+        "id": 575,
+        "name": "gothorita",
+        "requirements": {
+          "type": "level",
+          "level": 32
+        },
+        "evolves_to": [
+          {
+            "id": 576,
+            "name": "gothitelle",
+            "requirements": {
+              "type": "level",
+              "level": 41
+            },
+            "evolves_to": []
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "id": 577,
+    "name": "solosis",
+    "evolves_to": [
+      {
+        "id": 578,
+        "name": "duosion",
+        "requirements": {
+          "type": "level",
+          "level": 32
+        },
+        "evolves_to": [
+          {
+            "id": 579,
+            "name": "reuniclus",
+            "requirements": {
+              "type": "level",
+              "level": 41
+            },
+            "evolves_to": []
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "id": 580,
+    "name": "ducklett",
+    "evolves_to": [
+      {
+        "id": 581,
+        "name": "swanna",
+        "requirements": {
+          "type": "level",
+          "level": 35
+        },
+        "evolves_to": []
+      }
+    ]
+  },
+  {
+    "id": 582,
+    "name": "vanillite",
+    "evolves_to": [
+      {
+        "id": 583,
+        "name": "vanillish",
+        "requirements": {
+          "type": "level",
+          "level": 35
+        },
+        "evolves_to": [
+          {
+            "id": 584,
+            "name": "vanilluxe",
+            "requirements": {
+              "type": "level",
+              "level": 47
+            },
+            "evolves_to": []
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "id": 585,
+    "name": "deerling",
+    "evolves_to": [
+      {
+        "id": 586,
+        "name": "sawsbuck",
+        "requirements": {
+          "type": "level",
+          "level": 34
+        },
+        "evolves_to": []
+      }
+    ]
+  },
+  {
+    "id": 587,
+    "name": "emolga",
+    "evolves_to": []
+  },
+  {
+    "id": 588,
+    "name": "karrablast",
+    "evolves_to": [
+      {
+        "id": 589,
+        "name": "escavalier",
+        "requirements": {
+          "type": "trade"
+        },
+        "evolves_to": []
+      }
+    ]
+  },
+  {
+    "id": 590,
+    "name": "foongus",
+    "evolves_to": [
+      {
+        "id": 591,
+        "name": "amoonguss",
+        "requirements": {
+          "type": "level",
+          "level": 39
+        },
+        "evolves_to": []
+      }
+    ]
+  },
+  {
+    "id": 592,
+    "name": "frillish",
+    "evolves_to": [
+      {
+        "id": 593,
+        "name": "jellicent",
+        "requirements": {
+          "type": "level",
+          "level": 40
+        },
+        "evolves_to": []
+      }
+    ]
+  },
+  {
+    "id": 594,
+    "name": "alomomola",
+    "evolves_to": []
+  },
+  {
+    "id": 595,
+    "name": "joltik",
+    "evolves_to": [
+      {
+        "id": 596,
+        "name": "galvantula",
+        "requirements": {
+          "type": "level",
+          "level": 36
+        },
+        "evolves_to": []
+      }
+    ]
+  },
+  {
+    "id": 597,
+    "name": "ferroseed",
+    "evolves_to": [
+      {
+        "id": 598,
+        "name": "ferrothorn",
+        "requirements": {
+          "type": "level",
+          "level": 40
+        },
+        "evolves_to": []
+      }
+    ]
+  },
+  {
+    "id": 599,
+    "name": "klink",
+    "evolves_to": [
+      {
+        "id": 600,
+        "name": "klang",
+        "requirements": {
+          "type": "level",
+          "level": 38
+        },
+        "evolves_to": [
+          {
+            "id": 601,
+            "name": "klinklang",
+            "requirements": {
+              "type": "level",
+              "level": 49
+            },
+            "evolves_to": []
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "id": 602,
+    "name": "tynamo",
+    "evolves_to": [
+      {
+        "id": 603,
+        "name": "eelektrik",
+        "requirements": {
+          "type": "level",
+          "level": 39
+        },
+        "evolves_to": [
+          {
+            "id": 604,
+            "name": "eelektross",
+            "requirements": {
+              "type": "item",
+              "item": "thunder-stone"
+            },
+            "evolves_to": []
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "id": 605,
+    "name": "elgyem",
+    "evolves_to": [
+      {
+        "id": 606,
+        "name": "beheeyem",
+        "requirements": {
+          "type": "level",
+          "level": 42
+        },
+        "evolves_to": []
+      }
+    ]
+  },
+  {
+    "id": 607,
+    "name": "litwick",
+    "evolves_to": [
+      {
+        "id": 608,
+        "name": "lampent",
+        "requirements": {
+          "type": "level",
+          "level": 41
+        },
+        "evolves_to": [
+          {
+            "id": 609,
+            "name": "chandelure",
+            "requirements": {
+              "type": "item",
+              "item": "dusk-stone"
+            },
+            "evolves_to": []
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "id": 610,
+    "name": "axew",
+    "evolves_to": [
+      {
+        "id": 611,
+        "name": "fraxure",
+        "requirements": {
+          "type": "level",
+          "level": 38
+        },
+        "evolves_to": [
+          {
+            "id": 612,
+            "name": "haxorus",
+            "requirements": {
+              "type": "level",
+              "level": 48
+            },
+            "evolves_to": []
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "id": 613,
+    "name": "cubchoo",
+    "evolves_to": [
+      {
+        "id": 614,
+        "name": "beartic",
+        "requirements": {
+          "type": "level",
+          "level": 37
+        },
+        "evolves_to": []
+      }
+    ]
+  },
+  {
+    "id": 615,
+    "name": "cryogonal",
+    "evolves_to": []
+  },
+  {
+    "id": 616,
+    "name": "shelmet",
+    "evolves_to": [
+      {
+        "id": 617,
+        "name": "accelgor",
+        "requirements": {
+          "type": "trade"
+        },
+        "evolves_to": []
+      }
+    ]
+  },
+  {
+    "id": 618,
+    "name": "stunfisk",
+    "evolves_to": []
+  },
+  {
+    "id": 619,
+    "name": "mienfoo",
+    "evolves_to": [
+      {
+        "id": 620,
+        "name": "mienshao",
+        "requirements": {
+          "type": "level",
+          "level": 50
+        },
+        "evolves_to": []
+      }
+    ]
+  },
+  {
+    "id": 621,
+    "name": "druddigon",
+    "evolves_to": []
+  },
+  {
+    "id": 622,
+    "name": "golett",
+    "evolves_to": [
+      {
+        "id": 623,
+        "name": "golurk",
+        "requirements": {
+          "type": "level",
+          "level": 43
+        },
+        "evolves_to": []
+      }
+    ]
+  },
+  {
+    "id": 624,
+    "name": "pawniard",
+    "evolves_to": [
+      {
+        "id": 625,
+        "name": "bisharp",
+        "requirements": {
+          "type": "level",
+          "level": 52
+        },
+        "evolves_to": [
+          {
+            "id": 983,
+            "name": "kingambit",
+            "requirements": null,
+            "evolves_to": []
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "id": 626,
+    "name": "bouffalant",
+    "evolves_to": []
+  },
+  {
+    "id": 627,
+    "name": "rufflet",
+    "evolves_to": [
+      {
+        "id": 628,
+        "name": "braviary",
+        "requirements": {
+          "type": "level",
+          "level": 54
+        },
+        "evolves_to": []
+      }
+    ]
+  },
+  {
+    "id": 629,
+    "name": "vullaby",
+    "evolves_to": [
+      {
+        "id": 630,
+        "name": "mandibuzz",
+        "requirements": {
+          "type": "level",
+          "level": 54
+        },
+        "evolves_to": []
+      }
+    ]
+  },
+  {
+    "id": 631,
+    "name": "heatmor",
+    "evolves_to": []
+  },
+  {
+    "id": 632,
+    "name": "durant",
+    "evolves_to": []
+  },
+  {
+    "id": 633,
+    "name": "deino",
+    "evolves_to": [
+      {
+        "id": 634,
+        "name": "zweilous",
+        "requirements": {
+          "type": "level",
+          "level": 50
+        },
+        "evolves_to": [
+          {
+            "id": 635,
+            "name": "hydreigon",
+            "requirements": {
+              "type": "level",
+              "level": 64
+            },
+            "evolves_to": []
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "id": 636,
+    "name": "larvesta",
+    "evolves_to": [
+      {
+        "id": 637,
+        "name": "volcarona",
+        "requirements": {
+          "type": "level",
+          "level": 59
+        },
+        "evolves_to": []
+      }
+    ]
+  },
+  {
+    "id": 638,
+    "name": "cobalion",
+    "evolves_to": []
+  },
+  {
+    "id": 639,
+    "name": "terrakion",
+    "evolves_to": []
+  },
+  {
+    "id": 640,
+    "name": "virizion",
+    "evolves_to": []
+  },
+  {
+    "id": 641,
+    "name": "tornadus",
+    "evolves_to": []
+  },
+  {
+    "id": 642,
+    "name": "thundurus",
+    "evolves_to": []
+  },
+  {
+    "id": 643,
+    "name": "reshiram",
+    "evolves_to": []
+  },
+  {
+    "id": 644,
+    "name": "zekrom",
+    "evolves_to": []
+  },
+  {
+    "id": 645,
+    "name": "landorus",
+    "evolves_to": []
+  },
+  {
+    "id": 646,
+    "name": "kyurem",
+    "evolves_to": []
+  },
+  {
+    "id": 647,
+    "name": "keldeo",
+    "evolves_to": []
+  },
+  {
+    "id": 648,
+    "name": "meloetta",
+    "evolves_to": []
+  },
+  {
+    "id": 649,
+    "name": "genesect",
+    "evolves_to": []
+  },
+  {
+    "id": 650,
+    "name": "chespin",
+    "evolves_to": [
+      {
+        "id": 651,
+        "name": "quilladin",
+        "requirements": {
+          "type": "level",
+          "level": 16
+        },
+        "evolves_to": [
+          {
+            "id": 652,
+            "name": "chesnaught",
+            "requirements": {
+              "type": "level",
+              "level": 36
+            },
+            "evolves_to": []
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "id": 653,
+    "name": "fennekin",
+    "evolves_to": [
+      {
+        "id": 654,
+        "name": "braixen",
+        "requirements": {
+          "type": "level",
+          "level": 16
+        },
+        "evolves_to": [
+          {
+            "id": 655,
+            "name": "delphox",
+            "requirements": {
+              "type": "level",
+              "level": 36
+            },
+            "evolves_to": []
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "id": 656,
+    "name": "froakie",
+    "evolves_to": [
+      {
+        "id": 657,
+        "name": "frogadier",
+        "requirements": {
+          "type": "level",
+          "level": 16
+        },
+        "evolves_to": [
+          {
+            "id": 658,
+            "name": "greninja",
+            "requirements": {
+              "type": "level",
+              "level": 36
+            },
+            "evolves_to": []
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "id": 659,
+    "name": "bunnelby",
+    "evolves_to": [
+      {
+        "id": 660,
+        "name": "diggersby",
+        "requirements": {
+          "type": "level",
+          "level": 20
+        },
+        "evolves_to": []
+      }
+    ]
+  },
+  {
+    "id": 661,
+    "name": "fletchling",
+    "evolves_to": [
+      {
+        "id": 662,
+        "name": "fletchinder",
+        "requirements": {
+          "type": "level",
+          "level": 17
+        },
+        "evolves_to": [
+          {
+            "id": 663,
+            "name": "talonflame",
+            "requirements": {
+              "type": "level",
+              "level": 35
+            },
+            "evolves_to": []
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "id": 664,
+    "name": "scatterbug",
+    "evolves_to": [
+      {
+        "id": 665,
+        "name": "spewpa",
+        "requirements": {
+          "type": "level",
+          "level": 9
+        },
+        "evolves_to": [
+          {
+            "id": 666,
+            "name": "vivillon",
+            "requirements": {
+              "type": "level",
+              "level": 12
+            },
+            "evolves_to": []
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "id": 667,
+    "name": "litleo",
+    "evolves_to": [
+      {
+        "id": 668,
+        "name": "pyroar",
+        "requirements": {
+          "type": "level",
+          "level": 35
+        },
+        "evolves_to": []
+      }
+    ]
+  },
+  {
+    "id": 669,
+    "name": "flabebe",
+    "evolves_to": [
+      {
+        "id": 670,
+        "name": "floette",
+        "requirements": {
+          "type": "level",
+          "level": 19
+        },
+        "evolves_to": [
+          {
+            "id": 671,
+            "name": "florges",
+            "requirements": {
+              "type": "item",
+              "item": "shiny-stone"
+            },
+            "evolves_to": []
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "id": 672,
+    "name": "skiddo",
+    "evolves_to": [
+      {
+        "id": 673,
+        "name": "gogoat",
+        "requirements": {
+          "type": "level",
+          "level": 32
+        },
+        "evolves_to": []
+      }
+    ]
+  },
+  {
+    "id": 674,
+    "name": "pancham",
+    "evolves_to": [
+      {
+        "id": 675,
+        "name": "pangoro",
+        "requirements": {
+          "type": "level",
+          "level": 32
+        },
+        "evolves_to": []
+      }
+    ]
+  },
+  {
+    "id": 676,
+    "name": "furfrou",
+    "evolves_to": []
+  },
+  {
+    "id": 677,
+    "name": "espurr",
+    "evolves_to": [
+      {
+        "id": 678,
+        "name": "meowstic",
+        "requirements": {
+          "type": "level",
+          "level": 25
+        },
+        "evolves_to": []
+      }
+    ]
+  },
+  {
+    "id": 679,
+    "name": "honedge",
+    "evolves_to": [
+      {
+        "id": 680,
+        "name": "doublade",
+        "requirements": {
+          "type": "level",
+          "level": 35
+        },
+        "evolves_to": [
+          {
+            "id": 681,
+            "name": "aegislash",
+            "requirements": {
+              "type": "item",
+              "item": "dusk-stone"
+            },
+            "evolves_to": []
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "id": 682,
+    "name": "spritzee",
+    "evolves_to": [
+      {
+        "id": 683,
+        "name": "aromatisse",
+        "requirements": {
+          "type": "trade"
+        },
+        "evolves_to": []
+      }
+    ]
+  },
+  {
+    "id": 684,
+    "name": "swirlix",
+    "evolves_to": [
+      {
+        "id": 685,
+        "name": "slurpuff",
+        "requirements": {
+          "type": "trade"
+        },
+        "evolves_to": []
+      }
+    ]
+  },
+  {
+    "id": 686,
+    "name": "inkay",
+    "evolves_to": [
+      {
+        "id": 687,
+        "name": "malamar",
+        "requirements": {
+          "type": "level",
+          "level": 30
+        },
+        "evolves_to": []
+      }
+    ]
+  },
+  {
+    "id": 688,
+    "name": "binacle",
+    "evolves_to": [
+      {
+        "id": 689,
+        "name": "barbaracle",
+        "requirements": {
+          "type": "level",
+          "level": 39
+        },
+        "evolves_to": []
+      }
+    ]
+  },
+  {
+    "id": 690,
+    "name": "skrelp",
+    "evolves_to": [
+      {
+        "id": 691,
+        "name": "dragalge",
+        "requirements": {
+          "type": "level",
+          "level": 48
+        },
+        "evolves_to": []
+      }
+    ]
+  },
+  {
+    "id": 692,
+    "name": "clauncher",
+    "evolves_to": [
+      {
+        "id": 693,
+        "name": "clawitzer",
+        "requirements": {
+          "type": "level",
+          "level": 37
+        },
+        "evolves_to": []
+      }
+    ]
+  },
+  {
+    "id": 694,
+    "name": "helioptile",
+    "evolves_to": [
+      {
+        "id": 695,
+        "name": "heliolisk",
+        "requirements": {
+          "type": "item",
+          "item": "sun-stone"
+        },
+        "evolves_to": []
+      }
+    ]
+  },
+  {
+    "id": 696,
+    "name": "tyrunt",
+    "evolves_to": [
+      {
+        "id": 697,
+        "name": "tyrantrum",
+        "requirements": {
+          "type": "level",
+          "level": 39
+        },
+        "evolves_to": []
+      }
+    ]
+  },
+  {
+    "id": 698,
+    "name": "amaura",
+    "evolves_to": [
+      {
+        "id": 699,
+        "name": "aurorus",
+        "requirements": {
+          "type": "level",
+          "level": 39
+        },
+        "evolves_to": []
+      }
+    ]
+  },
+  {
+    "id": 701,
+    "name": "hawlucha",
+    "evolves_to": []
+  },
+  {
+    "id": 702,
+    "name": "dedenne",
+    "evolves_to": []
+  },
+  {
+    "id": 703,
+    "name": "carbink",
+    "evolves_to": []
+  },
+  {
+    "id": 704,
+    "name": "goomy",
+    "evolves_to": [
+      {
+        "id": 705,
+        "name": "sliggoo",
+        "requirements": {
+          "type": "level",
+          "level": 40
+        },
+        "evolves_to": [
+          {
+            "id": 706,
+            "name": "goodra",
+            "requirements": {
+              "type": "level",
+              "level": 50
+            },
+            "evolves_to": []
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "id": 707,
+    "name": "klefki",
+    "evolves_to": []
+  },
+  {
+    "id": 708,
+    "name": "phantump",
+    "evolves_to": [
+      {
+        "id": 709,
+        "name": "trevenant",
+        "requirements": {
+          "type": "trade"
+        },
+        "evolves_to": []
+      }
+    ]
+  },
+  {
+    "id": 710,
+    "name": "pumpkaboo",
+    "evolves_to": [
+      {
+        "id": 711,
+        "name": "gourgeist",
+        "requirements": {
+          "type": "trade"
+        },
+        "evolves_to": []
+      }
+    ]
+  },
+  {
+    "id": 712,
+    "name": "bergmite",
+    "evolves_to": [
+      {
+        "id": 713,
+        "name": "avalugg",
+        "requirements": {
+          "type": "level",
+          "level": 37
+        },
+        "evolves_to": []
+      }
+    ]
+  },
+  {
+    "id": 714,
+    "name": "noibat",
+    "evolves_to": [
+      {
+        "id": 715,
+        "name": "noivern",
+        "requirements": {
+          "type": "level",
+          "level": 48
+        },
+        "evolves_to": []
+      }
+    ]
+  },
+  {
+    "id": 716,
+    "name": "xerneas",
+    "evolves_to": []
+  },
+  {
+    "id": 717,
+    "name": "yveltal",
+    "evolves_to": []
+  },
+  {
+    "id": 718,
+    "name": "zygarde",
+    "evolves_to": []
+  },
+  {
+    "id": 719,
+    "name": "diancie",
+    "evolves_to": []
+  },
+  {
+    "id": 720,
+    "name": "hoopa",
+    "evolves_to": []
+  },
+  {
+    "id": 721,
+    "name": "volcanion",
+    "evolves_to": []
+  },
+  {
+    "id": 722,
+    "name": "rowlet",
+    "evolves_to": [
+      {
+        "id": 723,
+        "name": "dartrix",
+        "requirements": {
+          "type": "level",
+          "level": 17
+        },
+        "evolves_to": [
+          {
+            "id": 724,
+            "name": "decidueye",
+            "requirements": {
+              "type": "level",
+              "level": 34
+            },
+            "evolves_to": []
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "id": 725,
+    "name": "litten",
+    "evolves_to": [
+      {
+        "id": 726,
+        "name": "torracat",
+        "requirements": {
+          "type": "level",
+          "level": 17
+        },
+        "evolves_to": [
+          {
+            "id": 727,
+            "name": "incineroar",
+            "requirements": {
+              "type": "level",
+              "level": 34
+            },
+            "evolves_to": []
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "id": 728,
+    "name": "popplio",
+    "evolves_to": [
+      {
+        "id": 729,
+        "name": "brionne",
+        "requirements": {
+          "type": "level",
+          "level": 17
+        },
+        "evolves_to": [
+          {
+            "id": 730,
+            "name": "primarina",
+            "requirements": {
+              "type": "level",
+              "level": 34
+            },
+            "evolves_to": []
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "id": 731,
+    "name": "pikipek",
+    "evolves_to": [
+      {
+        "id": 732,
+        "name": "trumbeak",
+        "requirements": {
+          "type": "level",
+          "level": 14
+        },
+        "evolves_to": [
+          {
+            "id": 733,
+            "name": "toucannon",
+            "requirements": {
+              "type": "level",
+              "level": 28
+            },
+            "evolves_to": []
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "id": 734,
+    "name": "yungoos",
+    "evolves_to": [
+      {
+        "id": 735,
+        "name": "gumshoos",
+        "requirements": {
+          "type": "level",
+          "level": 20
+        },
+        "evolves_to": []
+      }
+    ]
+  },
+  {
+    "id": 736,
+    "name": "grubbin",
+    "evolves_to": [
+      {
+        "id": 737,
+        "name": "charjabug",
+        "requirements": {
+          "type": "level",
+          "level": 20
+        },
+        "evolves_to": [
+          {
+            "id": 738,
+            "name": "vikavolt",
+            "requirements": {
+              "type": "item",
+              "item": "thunder-stone"
+            },
+            "evolves_to": []
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "id": 739,
+    "name": "crabrawler",
+    "evolves_to": [
+      {
+        "id": 740,
+        "name": "crabominable",
+        "requirements": null,
+        "evolves_to": []
+      }
+    ]
+  },
+  {
+    "id": 741,
+    "name": "oricorio",
+    "evolves_to": []
+  },
+  {
+    "id": 742,
+    "name": "cutiefly",
+    "evolves_to": [
+      {
+        "id": 743,
+        "name": "ribombee",
+        "requirements": {
+          "type": "level",
+          "level": 25
+        },
+        "evolves_to": []
+      }
+    ]
+  },
+  {
+    "id": 744,
+    "name": "rockruff",
+    "evolves_to": [
+      {
+        "id": 745,
+        "name": "lycanroc",
+        "requirements": {
+          "type": "level",
+          "level": 25
+        },
+        "evolves_to": []
+      }
+    ]
+  },
+  {
+    "id": 746,
+    "name": "wishiwashi",
+    "evolves_to": []
+  },
+  {
+    "id": 747,
+    "name": "mareanie",
+    "evolves_to": [
+      {
+        "id": 748,
+        "name": "toxapex",
+        "requirements": {
+          "type": "level",
+          "level": 38
+        },
+        "evolves_to": []
+      }
+    ]
+  },
+  {
+    "id": 749,
+    "name": "mudbray",
+    "evolves_to": [
+      {
+        "id": 750,
+        "name": "mudsdale",
+        "requirements": {
+          "type": "level",
+          "level": 30
+        },
+        "evolves_to": []
+      }
+    ]
+  },
+  {
+    "id": 751,
+    "name": "dewpider",
+    "evolves_to": [
+      {
+        "id": 752,
+        "name": "araquanid",
+        "requirements": {
+          "type": "level",
+          "level": 22
+        },
+        "evolves_to": []
+      }
+    ]
+  },
+  {
+    "id": 753,
+    "name": "fomantis",
+    "evolves_to": [
+      {
+        "id": 754,
+        "name": "lurantis",
+        "requirements": {
+          "type": "level",
+          "level": 34
+        },
+        "evolves_to": []
+      }
+    ]
+  },
+  {
+    "id": 755,
+    "name": "morelull",
+    "evolves_to": [
+      {
+        "id": 756,
+        "name": "shiinotic",
+        "requirements": {
+          "type": "level",
+          "level": 24
+        },
+        "evolves_to": []
+      }
+    ]
+  },
+  {
+    "id": 757,
+    "name": "salandit",
+    "evolves_to": [
+      {
+        "id": 758,
+        "name": "salazzle",
+        "requirements": {
+          "type": "level",
+          "level": 33
+        },
+        "evolves_to": []
+      }
+    ]
+  },
+  {
+    "id": 759,
+    "name": "stufful",
+    "evolves_to": [
+      {
+        "id": 760,
+        "name": "bewear",
+        "requirements": {
+          "type": "level",
+          "level": 27
+        },
+        "evolves_to": []
+      }
+    ]
+  },
+  {
+    "id": 761,
+    "name": "bounsweet",
+    "evolves_to": [
+      {
+        "id": 762,
+        "name": "steenee",
+        "requirements": {
+          "type": "level",
+          "level": 18
+        },
+        "evolves_to": [
+          {
+            "id": 763,
+            "name": "tsareena",
+            "requirements": {
+              "type": "move",
+              "move": "stomp"
+            },
+            "evolves_to": []
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "id": 764,
+    "name": "comfey",
+    "evolves_to": []
+  },
+  {
+    "id": 765,
+    "name": "oranguru",
+    "evolves_to": []
+  },
+  {
+    "id": 766,
+    "name": "passimian",
+    "evolves_to": []
+  },
+  {
+    "id": 767,
+    "name": "wimpod",
+    "evolves_to": [
+      {
+        "id": 768,
+        "name": "golisopod",
+        "requirements": {
+          "type": "level",
+          "level": 30
+        },
+        "evolves_to": []
+      }
+    ]
+  },
+  {
+    "id": 769,
+    "name": "sandygast",
+    "evolves_to": [
+      {
+        "id": 770,
+        "name": "palossand",
+        "requirements": {
+          "type": "level",
+          "level": 42
+        },
+        "evolves_to": []
+      }
+    ]
+  },
+  {
+    "id": 771,
+    "name": "pyukumuku",
+    "evolves_to": []
+  },
+  {
+    "id": 772,
+    "name": "type-null",
+    "evolves_to": [
+      {
+        "id": 773,
+        "name": "silvally",
+        "requirements": null,
+        "evolves_to": []
+      }
+    ]
+  },
+  {
+    "id": 774,
+    "name": "minior",
+    "evolves_to": []
+  },
+  {
+    "id": 775,
+    "name": "komala",
+    "evolves_to": []
+  },
+  {
+    "id": 776,
+    "name": "turtonator",
+    "evolves_to": []
+  },
+  {
+    "id": 777,
+    "name": "togedemaru",
+    "evolves_to": []
+  },
+  {
+    "id": 778,
+    "name": "mimikyu",
+    "evolves_to": []
+  },
+  {
+    "id": 779,
+    "name": "bruxish",
+    "evolves_to": []
+  },
+  {
+    "id": 780,
+    "name": "drampa",
+    "evolves_to": []
+  },
+  {
+    "id": 781,
+    "name": "dhelmise",
+    "evolves_to": []
+  },
+  {
+    "id": 782,
+    "name": "jangmo-o",
+    "evolves_to": [
+      {
+        "id": 783,
+        "name": "hakamo-o",
+        "requirements": {
+          "type": "level",
+          "level": 35
+        },
+        "evolves_to": [
+          {
+            "id": 784,
+            "name": "kommo-o",
+            "requirements": {
+              "type": "level",
+              "level": 45
+            },
+            "evolves_to": []
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "id": 785,
+    "name": "tapu-koko",
+    "evolves_to": []
+  },
+  {
+    "id": 786,
+    "name": "tapu-lele",
+    "evolves_to": []
+  },
+  {
+    "id": 787,
+    "name": "tapu-bulu",
+    "evolves_to": []
+  },
+  {
+    "id": 788,
+    "name": "tapu-fini",
+    "evolves_to": []
+  },
+  {
+    "id": 789,
+    "name": "cosmog",
+    "evolves_to": [
+      {
+        "id": 790,
+        "name": "cosmoem",
+        "requirements": {
+          "type": "level",
+          "level": 43
+        },
+        "evolves_to": [
+          {
+            "id": 791,
+            "name": "solgaleo",
+            "requirements": {
+              "type": "level",
+              "level": 53
+            },
+            "evolves_to": []
+          },
+          {
+            "id": 792,
+            "name": "lunala",
+            "requirements": {
+              "type": "level",
+              "level": 53
+            },
+            "evolves_to": []
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "id": 793,
+    "name": "nihilego",
+    "evolves_to": []
+  },
+  {
+    "id": 794,
+    "name": "buzzwole",
+    "evolves_to": []
+  },
+  {
+    "id": 795,
+    "name": "pheromosa",
+    "evolves_to": []
+  },
+  {
+    "id": 796,
+    "name": "xurkitree",
+    "evolves_to": []
+  },
+  {
+    "id": 797,
+    "name": "celesteela",
+    "evolves_to": []
+  },
+  {
+    "id": 798,
+    "name": "kartana",
+    "evolves_to": []
+  },
+  {
+    "id": 799,
+    "name": "guzzlord",
+    "evolves_to": []
+  },
+  {
+    "id": 800,
+    "name": "necrozma",
+    "evolves_to": []
+  },
+  {
+    "id": 801,
+    "name": "magearna",
+    "evolves_to": []
+  },
+  {
+    "id": 802,
+    "name": "marshadow",
+    "evolves_to": []
+  },
+  {
+    "id": 803,
+    "name": "poipole",
+    "evolves_to": [
+      {
+        "id": 804,
+        "name": "naganadel",
+        "requirements": {
+          "type": "move",
+          "move": "dragon-pulse"
+        },
+        "evolves_to": []
+      }
+    ]
+  },
+  {
+    "id": 805,
+    "name": "stakataka",
+    "evolves_to": []
+  },
+  {
+    "id": 806,
+    "name": "blacephalon",
+    "evolves_to": []
+  },
+  {
+    "id": 807,
+    "name": "zeraora",
+    "evolves_to": []
+  },
+  {
+    "id": 808,
+    "name": "meltan",
+    "evolves_to": []
+  },
+  {
+    "id": 809,
+    "name": "melmetal",
+    "evolves_to": []
+  },
+  {
+    "id": 810,
+    "name": "grookey",
+    "evolves_to": [
+      {
+        "id": 811,
+        "name": "thwackey",
+        "requirements": {
+          "type": "level",
+          "level": 16
+        },
+        "evolves_to": [
+          {
+            "id": 812,
+            "name": "rillaboom",
+            "requirements": {
+              "type": "level",
+              "level": 35
+            },
+            "evolves_to": []
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "id": 813,
+    "name": "scorbunny",
+    "evolves_to": [
+      {
+        "id": 814,
+        "name": "raboot",
+        "requirements": {
+          "type": "level",
+          "level": 16
+        },
+        "evolves_to": [
+          {
+            "id": 815,
+            "name": "cinderace",
+            "requirements": {
+              "type": "level",
+              "level": 35
+            },
+            "evolves_to": []
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "id": 816,
+    "name": "sobble",
+    "evolves_to": [
+      {
+        "id": 817,
+        "name": "drizzile",
+        "requirements": {
+          "type": "level",
+          "level": 16
+        },
+        "evolves_to": [
+          {
+            "id": 818,
+            "name": "inteleon",
+            "requirements": {
+              "type": "level",
+              "level": 35
+            },
+            "evolves_to": []
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "id": 819,
+    "name": "skwovet",
+    "evolves_to": [
+      {
+        "id": 820,
+        "name": "greedent",
+        "requirements": {
+          "type": "level",
+          "level": 24
+        },
+        "evolves_to": []
+      }
+    ]
+  },
+  {
+    "id": 821,
+    "name": "rookidee",
+    "evolves_to": [
+      {
+        "id": 822,
+        "name": "corvisquire",
+        "requirements": {
+          "type": "level",
+          "level": 18
+        },
+        "evolves_to": [
+          {
+            "id": 823,
+            "name": "corviknight",
+            "requirements": {
+              "type": "level",
+              "level": 38
+            },
+            "evolves_to": []
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "id": 824,
+    "name": "blipbug",
+    "evolves_to": [
+      {
+        "id": 825,
+        "name": "dottler",
+        "requirements": {
+          "type": "level",
+          "level": 10
+        },
+        "evolves_to": [
+          {
+            "id": 826,
+            "name": "orbeetle",
+            "requirements": {
+              "type": "level",
+              "level": 30
+            },
+            "evolves_to": []
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "id": 827,
+    "name": "nickit",
+    "evolves_to": [
+      {
+        "id": 828,
+        "name": "thievul",
+        "requirements": {
+          "type": "level",
+          "level": 18
+        },
+        "evolves_to": []
+      }
+    ]
+  },
+  {
+    "id": 829,
+    "name": "gossifleur",
+    "evolves_to": [
+      {
+        "id": 830,
+        "name": "eldegoss",
+        "requirements": {
+          "type": "level",
+          "level": 20
+        },
+        "evolves_to": []
+      }
+    ]
+  },
+  {
+    "id": 831,
+    "name": "wooloo",
+    "evolves_to": [
+      {
+        "id": 832,
+        "name": "dubwool",
+        "requirements": {
+          "type": "level",
+          "level": 24
+        },
+        "evolves_to": []
+      }
+    ]
+  },
+  {
+    "id": 833,
+    "name": "chewtle",
+    "evolves_to": [
+      {
+        "id": 834,
+        "name": "drednaw",
+        "requirements": {
+          "type": "level",
+          "level": 22
+        },
+        "evolves_to": []
+      }
+    ]
+  },
+  {
+    "id": 835,
+    "name": "yamper",
+    "evolves_to": [
+      {
+        "id": 836,
+        "name": "boltund",
+        "requirements": {
+          "type": "level",
+          "level": 25
+        },
+        "evolves_to": []
+      }
+    ]
+  },
+  {
+    "id": 837,
+    "name": "rolycoly",
+    "evolves_to": [
+      {
+        "id": 838,
+        "name": "carkol",
+        "requirements": {
+          "type": "level",
+          "level": 18
+        },
+        "evolves_to": [
+          {
+            "id": 839,
+            "name": "coalossal",
+            "requirements": {
+              "type": "level",
+              "level": 34
+            },
+            "evolves_to": []
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "id": 840,
+    "name": "applin",
+    "evolves_to": [
+      {
+        "id": 841,
+        "name": "flapple",
+        "requirements": {
+          "type": "item",
+          "item": "tart-apple"
+        },
+        "evolves_to": []
+      },
+      {
+        "id": 842,
+        "name": "appletun",
+        "requirements": {
+          "type": "item",
+          "item": "sweet-apple"
+        },
+        "evolves_to": []
+      },
+      {
+        "id": 1011,
+        "name": "dipplin",
+        "requirements": null,
+        "evolves_to": [
+          {
+            "id": 1019,
+            "name": "hydrapple",
+            "requirements": null,
+            "evolves_to": []
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "id": 843,
+    "name": "silicobra",
+    "evolves_to": [
+      {
+        "id": 844,
+        "name": "sandaconda",
+        "requirements": {
+          "type": "level",
+          "level": 36
+        },
+        "evolves_to": []
+      }
+    ]
+  },
+  {
+    "id": 845,
+    "name": "cramorant",
+    "evolves_to": []
+  },
+  {
+    "id": 846,
+    "name": "arrokuda",
+    "evolves_to": [
+      {
+        "id": 847,
+        "name": "barraskewda",
+        "requirements": {
+          "type": "level",
+          "level": 26
+        },
+        "evolves_to": []
+      }
+    ]
+  },
+  {
+    "id": 848,
+    "name": "toxel",
+    "evolves_to": [
+      {
+        "id": 849,
+        "name": "toxtricity",
+        "requirements": {
+          "type": "level",
+          "level": 30
+        },
+        "evolves_to": []
+      }
+    ]
+  },
+  {
+    "id": 850,
+    "name": "sizzlipede",
+    "evolves_to": [
+      {
+        "id": 851,
+        "name": "centiskorch",
+        "requirements": {
+          "type": "level",
+          "level": 28
+        },
+        "evolves_to": []
+      }
+    ]
+  },
+  {
+    "id": 852,
+    "name": "clobbopus",
+    "evolves_to": [
+      {
+        "id": 853,
+        "name": "grapploct",
+        "requirements": {
+          "type": "move",
+          "move": "taunt"
+        },
+        "evolves_to": []
+      }
+    ]
+  },
+  {
+    "id": 854,
+    "name": "sinistea",
+    "evolves_to": [
+      {
+        "id": 855,
+        "name": "polteageist",
+        "requirements": {
+          "type": "item",
+          "item": "cracked-pot"
+        },
+        "evolves_to": []
+      }
+    ]
+  },
+  {
+    "id": 856,
+    "name": "hatenna",
+    "evolves_to": [
+      {
+        "id": 857,
+        "name": "hattrem",
+        "requirements": {
+          "type": "level",
+          "level": 32
+        },
+        "evolves_to": [
+          {
+            "id": 858,
+            "name": "hatterene",
+            "requirements": {
+              "type": "level",
+              "level": 42
+            },
+            "evolves_to": []
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "id": 859,
+    "name": "impidimp",
+    "evolves_to": [
+      {
+        "id": 860,
+        "name": "morgrem",
+        "requirements": {
+          "type": "level",
+          "level": 32
+        },
+        "evolves_to": [
+          {
+            "id": 861,
+            "name": "grimmsnarl",
+            "requirements": {
+              "type": "level",
+              "level": 42
+            },
+            "evolves_to": []
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "id": 868,
+    "name": "milcery",
+    "evolves_to": [
+      {
+        "id": 869,
+        "name": "alcremie",
+        "requirements": null,
+        "evolves_to": []
+      }
+    ]
+  },
+  {
+    "id": 870,
+    "name": "falinks",
+    "evolves_to": []
+  },
+  {
+    "id": 871,
+    "name": "pincurchin",
+    "evolves_to": []
+  },
+  {
+    "id": 872,
+    "name": "snom",
+    "evolves_to": [
+      {
+        "id": 873,
+        "name": "frosmoth",
+        "requirements": null,
+        "evolves_to": []
+      }
+    ]
+  },
+  {
+    "id": 874,
+    "name": "stonjourner",
+    "evolves_to": []
+  },
+  {
+    "id": 875,
+    "name": "eiscue",
+    "evolves_to": []
+  },
+  {
+    "id": 876,
+    "name": "indeedee",
+    "evolves_to": []
+  },
+  {
+    "id": 877,
+    "name": "morpeko",
+    "evolves_to": []
+  },
+  {
+    "id": 878,
+    "name": "cufant",
+    "evolves_to": [
+      {
+        "id": 879,
+        "name": "copperajah",
+        "requirements": {
+          "type": "level",
+          "level": 34
+        },
+        "evolves_to": []
+      }
+    ]
+  },
+  {
+    "id": 880,
+    "name": "dracozolt",
+    "evolves_to": []
+  },
+  {
+    "id": 881,
+    "name": "arctozolt",
+    "evolves_to": []
+  },
+  {
+    "id": 882,
+    "name": "dracovish",
+    "evolves_to": []
+  },
+  {
+    "id": 883,
+    "name": "arctovish",
+    "evolves_to": []
+  },
+  {
+    "id": 884,
+    "name": "duraludon",
+    "evolves_to": [
+      {
+        "id": 1018,
+        "name": "archaludon",
+        "requirements": null,
+        "evolves_to": []
+      }
+    ]
+  },
+  {
+    "id": 885,
+    "name": "dreepy",
+    "evolves_to": [
+      {
+        "id": 886,
+        "name": "drakloak",
+        "requirements": {
+          "type": "level",
+          "level": 50
+        },
+        "evolves_to": [
+          {
+            "id": 887,
+            "name": "dragapult",
+            "requirements": {
+              "type": "level",
+              "level": 60
+            },
+            "evolves_to": []
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "id": 888,
+    "name": "zacian",
+    "evolves_to": []
+  },
+  {
+    "id": 889,
+    "name": "zamazenta",
+    "evolves_to": []
+  },
+  {
+    "id": 890,
+    "name": "eternatus",
+    "evolves_to": []
+  },
+  {
+    "id": 891,
+    "name": "kubfu",
+    "evolves_to": [
+      {
+        "id": 892,
+        "name": "urshifu",
+        "requirements": null,
+        "evolves_to": []
+      }
+    ]
+  },
+  {
+    "id": 893,
+    "name": "zarude",
+    "evolves_to": []
+  },
+  {
+    "id": 894,
+    "name": "regieleki",
+    "evolves_to": []
+  },
+  {
+    "id": 895,
+    "name": "regidrago",
+    "evolves_to": []
+  },
+  {
+    "id": 896,
+    "name": "glastrier",
+    "evolves_to": []
+  },
+  {
+    "id": 897,
+    "name": "spectrier",
+    "evolves_to": []
+  },
+  {
+    "id": 898,
+    "name": "calyrex",
+    "evolves_to": []
+  },
+  {
+    "id": 905,
+    "name": "enamorus",
+    "evolves_to": []
+  },
+  {
+    "id": 906,
+    "name": "sprigatito",
+    "evolves_to": [
+      {
+        "id": 907,
+        "name": "floragato",
+        "requirements": {
+          "type": "level",
+          "level": 16
+        },
+        "evolves_to": [
+          {
+            "id": 908,
+            "name": "meowscarada",
+            "requirements": {
+              "type": "level",
+              "level": 36
+            },
+            "evolves_to": []
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "id": 909,
+    "name": "fuecoco",
+    "evolves_to": [
+      {
+        "id": 910,
+        "name": "crocalor",
+        "requirements": {
+          "type": "level",
+          "level": 16
+        },
+        "evolves_to": [
+          {
+            "id": 911,
+            "name": "skeledirge",
+            "requirements": {
+              "type": "level",
+              "level": 36
+            },
+            "evolves_to": []
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "id": 912,
+    "name": "quaxly",
+    "evolves_to": [
+      {
+        "id": 913,
+        "name": "quaxwell",
+        "requirements": {
+          "type": "level",
+          "level": 16
+        },
+        "evolves_to": [
+          {
+            "id": 914,
+            "name": "quaquaval",
+            "requirements": {
+              "type": "level",
+              "level": 36
+            },
+            "evolves_to": []
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "id": 915,
+    "name": "lechonk",
+    "evolves_to": [
+      {
+        "id": 916,
+        "name": "oinkologne",
+        "requirements": {
+          "type": "level",
+          "level": 18
+        },
+        "evolves_to": []
+      }
+    ]
+  },
+  {
+    "id": 917,
+    "name": "tarountula",
+    "evolves_to": [
+      {
+        "id": 918,
+        "name": "spidops",
+        "requirements": {
+          "type": "level",
+          "level": 15
+        },
+        "evolves_to": []
+      }
+    ]
+  },
+  {
+    "id": 919,
+    "name": "nymble",
+    "evolves_to": [
+      {
+        "id": 920,
+        "name": "lokix",
+        "requirements": {
+          "type": "level",
+          "level": 24
+        },
+        "evolves_to": []
+      }
+    ]
+  },
+  {
+    "id": 921,
+    "name": "pawmi",
+    "evolves_to": [
+      {
+        "id": 922,
+        "name": "pawmo",
+        "requirements": {
+          "type": "level",
+          "level": 18
+        },
+        "evolves_to": [
+          {
+            "id": 923,
+            "name": "pawmot",
+            "requirements": null,
+            "evolves_to": []
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "id": 924,
+    "name": "tandemaus",
+    "evolves_to": [
+      {
+        "id": 925,
+        "name": "maushold",
+        "requirements": {
+          "type": "level",
+          "level": 25
+        },
+        "evolves_to": []
+      }
+    ]
+  },
+  {
+    "id": 926,
+    "name": "fidough",
+    "evolves_to": [
+      {
+        "id": 927,
+        "name": "dachsbun",
+        "requirements": {
+          "type": "level",
+          "level": 26
+        },
+        "evolves_to": []
+      }
+    ]
+  },
+  {
+    "id": 928,
+    "name": "smoliv",
+    "evolves_to": [
+      {
+        "id": 929,
+        "name": "dolliv",
+        "requirements": {
+          "type": "level",
+          "level": 25
+        },
+        "evolves_to": [
+          {
+            "id": 930,
+            "name": "arboliva",
+            "requirements": {
+              "type": "level",
+              "level": 35
+            },
+            "evolves_to": []
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "id": 931,
+    "name": "squawkabilly",
+    "evolves_to": []
+  },
+  {
+    "id": 932,
+    "name": "nacli",
+    "evolves_to": [
+      {
+        "id": 933,
+        "name": "naclstack",
+        "requirements": {
+          "type": "level",
+          "level": 24
+        },
+        "evolves_to": [
+          {
+            "id": 934,
+            "name": "garganacl",
+            "requirements": {
+              "type": "level",
+              "level": 38
+            },
+            "evolves_to": []
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "id": 935,
+    "name": "charcadet",
+    "evolves_to": [
+      {
+        "id": 936,
+        "name": "armarouge",
+        "requirements": {
+          "type": "item",
+          "item": "auspicious-armor"
+        },
+        "evolves_to": []
+      },
+      {
+        "id": 937,
+        "name": "ceruledge",
+        "requirements": {
+          "type": "item",
+          "item": "malicious-armor"
+        },
+        "evolves_to": []
+      }
+    ]
+  },
+  {
+    "id": 938,
+    "name": "tadbulb",
+    "evolves_to": [
+      {
+        "id": 939,
+        "name": "bellibolt",
+        "requirements": {
+          "type": "item",
+          "item": "thunder-stone"
+        },
+        "evolves_to": []
+      }
+    ]
+  },
+  {
+    "id": 940,
+    "name": "wattrel",
+    "evolves_to": [
+      {
+        "id": 941,
+        "name": "kilowattrel",
+        "requirements": {
+          "type": "level",
+          "level": 25
+        },
+        "evolves_to": []
+      }
+    ]
+  },
+  {
+    "id": 942,
+    "name": "maschiff",
+    "evolves_to": [
+      {
+        "id": 943,
+        "name": "mabosstiff",
+        "requirements": {
+          "type": "level",
+          "level": 30
+        },
+        "evolves_to": []
+      }
+    ]
+  },
+  {
+    "id": 944,
+    "name": "shroodle",
+    "evolves_to": [
+      {
+        "id": 945,
+        "name": "grafaiai",
+        "requirements": {
+          "type": "level",
+          "level": 28
+        },
+        "evolves_to": []
+      }
+    ]
+  },
+  {
+    "id": 946,
+    "name": "bramblin",
+    "evolves_to": [
+      {
+        "id": 947,
+        "name": "brambleghast",
+        "requirements": null,
+        "evolves_to": []
+      }
+    ]
+  },
+  {
+    "id": 948,
+    "name": "toedscool",
+    "evolves_to": [
+      {
+        "id": 949,
+        "name": "toedscruel",
+        "requirements": {
+          "type": "level",
+          "level": 30
+        },
+        "evolves_to": []
+      }
+    ]
+  },
+  {
+    "id": 950,
+    "name": "klawf",
+    "evolves_to": []
+  },
+  {
+    "id": 951,
+    "name": "capsakid",
+    "evolves_to": [
+      {
+        "id": 952,
+        "name": "scovillain",
+        "requirements": {
+          "type": "item",
+          "item": "fire-stone"
+        },
+        "evolves_to": []
+      }
+    ]
+  },
+  {
+    "id": 953,
+    "name": "rellor",
+    "evolves_to": [
+      {
+        "id": 954,
+        "name": "rabsca",
+        "requirements": null,
+        "evolves_to": []
+      }
+    ]
+  },
+  {
+    "id": 955,
+    "name": "flittle",
+    "evolves_to": [
+      {
+        "id": 956,
+        "name": "espathra",
+        "requirements": {
+          "type": "level",
+          "level": 35
+        },
+        "evolves_to": []
+      }
+    ]
+  },
+  {
+    "id": 957,
+    "name": "tinkatink",
+    "evolves_to": [
+      {
+        "id": 958,
+        "name": "tinkatuff",
+        "requirements": {
+          "type": "level",
+          "level": 24
+        },
+        "evolves_to": [
+          {
+            "id": 959,
+            "name": "tinkaton",
+            "requirements": {
+              "type": "level",
+              "level": 38
+            },
+            "evolves_to": []
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "id": 960,
+    "name": "wiglett",
+    "evolves_to": [
+      {
+        "id": 961,
+        "name": "wugtrio",
+        "requirements": {
+          "type": "level",
+          "level": 26
+        },
+        "evolves_to": []
+      }
+    ]
+  },
+  {
+    "id": 962,
+    "name": "bombirdier",
+    "evolves_to": []
+  },
+  {
+    "id": 963,
+    "name": "finizen",
+    "evolves_to": [
+      {
+        "id": 964,
+        "name": "palafin",
+        "requirements": {
+          "type": "level",
+          "level": 38
+        },
+        "evolves_to": []
+      }
+    ]
+  },
+  {
+    "id": 965,
+    "name": "varoom",
+    "evolves_to": [
+      {
+        "id": 966,
+        "name": "revavroom",
+        "requirements": {
+          "type": "level",
+          "level": 40
+        },
+        "evolves_to": []
+      }
+    ]
+  },
+  {
+    "id": 967,
+    "name": "cyclizar",
+    "evolves_to": []
+  },
+  {
+    "id": 968,
+    "name": "orthworm",
+    "evolves_to": []
+  },
+  {
+    "id": 969,
+    "name": "glimmet",
+    "evolves_to": [
+      {
+        "id": 970,
+        "name": "glimmora",
+        "requirements": {
+          "type": "level",
+          "level": 35
+        },
+        "evolves_to": []
+      }
+    ]
+  },
+  {
+    "id": 971,
+    "name": "greavard",
+    "evolves_to": [
+      {
+        "id": 972,
+        "name": "houndstone",
+        "requirements": {
+          "type": "level",
+          "level": 30
+        },
+        "evolves_to": []
+      }
+    ]
+  },
+  {
+    "id": 973,
+    "name": "flamigo",
+    "evolves_to": []
+  },
+  {
+    "id": 974,
+    "name": "cetoddle",
+    "evolves_to": [
+      {
+        "id": 975,
+        "name": "cetitan",
+        "requirements": {
+          "type": "item",
+          "item": "ice-stone"
+        },
+        "evolves_to": []
+      }
+    ]
+  },
+  {
+    "id": 976,
+    "name": "veluza",
+    "evolves_to": []
+  },
+  {
+    "id": 977,
+    "name": "dondozo",
+    "evolves_to": []
+  },
+  {
+    "id": 978,
+    "name": "tatsugiri",
+    "evolves_to": []
+  },
+  {
+    "id": 984,
+    "name": "great-tusk",
+    "evolves_to": []
+  },
+  {
+    "id": 985,
+    "name": "scream-tail",
+    "evolves_to": []
+  },
+  {
+    "id": 986,
+    "name": "brute-bonnet",
+    "evolves_to": []
+  },
+  {
+    "id": 987,
+    "name": "flutter-mane",
+    "evolves_to": []
+  },
+  {
+    "id": 988,
+    "name": "slither-wing",
+    "evolves_to": []
+  },
+  {
+    "id": 989,
+    "name": "sandy-shocks",
+    "evolves_to": []
+  },
+  {
+    "id": 990,
+    "name": "iron-treads",
+    "evolves_to": []
+  },
+  {
+    "id": 991,
+    "name": "iron-bundle",
+    "evolves_to": []
+  },
+  {
+    "id": 992,
+    "name": "iron-hands",
+    "evolves_to": []
+  },
+  {
+    "id": 993,
+    "name": "iron-jugulis",
+    "evolves_to": []
+  },
+  {
+    "id": 994,
+    "name": "iron-moth",
+    "evolves_to": []
+  },
+  {
+    "id": 995,
+    "name": "iron-thorns",
+    "evolves_to": []
+  },
+  {
+    "id": 996,
+    "name": "frigibax",
+    "evolves_to": [
+      {
+        "id": 997,
+        "name": "arctibax",
+        "requirements": {
+          "type": "level",
+          "level": 35
+        },
+        "evolves_to": [
+          {
+            "id": 998,
+            "name": "baxcalibur",
+            "requirements": {
+              "type": "level",
+              "level": 54
+            },
+            "evolves_to": []
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "id": 999,
+    "name": "gimmighoul",
+    "evolves_to": [
+      {
+        "id": 1000,
+        "name": "gholdengo",
+        "requirements": null,
+        "evolves_to": []
+      }
+    ]
+  },
+  {
+    "id": 1001,
+    "name": "wo-chien",
+    "evolves_to": []
+  },
+  {
+    "id": 1002,
+    "name": "chien-pao",
+    "evolves_to": []
+  },
+  {
+    "id": 1003,
+    "name": "ting-lu",
+    "evolves_to": []
+  },
+  {
+    "id": 1004,
+    "name": "chi-yu",
+    "evolves_to": []
+  },
+  {
+    "id": 1005,
+    "name": "roaring-moon",
+    "evolves_to": []
+  },
+  {
+    "id": 1006,
+    "name": "iron-valiant",
+    "evolves_to": []
+  },
+  {
+    "id": 1007,
+    "name": "koraidon",
+    "evolves_to": []
+  },
+  {
+    "id": 1008,
+    "name": "miraidon",
+    "evolves_to": []
+  },
+  {
+    "id": 1009,
+    "name": "walking-wake",
+    "evolves_to": []
+  },
+  {
+    "id": 1010,
+    "name": "iron-leaves",
+    "evolves_to": []
+  },
+  {
+    "id": 1012,
+    "name": "poltchageist",
+    "evolves_to": [
+      {
+        "id": 1013,
+        "name": "sinistcha",
+        "requirements": null,
+        "evolves_to": []
+      }
+    ]
+  },
+  {
+    "id": 1014,
+    "name": "okidogi",
+    "evolves_to": []
+  },
+  {
+    "id": 1015,
+    "name": "munkidori",
+    "evolves_to": []
+  },
+  {
+    "id": 1016,
+    "name": "fezandipiti",
+    "evolves_to": []
+  },
+  {
+    "id": 1017,
+    "name": "ogerpon",
+    "evolves_to": []
+  },
+  {
+    "id": 1020,
+    "name": "gouging-fire",
+    "evolves_to": []
+  },
+  {
+    "id": 1021,
+    "name": "raging-bolt",
+    "evolves_to": []
+  },
+  {
+    "id": 1023,
+    "name": "iron-crown",
+    "evolves_to": []
+  },
+  {
+    "id": 1022,
+    "name": "iron-boulder",
+    "evolves_to": []
+  },
+  {
+    "id": 1024,
+    "name": "terapagos",
+    "evolves_to": []
+  },
+  {
+    "id": 1025,
+    "name": "pecharunt",
+    "evolves_to": []
+  }
+]

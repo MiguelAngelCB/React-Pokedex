@@ -38,10 +38,10 @@
   text-transform: uppercase;
   text-align: center;
   color: white;
-  padding: 0 1rem;
-  font-size: x-large;
+  padding: 0 0.5rem;
   font-weight: bolder;
   border-radius: inherit;
+  border: 2px solid;
 }
 /* Joint */
 
@@ -86,15 +86,19 @@
     height: 16% !important;
   }
   .left-screen__joint {
-    top: 72%;
+    top: 70.5%;
     left: 50%;
     transform: translateX(-50%) rotate(90deg);
     width: 90%;
-    height: 55% !important;
+    height: 22rem !important;
   }
   .container .left-screen__bottom .main-screen__top-lights {
     position: relative;
     margin-bottom: 1rem !important;
+  }
+  .container .right-screen .main-screen__display {
+    margin-top: 3%;
+    margin-left: 0 !important;
   }
 }
 
@@ -352,13 +356,14 @@
 .container .right-screen__bottom {
   display: flex;
   flex-direction: column;
+  align-items: center;
   width: 100%;
   height: 100%; /* Asegura que ocupe todo el espacio disponible */
   gap: 1rem; /* Espaciado entre los divs */
 }
 /* Ajustes de los displays dentro de la pantalla derecha */
 .container .right-screen .main-screen__display {
-  width: 90%; /* Ocupa todo el ancho disponible */
+  width: 95%; /* Ocupa todo el ancho disponible */
   height: 100%; /* Asegura que el display ocupe toda la altura disponible */
   background-color: #ffffff;
   border: 1px solid #000000;
@@ -369,8 +374,8 @@
   flex-direction: column; /* Los elementos se organizarán de manera vertical */
   align-items: stretch; /* Los elementos dentro de este contenedor ocuparán todo el ancho */
   justify-content: flex-start; /* Los elementos se alinearán al inicio (parte superior) */
-  margin-left: 5%;
-  overflow: scroll;
+  margin-left: 4%;
+  overflow-y: auto;
   top: -5%;
 }
 .container .left-screen__bottom .main-screen__top-lights {
