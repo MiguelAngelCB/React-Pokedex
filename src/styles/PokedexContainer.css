@@ -27,6 +27,7 @@
 }
 .container {
   width: 70vw;
+  height: 70vh;
   display: grid;
   grid-template-columns: 1fr 1fr; /* Dos columnas por defecto */
   grid-template-rows: auto; /* Una sola fila */
@@ -42,6 +43,11 @@
   font-weight: bolder;
   border-radius: inherit;
   border: 2px solid;
+}
+@media (min-width: 1110px) {
+  .pokemon-name {
+    font-size: larger;
+  }
 }
 /* Joint */
 
@@ -454,8 +460,9 @@ h3 {
   align-items: center;
 }
 .container .left-screen__bottom .main-screen__display .pokemon-image img {
-  width: 10rem; /* Ajusta este valor según el tamaño deseado */
-  object-fit: contain; /* Para asegurarse de que la imagen no se deforme */
+  width: 40%;
+  object-fit: contain;
+  min-width: 13em;
 }
 .container .left-screen__joint {
   position: absolute;

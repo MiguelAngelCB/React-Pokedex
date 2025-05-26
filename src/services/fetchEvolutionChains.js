@@ -1,4 +1,5 @@
 import axios from "axios";
+import { fetchPokemonsFromFile } from "../services/api"; // Importación del método
 
 const BASE_URL = "https://pokeapi.co/api/v2";
 
@@ -55,6 +56,19 @@ const processEvolutionNode = (node) => {
   return currentPokemon;
 };
 
+const downloadJSON = (data, filename = "evolutionChains.json") => {
+  const json = JSON.stringify(data, null, 2); // Formatea el JSON con sangría
+  const blob = new Blob([json], { type: "application/json" });
+  const url = URL.createObjectURL(blob);
+
+  const a = document.createElement("a");
+  a.href = url;
+  a.download = filename;
+  a.click();
+
+  URL.revokeObjectURL(url); // Limpia el objeto URL
+};
+
 export const fetchAllEvolutionChains = async () => {
   try {
     const evolutionChains = [];
@@ -86,7 +100,20 @@ export const fetchAllEvolutionChains = async () => {
       nextUrl = chainData.next;
     }
 
-    // Save to JSON file
+    // Fetch Pokémon data and assign evolutionChainId
+    const pokemons = await fetchPokemonsFromFile();
+    evolutionChains.forEach((chain) => {
+      const matchingPokemon = pokemons.find(
+        (pokemon) => pokemon.id === chain.id
+      );
+      if (matchingPokemon) {
+        chain.evolutionChainId = matchingPokemon.evolutionChainId;
+      }
+    });
+
+    // Descarga el JSON generado
+    downloadJSON(evolutionChains);
+
     return evolutionChains;
   } catch (error) {
     console.error("Error fetching evolution chains:", error);
